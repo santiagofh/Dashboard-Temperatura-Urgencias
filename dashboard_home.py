@@ -28,12 +28,11 @@ pages = {
         st.Page("dashboard_atenciones_urgencia.py", title="Atenciones de urgencias", icon=":material/public:"),
         st.Page("dashboard_defunciones.py", title="Defunciones", icon=":material/public:"),
         st.Page("dashboard_egresos.py", title="Egresos Hospitalarios", icon=":material/public:"),
-        st.Page(external_link, title="Enlace externo: Vigilancia", icon=":material/link:"),
+        st.Page(external_link, title="Enlace externo: Vigilancia", icon=":material/link:")
     ],
     "Graficos combinados":[
-        st.Page("dashboard_alerta_atenciones.py", title="Alertas y Atenciones de urgencias", icon=":material/public:"),
         st.Page("dashboard_corredor_endemico_menor01.py", title="Corredor endemico menores de 1", icon=":material/public:"),
-        st.Page("dashboard_corredor_endemico_mayor80.py", title="Corredor endemico mayores de 80", icon=":material/public:"),
+        st.Page("dashboard_corredor_endemico_mayor80.py", title="Corredor endemico mayores de 80", icon=":material/public:")
     ]
 }
 
