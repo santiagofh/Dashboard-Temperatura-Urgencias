@@ -151,7 +151,21 @@ def grafico_area_atenciones_respiratorias(df_au, df_temp, col, title):
         )
     )
 
-    return fig
+    # Crear una base de datos combinada para descarga
+    df_base = pd.DataFrame({
+        'Fecha': df_tota_sc['fecha'],
+        'Total Sistema Circulatorio': df_tota_sc[col],
+        'Infarto Agudo Miocardio': df_infarto[col],
+        'Accidente Vascular Encefálico': df_accidente[col],
+        'Crisis Hipertensiva': df_crisis[col],
+        'Arritmia Grave': df_arritmia[col],
+        'Otras Causas Circulatorias': df_otras[col],
+        'Temperatura Máxima': df_temp.set_index('date').reindex(df_tota_sc['fecha'], method='nearest')['t_max'].values
+    })
+
+    return fig, df_base
+
+
 def grafico_atenciones_urgencia_pie(df, df_temp, col, title):
     diccionario_causas_au = {
         1: 'Atenciones de urgencia - Total',
@@ -190,6 +204,7 @@ def grafico_atenciones_urgencia_pie(df, df_temp, col, title):
     )
 
     return fig
+
 def grafico_porcentaje_atenciones(df, df_temp, col, title):
     diccionario_causas_au = {
         1: 'Atenciones de urgencia - Total',
@@ -302,82 +317,12 @@ def grafico_porcentaje_atenciones(df, df_temp, col, title):
             x=0.5
         )
     )
+    # Crear una base de datos combinada para descarga
+    df_base = porcentajes.copy()
+    df_base['Temperatura Máxima'] = df_temp.set_index('date').reindex(porcentajes['fecha'], method='nearest')['t_max'].values
 
-    return fig
+    return fig, df_base
 
-def grafico_total_grupo_etario(df, title):
-    df_filtrado = df[df['Causa'] == diccionario_causas_au[12]]
-
-    # Agrupar los datos por fecha para cada grupo etario
-    df_total = df_filtrado.groupby('fecha')['Total'].sum().reset_index()
-    df_menores_1 = df_filtrado.groupby('fecha')['Menores_1'].sum().reset_index()
-    df_1_a_4 = df_filtrado.groupby('fecha')['De_1_a_4'].sum().reset_index()
-    df_5_a_14 = df_filtrado.groupby('fecha')['De_5_a_14'].sum().reset_index()
-    df_15_a_64 = df_filtrado.groupby('fecha')['De_15_a_64'].sum().reset_index()
-    df_65_y_mas = df_filtrado.groupby('fecha')['De_65_y_mas'].sum().reset_index()
-
-    # Crear la figura del gráfico
-    fig = go.Figure()
-
-    # Agregar la línea para el total
-    fig.add_trace(go.Scatter(
-        x=df_total['fecha'], y=df_total['Total'],
-        mode='lines', name='Total',
-        line=dict(color='blue')
-    ))
-
-    # Agregar las barras para cada grupo etario
-    fig.add_trace(go.Bar(
-        x=df_menores_1['fecha'], y=df_menores_1['Menores_1'],
-        name='Menores_1',
-        marker=dict(color='cyan')
-    ))
-
-    fig.add_trace(go.Bar(
-        x=df_1_a_4['fecha'], y=df_1_a_4['De_1_a_4'],
-        name='De_1_a_4',
-        marker=dict(color='magenta')
-    ))
-
-    fig.add_trace(go.Bar(
-        x=df_5_a_14['fecha'], y=df_5_a_14['De_5_a_14'],
-        name='De_5_a_14',
-        marker=dict(color='orange')
-    ))
-
-    fig.add_trace(go.Bar(
-        x=df_15_a_64['fecha'], y=df_15_a_64['De_15_a_64'],
-        name='De_15_a_64',
-        marker=dict(color='yellow')
-    ))
-
-    fig.add_trace(go.Bar(
-        x=df_65_y_mas['fecha'], y=df_65_y_mas['De_65_y_mas'],
-        name='De_65_y_mas',
-        marker=dict(color='green')
-    ))
-
-    # Configurar el diseño del gráfico
-    fig.update_layout(
-        title=title,
-        xaxis_title='Fecha',
-        yaxis_title='Cantidad de Consultas',
-        barmode='stack',
-        template='plotly_white',
-        legend=dict(
-            title='Grupos Etarios',
-            orientation="h",  # Leyenda horizontal
-            yanchor="top",    # Alinear la parte superior de la leyenda
-            y=-0.2,           # Posicionar debajo del gráfico
-            xanchor="center", # Centrar horizontalmente
-            x=0.5             # Ubicación horizontal central
-        )
-
-    )
-
-
-    
-    return fig
 def grafico_total_grupo_etario(df, df_temp, title):
     df_filtrado = df[df['Causa'] == diccionario_causas_au[12]]
 
@@ -491,55 +436,19 @@ def grafico_total_grupo_etario(df, df_temp, title):
         )
 
     )
+    df_base = pd.DataFrame({
+        'Fecha': df_total['fecha'],
+        'Total': df_total['Total'],
+        'Menores_1': df_menores_1['Menores_1'],
+        'De_1_a_4': df_1_a_4['De_1_a_4'],
+        'De_5_a_14': df_5_a_14['De_5_a_14'],
+        'De_15_a_64': df_15_a_64['De_15_a_64'],
+        'De_65_y_mas': df_65_y_mas['De_65_y_mas'],
+        'Temperatura Máxima': df_temp.set_index('date').reindex(df_total['fecha'], method='nearest')['t_max'].values
+    })
 
-    return fig
+    return fig, df_base
 
-def grafico_grupos_interes_epidemiologico(df, title):
-    # Filtrar el DataFrame para 'Atenciones de urgencia - Total Sistema Circulatorio'
-    df_filtrado = df[df['Causa'] == diccionario_causas_au[12]]
-
-    # Agrupar los datos por fecha para cada grupo de interés epidemiológico
-    df_menores_1 = df_filtrado.groupby('fecha')['Menores_1'].sum().reset_index()
-    df_1_a_4 = df_filtrado.groupby('fecha')['De_1_a_4'].sum().reset_index()
-    df_65_y_mas = df_filtrado.groupby('fecha')['De_65_y_mas'].sum().reset_index()
-
-    # Crear la figura del gráfico
-    fig = go.Figure()
-
-
-
-    # Agregar las barras para cada grupo de interés epidemiológico
-    fig.add_trace(go.Bar(
-        x=df_menores_1['fecha'], y=df_menores_1['Menores_1'],
-        name='Menores_1',
-        marker=dict(color='cyan')
-    ))
-
-    fig.add_trace(go.Bar(
-        x=df_65_y_mas['fecha'], y=df_65_y_mas['De_65_y_mas'],
-        name='De_65_y_mas',
-        marker=dict(color='green')
-    ))
-
-    # Configurar el diseño del gráfico
-    fig.update_layout(
-        title=title,
-        xaxis_title='Fecha',
-        yaxis_title='Cantidad de Consultas',
-        barmode='stack',
-        template='plotly_white',
-        legend=dict(
-            title='Grupos Etario de interes',
-            orientation="h",  # Leyenda horizontal
-            yanchor="top",    # Alinear la parte superior de la leyenda
-            y=-0.2,           # Posicionar debajo del gráfico
-            xanchor="center", # Centrar horizontalmente
-            x=0.5             # Ubicación horizontal central
-        )
-        
-    )
-
-    return fig
 def grafico_grupos_interes_epidemiologico(df, df_temp, title):
     # Filtrar el DataFrame para 'Atenciones de urgencia - Total Sistema Circulatorio'
     df_filtrado = df[df['Causa'] == diccionario_causas_au[12]]
@@ -624,8 +533,16 @@ def grafico_grupos_interes_epidemiologico(df, df_temp, title):
             x=0.5             # Ubicación horizontal central
         )
     )
+    # Crear una base de datos combinada para descarga
+    df_base = pd.DataFrame({
+        'Fecha': df_menores_1['fecha'],
+        'Menores_1': df_menores_1['Menores_1'],
+        'De_65_y_mas': df_65_y_mas['De_65_y_mas'],
+        'Temperatura Máxima': df_temp.set_index('date').reindex(df_menores_1['fecha'], method='nearest')['t_max'].values
+    })
 
-    return fig
+    return fig, df_base
+
 
 def grafico_porcentaje_total(df, df_temp, col, title):
     # Filtrar datos por causas específicas y calcular el total general de atenciones de urgencia
@@ -735,48 +652,108 @@ def grafico_porcentaje_total(df, df_temp, col, title):
             x=0.5
         )
     )
+    # Crear una base de datos combinada para descarga
+    df_base = pd.DataFrame({
+        'Fecha': porcentajes['fecha'],
+        'Sistema Circulatorio (%)': porcentajes['Sistema Circulatorio (%)'],
+        'Infarto agudo miocardio (%)': porcentajes['Infarto agudo miocardio (%)'],
+        'Accidente vascular encefálico (%)': porcentajes['Accidente vascular encefálico (%)'],
+        'Crisis hipertensiva (%)': porcentajes['Crisis hipertensiva (%)'],
+        'Arritmia grave (%)': porcentajes['Arritmia grave (%)'],
+        'Otras causas circulatorias (%)': porcentajes['Otras causas circulatorias (%)'],
+        'Temperatura Máxima': df_temp.set_index('date').reindex(porcentajes['fecha'], method='nearest')['t_max'].values
+    })
 
-    return fig
+    return fig, df_base
+
 
 #%%
-# Llamar a la función con el DataFrame y columna correspondiente
-fig_area_atenciones_respiratorias = grafico_area_atenciones_respiratorias(
+# Llamar a las funciones y capturar tanto el gráfico como el DataFrame base
+fig_area_atenciones_respiratorias, base_area_atenciones_respiratorias = grafico_area_atenciones_respiratorias(
     df_au, df_tmm, 'Total', 'Evolución de Atenciones de Urgencia en el Sistema Circulatorio'
 )
 
-fig_porcentaje_atenciones = grafico_porcentaje_atenciones(
-    df_au,df_tmm ,'Total', 'Porcentaje de Atenciones de Urgencia por Causa en el Sistema Circulatorio'
+fig_porcentaje_atenciones, base_porcentaje_atenciones = grafico_porcentaje_atenciones(
+    df_au, df_tmm, 'Total', 'Porcentaje de Atenciones de Urgencia por Causa en el Sistema Circulatorio'
 )
 
-fig_porcentaje_atenciones_total = grafico_porcentaje_total(
-    df_au,df_tmm, 'Total', 'Porcentaje de Atenciones de Urgencia por Causa en Relación al Total General'
+fig_porcentaje_atenciones_total, base_porcentaje_atenciones_total = grafico_porcentaje_total(
+    df_au, df_tmm, 'Total', 'Porcentaje de Atenciones de Urgencia por Causa en Relación al Total General'
 )
 
-fig_total_grupo_etario = grafico_total_grupo_etario(
-    df_au,df_tmm, 'Consultas de Urgencia por Grupos Etarios del Sistema Circulatorio'
+fig_total_grupo_etario, base_total_grupo_etario = grafico_total_grupo_etario(
+    df_au, df_tmm, 'Consultas de Urgencia por Grupos Etarios del Sistema Circulatorio'
 )
 
-fig_grupos_interes_epidemiologico = grafico_grupos_interes_epidemiologico(
-    df_au,df_tmm, 'Consultas de Urgencia en Grupos de Interés Epidemiológico'
+fig_grupos_interes_epidemiologico, base_grupos_interes_epidemiologico = grafico_grupos_interes_epidemiologico(
+    df_au, df_tmm, 'Consultas de Urgencia en Grupos de Interés Epidemiológico'
 )
-# Renderizar los gráficos en la aplicación
+
+# Renderizar los gráficos y agregar los botones de descarga correspondientes
+
+# Renderizar los gráficos y agregar los botones de descarga correspondientes
+
+# 1. Evolución de Atenciones de Urgencia por Sistema Circulatorio
 st.write("## Evolución de cantidad Atenciones de Urgencia por Sistema Circulatorio")
 st.write("Este gráfico muestra la evolución temporal de las atenciones de urgencia relacionadas con diferentes causas del sistema circulatorio.")
-st.plotly_chart(fig_area_atenciones_respiratorias)
+st.plotly_chart(fig_area_atenciones_respiratorias, use_container_width=True)
+st.write("### Descargar Datos Utilizados en el Gráfico")
+data_csv_area = base_area_atenciones_respiratorias.to_csv(index=False, sep=';', decimal=',', encoding='utf-8').encode('utf-8')
+st.download_button(
+    label="Descargar Datos",
+    data=data_csv_area,
+    file_name="datos_atenciones_urgencia.csv",
+    mime="text/csv"
+)
 
+# 2. Porcentaje de Atenciones de Urgencia por Causa en el Sistema Circulatorio
 st.write("## Porcentaje de Atenciones de Urgencia por Causas por Sistema Circulatorio")
 st.write("Se presenta la proporción diaria de las distintas causas de urgencia dentro del total de atenciones del sistema circulatorio.")
 st.plotly_chart(fig_porcentaje_atenciones, use_container_width=True)
+st.write("### Descargar Datos Utilizados en el Gráfico")
+data_csv_porcentaje = base_porcentaje_atenciones.to_csv(index=False, sep=';', decimal=',', encoding='utf-8').encode('utf-8')
+st.download_button(
+    label="Descargar Datos",
+    data=data_csv_porcentaje,
+    file_name="datos_porcentaje_atenciones.csv",
+    mime="text/csv"
+)
 
+# 3. Porcentaje de Atenciones de Urgencia por Causa en Relación al Total General
 st.write("## Porcentaje de Atenciones de Urgencia por Causa de Sistema Circulatorio en Relación al Total General de Atenciones de Urgencia")
 st.write("Este gráfico muestra el porcentaje de atenciones de urgencia de causas circulatorias específicas respecto al total de consultas de urgencia.")
 st.plotly_chart(fig_porcentaje_atenciones_total, use_container_width=True)
+st.write("### Descargar Datos Utilizados en el Gráfico")
+data_csv_porcentaje_total = base_porcentaje_atenciones_total.to_csv(index=False, sep=';', decimal=',', encoding='utf-8').encode('utf-8')
+st.download_button(
+    label="Descargar Datos",
+    data=data_csv_porcentaje_total,
+    file_name="datos_porcentaje_total_atenciones.csv",
+    mime="text/csv"
+)
 
+# 4. Consultas de Urgencia por Grupos Etarios en el Sistema Circulatorio
 st.write("## Consultas de Urgencia por Grupos Etarios en el Sistema Circulatorio")
 st.write("Representación de la distribución total de atenciones de urgencia del sistema circulatorio según grupos etarios.")
 st.plotly_chart(fig_total_grupo_etario, use_container_width=True)
+st.write("### Descargar Datos Utilizados en el Gráfico")
+data_csv_grupo_etario = base_total_grupo_etario.to_csv(index=False, sep=';', decimal=',', encoding='utf-8').encode('utf-8')
+st.download_button(
+    label="Descargar Datos",
+    data=data_csv_grupo_etario,
+    file_name="datos_grupo_etario_atenciones.csv",
+    mime="text/csv"
+)
 
+# 5. Consultas de Urgencia en Grupos de Interés Epidemiológico
 st.write("## Consultas de Urgencia en Grupos de Interés Epidemiológico")
 st.write("Este gráfico ilustra la cantidad de consultas de urgencia de grupos clave: menores de 1 año, y adultos mayores de 65 años.")
 st.plotly_chart(fig_grupos_interes_epidemiologico, use_container_width=True)
-# %%
+st.write("### Descargar Datos Utilizados en el Gráfico")
+data_csv_grupos_interes = base_grupos_interes_epidemiologico.to_csv(index=False, sep=';', decimal=',', encoding='utf-8').encode('utf-8')
+st.download_button(
+    label="Descargar Datos",
+    data=data_csv_grupos_interes,
+    file_name="datos_grupos_interes_epidemiologico.csv",
+    mime="text/csv"
+)
