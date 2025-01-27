@@ -378,6 +378,122 @@ def grafico_total_grupo_etario(df, title):
 
     
     return fig
+def grafico_total_grupo_etario(df, df_temp, title):
+    df_filtrado = df[df['Causa'] == diccionario_causas_au[12]]
+
+    # Agrupar los datos por fecha para cada grupo etario
+    df_total = df_filtrado.groupby('fecha')['Total'].sum().reset_index()
+    df_menores_1 = df_filtrado.groupby('fecha')['Menores_1'].sum().reset_index()
+    df_1_a_4 = df_filtrado.groupby('fecha')['De_1_a_4'].sum().reset_index()
+    df_5_a_14 = df_filtrado.groupby('fecha')['De_5_a_14'].sum().reset_index()
+    df_15_a_64 = df_filtrado.groupby('fecha')['De_15_a_64'].sum().reset_index()
+    df_65_y_mas = df_filtrado.groupby('fecha')['De_65_y_mas'].sum().reset_index()
+
+    # Crear la figura del gráfico
+    fig = go.Figure()
+
+    # Agregar la línea para el total
+    fig.add_trace(go.Scatter(
+        x=df_total['fecha'], y=df_total['Total'],
+        mode='lines', name='Total',
+        line=dict(color='blue')
+    ))
+
+    # Agregar las barras para cada grupo etario
+    fig.add_trace(go.Bar(
+        x=df_menores_1['fecha'], y=df_menores_1['Menores_1'],
+        name='Menores_1',
+        marker=dict(color='cyan')
+    ))
+
+    fig.add_trace(go.Bar(
+        x=df_1_a_4['fecha'], y=df_1_a_4['De_1_a_4'],
+        name='De_1_a_4',
+        marker=dict(color='magenta')
+    ))
+
+    fig.add_trace(go.Bar(
+        x=df_5_a_14['fecha'], y=df_5_a_14['De_5_a_14'],
+        name='De_5_a_14',
+        marker=dict(color='orange')
+    ))
+
+    fig.add_trace(go.Bar(
+        x=df_15_a_64['fecha'], y=df_15_a_64['De_15_a_64'],
+        name='De_15_a_64',
+        marker=dict(color='yellow')
+    ))
+
+    fig.add_trace(go.Bar(
+        x=df_65_y_mas['fecha'], y=df_65_y_mas['De_65_y_mas'],
+        name='De_65_y_mas',
+        marker=dict(color='green')
+    ))
+
+    # Configurar alertas de temperatura
+    df_temp['alerta'] = 'Sin Alerta'
+    df_temp['mes'] = df_temp['date'].dt.month
+    df_temp.loc[df_temp['mes'].isin([11, 12, 1, 2, 3]), 'alerta'] = 'Alerta temprana preventiva'
+    df_temp.loc[df_temp['t_max'] >= 40, 'alerta'] = 'Alerta Roja'
+    df_temp['alerta_temporal'] = df_temp['t_max'] >= 34
+    df_temp['alerta_consecutiva'] = df_temp['alerta_temporal'].rolling(window=2).sum()
+    df_temp.loc[df_temp['alerta_consecutiva'] >= 2, 'alerta'] = 'Alerta Amarilla'
+    df_temp['alerta_consecutiva_3'] = df_temp['alerta_temporal'].rolling(window=3).sum()
+    df_temp.loc[df_temp['alerta_consecutiva_3'] >= 3, 'alerta'] = 'Alerta Roja'
+
+    # Agregar las trazas de temperatura máxima (eje Y2)
+    fig.add_trace(go.Scatter(
+        x=df_temp['date'], y=df_temp['t_max'],
+        mode='lines',
+        name='Temperatura Máxima',
+        line=dict(color='red'),
+        yaxis='y2'
+    ))
+
+    # Agregar los marcadores de alertas (eje Y2)
+    color_map = {
+        'Sin Alerta': 'blue',
+        'Alerta temprana preventiva': 'green',
+        'Alerta Amarilla': 'yellow',
+        'Alerta Roja': 'red'
+    }
+
+    for alerta, color in color_map.items():
+        df_alerta = df_temp[df_temp['alerta'] == alerta]
+        fig.add_trace(go.Scatter(
+            x=df_alerta['date'],
+            y=df_alerta['t_max'],
+            mode='markers',
+            name=f'Alerta: {alerta}',
+            marker=dict(color=color),
+            yaxis='y2'
+        ))
+
+    # Configurar el diseño del gráfico
+    fig.update_layout(
+        title=title,
+        xaxis_title='Fecha',
+        yaxis_title='Cantidad de Consultas',
+        barmode='stack',
+        template='plotly_white',
+        yaxis2=dict(
+            title='Temperatura Máxima',
+            overlaying='y',
+            side='right'
+        ),
+        legend=dict(
+            title='Grupos Etarios',
+            orientation="h",  # Leyenda horizontal
+            yanchor="top",    # Alinear la parte superior de la leyenda
+            y=-0.2,           # Posicionar debajo del gráfico
+            xanchor="center", # Centrar horizontalmente
+            x=0.5             # Ubicación horizontal central
+        )
+
+    )
+
+    return fig
+
 def grafico_grupos_interes_epidemiologico(df, title):
     # Filtrar el DataFrame para 'Atenciones de urgencia - Total Sistema Circulatorio'
     df_filtrado = df[df['Causa'] == diccionario_causas_au[12]]
@@ -424,6 +540,93 @@ def grafico_grupos_interes_epidemiologico(df, title):
     )
 
     return fig
+def grafico_grupos_interes_epidemiologico(df, df_temp, title):
+    # Filtrar el DataFrame para 'Atenciones de urgencia - Total Sistema Circulatorio'
+    df_filtrado = df[df['Causa'] == diccionario_causas_au[12]]
+
+    # Agrupar los datos por fecha para cada grupo de interés epidemiológico
+    df_menores_1 = df_filtrado.groupby('fecha')['Menores_1'].sum().reset_index()
+    df_65_y_mas = df_filtrado.groupby('fecha')['De_65_y_mas'].sum().reset_index()
+
+    # Crear la figura del gráfico
+    fig = go.Figure()
+
+    # Agregar las barras para cada grupo de interés epidemiológico
+    fig.add_trace(go.Bar(
+        x=df_menores_1['fecha'], y=df_menores_1['Menores_1'],
+        name='Menores_1',
+        marker=dict(color='cyan')
+    ))
+
+    fig.add_trace(go.Bar(
+        x=df_65_y_mas['fecha'], y=df_65_y_mas['De_65_y_mas'],
+        name='De_65_y_mas',
+        marker=dict(color='green')
+    ))
+
+    # Configurar alertas de temperatura
+    df_temp['alerta'] = 'Sin Alerta'
+    df_temp['mes'] = df_temp['date'].dt.month
+    df_temp.loc[df_temp['mes'].isin([11, 12, 1, 2, 3]), 'alerta'] = 'Alerta temprana preventiva'
+    df_temp.loc[df_temp['t_max'] >= 40, 'alerta'] = 'Alerta Roja'
+    df_temp['alerta_temporal'] = df_temp['t_max'] >= 34
+    df_temp['alerta_consecutiva'] = df_temp['alerta_temporal'].rolling(window=2).sum()
+    df_temp.loc[df_temp['alerta_consecutiva'] >= 2, 'alerta'] = 'Alerta Amarilla'
+    df_temp['alerta_consecutiva_3'] = df_temp['alerta_temporal'].rolling(window=3).sum()
+    df_temp.loc[df_temp['alerta_consecutiva_3'] >= 3, 'alerta'] = 'Alerta Roja'
+
+    # Agregar las trazas de temperatura máxima (eje Y2)
+    fig.add_trace(go.Scatter(
+        x=df_temp['date'], y=df_temp['t_max'],
+        mode='lines',
+        name='Temperatura Máxima',
+        line=dict(color='red'),
+        yaxis='y2'
+    ))
+
+    # Agregar los marcadores de alertas (eje Y2)
+    color_map = {
+        'Sin Alerta': 'blue',
+        'Alerta temprana preventiva': 'green',
+        'Alerta Amarilla': 'yellow',
+        'Alerta Roja': 'red'
+    }
+
+    for alerta, color in color_map.items():
+        df_alerta = df_temp[df_temp['alerta'] == alerta]
+        fig.add_trace(go.Scatter(
+            x=df_alerta['date'],
+            y=df_alerta['t_max'],
+            mode='markers',
+            name=f'Alerta: {alerta}',
+            marker=dict(color=color),
+            yaxis='y2'
+        ))
+
+    # Configurar el diseño del gráfico
+    fig.update_layout(
+        title=title,
+        xaxis_title='Fecha',
+        yaxis_title='Cantidad de Consultas',
+        barmode='stack',
+        template='plotly_white',
+        yaxis2=dict(
+            title='Temperatura Máxima',
+            overlaying='y',
+            side='right'
+        ),
+        legend=dict(
+            title='Grupos Etario de interés',
+            orientation="h",  # Leyenda horizontal
+            yanchor="top",    # Alinear la parte superior de la leyenda
+            y=-0.2,           # Posicionar debajo del gráfico
+            xanchor="center", # Centrar horizontalmente
+            x=0.5             # Ubicación horizontal central
+        )
+    )
+
+    return fig
+
 def grafico_porcentaje_total(df, df_temp, col, title):
     # Filtrar datos por causas específicas y calcular el total general de atenciones de urgencia
     df_total_urgencias = df[df['Causa'] == 'Atenciones de urgencia - Total'].groupby('fecha')[col].sum().reset_index()
@@ -550,11 +753,11 @@ fig_porcentaje_atenciones_total = grafico_porcentaje_total(
 )
 
 fig_total_grupo_etario = grafico_total_grupo_etario(
-    df_au, 'Consultas de Urgencia por Grupos Etarios del Sistema Circulatorio'
+    df_au,df_tmm, 'Consultas de Urgencia por Grupos Etarios del Sistema Circulatorio'
 )
 
 fig_grupos_interes_epidemiologico = grafico_grupos_interes_epidemiologico(
-    df_au, 'Consultas de Urgencia en Grupos de Interés Epidemiológico'
+    df_au,df_tmm, 'Consultas de Urgencia en Grupos de Interés Epidemiológico'
 )
 # Renderizar los gráficos en la aplicación
 st.write("## Evolución de cantidad Atenciones de Urgencia por Sistema Circulatorio")
