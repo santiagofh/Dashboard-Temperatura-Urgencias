@@ -29,6 +29,7 @@ df_eh_rm['CARDIOVASCULAR'] = df_eh_rm['DIAG1'].str.startswith('I', na=False)
 df_eh_rm.loc[df_eh_rm['TIPO_EDAD'].isin([2, 3, 4]), 'EDAD_CANT'] = 0
 df_eh_rm['MAYOR_80'] = df_eh_rm['EDAD_CANT'] >= 80
 df_eh_rm['MENOR_1'] = df_eh_rm['EDAD_CANT'] < 1
+df_eh_rm_2024 = df_eh_rm[df_eh_rm['date_ingreso'] < '2025-01-01']
 # %%
-df_eh_rm.to_csv(r'data_egresos/eh_2024.csv', index=False, encoding='LATIN')
+df_eh_rm_2024.to_csv(r'data_egresos/eh_2024.csv', index=False, encoding='LATIN')
 # %%
