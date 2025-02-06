@@ -3,9 +3,10 @@
 Página de Atenciones de Urgencia y Temperatura en el Sistema Circulatorio
 
 Esta aplicación permite visualizar diversos gráficos que relacionan las atenciones de urgencia 
-(con diferentes causas) con la evolución de la temperatura máxima. Cada gráfico incluye una breve 
-explicación y un botón para descargar (en Excel) los datos utilizados en su construcción. 
-Al final se ofrece la opción de descargar la base completa de datos en formato CSV.
+(con diferentes causas) con la evolución de la temperatura máxima. Cada sección incluye una breve 
+explicación, el gráfico interactivo, y una tabla que muestra la información de los últimos 10 días 
+utilizados en el gráfico, con la opción de descargar los datos en Excel. Al final se ofrece la opción 
+de descargar las bases completas en formato CSV.
 """
 
 # %% 1. Importar librerías y definir funciones auxiliares
@@ -17,6 +18,16 @@ import pydeck as pdk
 from io import BytesIO
 import datetime
 import numpy as np
+# Función para convertir un DataFrame a Excel (en bytes)
+def to_excel_bytes(df: pd.DataFrame) -> bytes:
+    output = BytesIO()
+    with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+        df.to_excel(writer, index=False, sheet_name='Datos')
+    return output.getvalue()
+
+# Función para convertir un DataFrame a CSV (en bytes) para las bases completas
+def df_to_csv_bytes(df: pd.DataFrame) -> bytes:
+    return df.to_csv(index=False, sep=';', decimal=',', encoding='utf-8').encode('utf-8')
 
 # --- Definición de paletas de colores profesionales ---
 
@@ -49,17 +60,6 @@ colors_grupo_etario = {
     'De_15_a_64': '#6BAED6',
     'De_65_y_mas': '#9ECAE1'
 }
-
-# Función auxiliar para convertir un DataFrame a Excel en formato bytes
-def to_excel_bytes(df: pd.DataFrame) -> bytes:
-    output = BytesIO()
-    with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
-        df.to_excel(writer, index=False, sheet_name='Datos')
-    return output.getvalue()
-
-# Función auxiliar para convertir un DataFrame a CSV en formato bytes (para bases completas)
-def df_to_csv_bytes(df: pd.DataFrame) -> bytes:
-    return df.to_csv(index=False, sep=';', decimal=',', encoding='utf-8').encode('utf-8')
 
 # %% 2. Configuración del Sidebar y carga de datos
 
@@ -102,7 +102,7 @@ diccionario_causas_au = {
     16: 'Atenciones de urgencia - Arritmia grave',
     17: 'Atenciones de urgencia - Otras causas circulatorias',
     25: 'Hospitalizaciones - Total',
-    22: 'Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO',
+    22: 'Hospitalizaciones - CAUSAS SISTEMA CIRCUlATORIO',
 }
 
 # %% 3. Definición de funciones para crear gráficos y bases de datos combinadas
@@ -167,14 +167,13 @@ def grafico_area_atenciones_respiratorias(df_au, df_temp, col, title):
     fig.add_trace(go.Scatter(x=df_temp['date'], y=df_temp['t_max'],
                              mode='lines', name='Temperatura Máxima',
                              line=dict(color=color_temperatura), yaxis='y2'))
-    # Agregar marcadores de alertas usando la paleta de alertas
+    # Agregar marcadores de alertas usando la paleta de alerta
     for alerta, color in colors_alerta.items():
         df_alerta = df_temp[df_temp['alerta'] == alerta]
         fig.add_trace(go.Scatter(x=df_alerta['date'], y=df_alerta['t_max'],
                                  mode='markers', name=f'Alerta: {alerta}',
                                  marker=dict(color=color), yaxis='y2'))
 
-    # Configurar diseño del gráfico
     fig.update_layout(
         title=title,
         xaxis_title='Fecha',
@@ -184,7 +183,7 @@ def grafico_area_atenciones_respiratorias(df_au, df_temp, col, title):
         legend=dict(orientation="h", yanchor="top", y=-0.2, xanchor="center", x=0.5)
     )
 
-    # Crear base combinada para descarga
+    # Crear base combinada para descarga (todos los datos usados en el gráfico)
     df_base = pd.DataFrame({
         'Fecha': df_tota_sc['fecha'],
         'Total Sistema Circulatorio': df_tota_sc[col],
@@ -270,7 +269,6 @@ def grafico_porcentaje_atenciones(df, df_temp, col, title):
         template='plotly_white',
         legend=dict(orientation="h", yanchor="top", y=-0.2, xanchor="center", x=0.5)
     )
-    # Base combinada para descarga
     df_base = pd.DataFrame({
         'Fecha': porcentajes['fecha'],
         'Infarto agudo miocardio (%)': porcentajes['Infarto agudo miocardio (%)'],
@@ -344,7 +342,6 @@ def grafico_total_grupo_etario(df, df_temp, title):
         yaxis2=dict(title='Temperatura Máxima', overlaying='y', side='right'),
         legend=dict(title='Grupos Etarios', orientation="h", yanchor="top", y=-0.2, xanchor="center", x=0.5)
     )
-    # Base para descarga
     df_base = pd.DataFrame({
         'Fecha': df_total['fecha'],
         'Total': df_total['Total'],
@@ -433,7 +430,6 @@ def grafico_porcentaje_total(df, df_temp, col, title):
 
     porcentajes = pd.DataFrame()
     porcentajes['fecha'] = df_total_urgencias['fecha']
-    porcentajes['Sistema Circulatorio (%)'] = (df_total_sc[col] / df_total_urgencias[col]) * 100
     porcentajes['Infarto agudo miocardio (%)'] = (df_infarto[col] / df_total_urgencias[col]) * 100
     porcentajes['Accidente vascular encefálico (%)'] = (df_accidente[col] / df_total_urgencias[col]) * 100
     porcentajes['Crisis hipertensiva (%)'] = (df_crisis[col] / df_total_urgencias[col]) * 100
@@ -497,20 +493,28 @@ def grafico_porcentaje_total(df, df_temp, col, title):
 # %% 4. Construcción de la aplicación principal y renderización de gráficos
 
 st.title("Análisis de Atenciones de Urgencia y Temperatura en el Sistema Circulatorio")
-st.write("Esta página permite analizar la evolución de las atenciones de urgencia en el sistema circulatorio y su relación con la temperatura máxima. Cada sección incluye una explicación y la posibilidad de descargar los datos utilizados en cada gráfico en formato Excel.")
+st.write("Esta página permite analizar la evolución de las atenciones de urgencia y su relación con la temperatura máxima. Cada sección incluye una explicación, el gráfico interactivo, y una tabla con los datos de los últimos 10 días, con opción de descargar los datos en Excel.")
 
-# 1. Evolución de Atenciones de Urgencia por Sistema Circulatorio
+### Gráfico 1: Evolución de Atenciones de Urgencia
 st.header("Evolución de Atenciones de Urgencia en el Sistema Circulatorio")
 st.markdown(
     """
     **Descripción:**  
-    Este gráfico muestra la evolución temporal de las atenciones de urgencia relacionadas con el sistema circulatorio, desglosadas por causa (infarto, accidente, crisis, arritmia y otras).  
-    Además, se superpone la serie de temperatura máxima, en la que se visualizan los distintos estados de alerta.
+    Este gráfico muestra la evolución temporal de las atenciones de urgencia (desglosadas por causa) y la serie de temperatura máxima (con alertas) dentro del rango de fechas seleccionado.
     """
 )
-fig_area, base_area = grafico_area_atenciones_respiratorias(df_au, df_tmm, 'Total',
-                                                             'Evolución de Atenciones de Urgencia en el Sistema Circulatorio')
-st.plotly_chart(fig_area, use_container_width=True)
+fig1, base_area = grafico_area_atenciones_respiratorias(df_au, df_tmm, 'Total',
+                                                        'Evolución de Atenciones de Urgencia en el Sistema Circulatorio')
+st.plotly_chart(fig1, use_container_width=True)
+st.markdown("**Tabla: Últimos 10 días (Defunciones Cardiovasculares)**")
+table1 = base_area.sort_values(by='Fecha').tail(10)
+st.table(table1)
+st.download_button(
+    label="Descargar Tabla (Excel)",
+    data=to_excel_bytes(table1),
+    file_name="tabla_area_atenciones_urgencia.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+)
 st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
 st.download_button(
     label="Descargar Datos (Excel)",
@@ -519,18 +523,27 @@ st.download_button(
     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 )
 
-# 2. Porcentaje de Atenciones de Urgencia por Causa en el Sistema Circulatorio
-st.header("Porcentaje de Atenciones de Urgencia por Causa en el Sistema Circulatorio")
+### Gráfico 2: Porcentaje de Atenciones de Urgencia
+st.header("Porcentaje de Atenciones de Urgencia por Causa")
 st.markdown(
     """
     **Descripción:**  
-    Este gráfico presenta el porcentaje diario de atenciones de urgencia por causa (infarto, accidente, crisis, arritmia y otras) en relación al total de atenciones del sistema circulatorio.  
-    Se incluye también la serie de temperatura máxima con sus respectivas alertas.
+    Este gráfico presenta el porcentaje diario de atenciones de urgencia (por causa) respecto al total, 
+    junto con la serie de temperatura máxima (y sus alertas) para complementar el análisis.
     """
 )
-fig_porcentaje, base_porcentaje = grafico_porcentaje_atenciones(df_au, df_tmm, 'Total',
-                                                                'Porcentaje de Atenciones de Urgencia por Causa')
-st.plotly_chart(fig_porcentaje, use_container_width=True)
+fig2, base_porcentaje = grafico_porcentaje_atenciones(df_au, df_tmm, 'Total',
+                                                      'Porcentaje de Atenciones de Urgencia por Causa')
+st.plotly_chart(fig2, use_container_width=True)
+st.markdown("**Tabla: Últimos 10 días (Porcentaje de Atenciones)**")
+table2 = base_porcentaje.sort_values(by='Fecha').tail(10)
+st.table(table2)
+st.download_button(
+    label="Descargar Tabla (Excel)",
+    data=to_excel_bytes(table2),
+    file_name="tabla_porcentaje_atenciones.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+)
 st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
 st.download_button(
     label="Descargar Datos (Excel)",
@@ -539,64 +552,62 @@ st.download_button(
     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 )
 
-# 3. Porcentaje de Atenciones de Urgencia en Relación al Total General
-st.header("Porcentaje de Atenciones de Urgencia (Causas Circulatorias) respecto al Total General")
+### Gráfico 3: Atenciones por Grupo de Edad
+st.header("Atenciones de Urgencia por Grupo de Edad")
 st.markdown(
     """
     **Descripción:**  
-    Este gráfico muestra el porcentaje que representan las atenciones de urgencia de causas del sistema circulatorio (infarto, accidente, etc.) en relación al total general de atenciones de urgencia.
-    Se superpone la serie de temperatura máxima (con alertas) para complementar el análisis.
+    Este gráfico muestra la distribución diaria de atenciones de urgencia por grupo de edad 
+    (clasificados como **< 1 año**, **>= 85 años** y **Otros**), superponiendo la serie de temperatura máxima (y alertas) en un eje secundario.
     """
 )
-fig_porcentaje_total, base_porcentaje_total = grafico_porcentaje_total(df_au, df_tmm, 'Total',
-                                                                      'Porcentaje de Atenciones de Urgencia por Causa (Total General)')
-st.plotly_chart(fig_porcentaje_total, use_container_width=True)
+fig3, base_grupo = grafico_total_grupo_etario(df_au, df_tmm,
+                                              'Consultas de Urgencia por Grupos Etarios del Sistema Circulatorio')
+st.plotly_chart(fig3, use_container_width=True)
+st.markdown("**Tabla: Últimos 10 días (Atenciones por Grupo de Edad)**")
+table3 = base_grupo.sort_values(by='Fecha').tail(10)
+st.table(table3)
+st.download_button(
+    label="Descargar Tabla (Excel)",
+    data=to_excel_bytes(table3),
+    file_name="tabla_atenciones_por_grupo.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+)
 st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
 st.download_button(
     label="Descargar Datos (Excel)",
-    data=to_excel_bytes(base_porcentaje_total),
-    file_name="datos_porcentaje_total_atenciones.xlsx",
+    data=to_excel_bytes(base_grupo),
+    file_name="datos_atenciones_por_grupo.xlsx",
     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 )
 
-# 4. Consultas de Urgencia por Grupos Etarios en el Sistema Circulatorio
-st.header("Consultas de Urgencia por Grupos Etarios")
+### Gráfico 4: Porcentaje de Atenciones por Grupo de Edad
+st.header("Porcentaje de Atenciones por Grupo de Edad")
 st.markdown(
     """
     **Descripción:**  
-    Este gráfico representa la distribución de las consultas de urgencia en el sistema circulatorio según distintos grupos etarios.  
-    Se muestra la tendencia total (línea azul) y la contribución de cada grupo (barras).  
-    Además, se superpone la serie de temperatura máxima (con alertas) en un eje secundario.
+    Este gráfico presenta el porcentaje diario de atenciones de urgencia por grupo de edad 
+    (comparando **< 1 año**, **>= 85 años** y **Otros**) respecto al total diario, 
+    con la serie de temperatura máxima (y alertas) superpuesta en un eje secundario.
     """
 )
-fig_grupo_etario, base_grupo_etario = grafico_total_grupo_etario(df_au, df_tmm,
-                                                                'Consultas de Urgencia por Grupos Etarios del Sistema Circulatorio')
-st.plotly_chart(fig_grupo_etario, use_container_width=True)
-st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
+fig4, base_porcentaje_grupo = grafico_porcentaje_total(df_au, df_tmm, 'Total',
+                                                       'Porcentaje de Atenciones por Causa (Total General)')
+st.plotly_chart(fig4, use_container_width=True)
+st.markdown("**Tabla: Últimos 10 días (Porcentaje de Atenciones por Grupo de Edad)**")
+table4 = base_porcentaje_grupo.sort_values(by='Fecha').tail(10)
+st.table(table4)
 st.download_button(
-    label="Descargar Datos (Excel)",
-    data=to_excel_bytes(base_grupo_etario),
-    file_name="datos_grupo_etario_atenciones.xlsx",
+    label="Descargar Tabla (Excel)",
+    data=to_excel_bytes(table4),
+    file_name="tabla_porcentaje_atenciones_por_grupo.xlsx",
     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 )
-
-# 5. Consultas de Urgencia en Grupos de Interés Epidemiológico
-st.header("Consultas de Urgencia en Grupos de Interés Epidemiológico")
-st.markdown(
-    """
-    **Descripción:**  
-    Este gráfico ilustra la cantidad de consultas de urgencia para grupos clave de interés epidemiológico: menores de 1 año y adultos mayores (De_65_y_mas).  
-    Se superpone la serie de temperatura máxima (con alertas) en un eje secundario.
-    """
-)
-fig_grupo_interes, base_grupo_interes = grafico_grupos_interes_epidemiologico(df_au, df_tmm,
-                                                                              'Consultas de Urgencia en Grupos de Interés Epidemiológico')
-st.plotly_chart(fig_grupo_interes, use_container_width=True)
 st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
 st.download_button(
     label="Descargar Datos (Excel)",
-    data=to_excel_bytes(base_grupo_interes),
-    file_name="datos_grupos_interes_epidemiologico.xlsx",
+    data=to_excel_bytes(base_porcentaje_grupo),
+    file_name="datos_porcentaje_atenciones_por_grupo.xlsx",
     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 )
 
@@ -608,21 +619,19 @@ st.markdown(
     A continuación, puedes descargar los archivos CSV originales que contienen toda la información utilizada en este análisis.
     """
 )
-# Descargar base de atenciones de urgencia
 with open("data_atenciones_urgencia/df_rm_circ_2024.csv", "rb") as file_au:
-    data_au = file_au.read()
+    data_au_csv = file_au.read()
 st.download_button(
     label="Descargar Base de Atenciones de Urgencia (CSV)",
-    data=data_au,
+    data=data_au_csv,
     file_name="df_rm_circ_2024.csv",
     mime="text/csv"
 )
-# Descargar base de temperaturas
 with open("data_temperatura/tmm_historico_2024.csv", "rb") as file_tmm:
-    data_tmm = file_tmm.read()
+    data_tmm_csv = file_tmm.read()
 st.download_button(
     label="Descargar Base de Temperaturas (CSV)",
-    data=data_tmm,
+    data=data_tmm_csv,
     file_name="tmm_historico_2024.csv",
     mime="text/csv"
 )

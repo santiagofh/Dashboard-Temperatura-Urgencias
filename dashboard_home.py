@@ -1,18 +1,17 @@
 import streamlit as st
 from datetime import datetime
-
+st.set_page_config(layout="wide")
 # Cargar imágenes y logotipos
 st.image('img/seremi-100-años.png', width=300)
 logo_horizontal = 'img/horizontal_SEREMIRM_blue.png'
 logo_icono = 'img/icon_SEREMIRM.png'
 st.logo(logo_horizontal, icon_image=logo_icono)
-
 # Función de la página de inicio
 def home():
-    st.markdown('# Bienvenido a la Plataforma de Monitoreo de temperatura extrema')
+    st.markdown('# Bienvenido al visor de Monitoreo de temperatura extrema de la RM')
     st.write(
         """
-        Este dashboar/visor está diseñada para brindar información actualizada sobre **temperaturas extremas** y sus posibles impactos en la salud de la Región Metropolitana.
+        Este dashboar/visor está diseñada para dar información actualizada sobre **temperaturas extremas** y sus posibles impactos en la salud de la Región Metropolitana.
         
         ### ¿Cómo utilizar?
         
@@ -26,8 +25,6 @@ def home():
         - **Plataforma territorial**
             - Enlace externo para la Plataforma territorial de monitoreo de calor extremo
             - Enlace externo para el Mapa botón rojo
-        
-        Utiliza el menú de navegación (ubicado en la parte lateral) para desplazarte entre las diferentes secciones. Cada sección contiene visualizaciones y datos interactivos que permitirán explorar en detalle la información.
         """
     )
 
@@ -58,6 +55,8 @@ pages = {
         st.Page("dashboard_atenciones_urgencia.py", title="Atenciones de urgencias", icon=":material/public:"),
         st.Page("dashboard_defunciones.py", title="Defunciones", icon=":material/public:"),
         # st.Page("dashboard_egresos.py", title="Egresos Hospitalarios", icon=":material/public:"),
+            ],
+    "Vigilancia de notificaciones":[
         st.Page(external_link, title="Vigilancia de notificaciones", icon=":material/link:")
     ],
     "Visor Territorial":[

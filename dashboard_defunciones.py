@@ -9,6 +9,7 @@ y superpone la serie de temperatura máxima con la clasificación de alertas (se
 Cada sección incluye:
   - Un título y una breve explicación.
   - El gráfico interactivo.
+  - Una tabla que muestra los datos de los últimos 10 días usados en el gráfico.
   - Un botón para descargar (en Excel) los datos utilizados en el gráfico.
 Al final se ofrecen botones para descargar las bases completas en formato CSV.
 """
@@ -109,7 +110,7 @@ df_temp.loc[df_temp['alerta_consecutiva'] >= 2, 'alerta'] = 'Alerta Amarilla'
 df_temp['alerta_consecutiva_3'] = df_temp['alerta_temporal'].rolling(window=3).sum()
 df_temp.loc[df_temp['alerta_consecutiva_3'] >= 3, 'alerta'] = 'Alerta Roja'
 
-# %% 3. Creación de Gráficos
+# %% 3. Creación de Gráficos y bases de datos
 
 ## Gráfico 1: Cantidad diaria de defunciones cardiovasculares
 daily_cardiovascular = filtered_data[filtered_data['CARDIOVASCULAR']].groupby('DATE').size().reset_index(name='CARDIOVASCULAR')
@@ -119,7 +120,6 @@ total_deaths = filtered_data.groupby('DATE').size().reset_index(name='Total')
 daily_cardiovascular_perc = daily_cardiovascular.copy()
 merged_data = pd.merge(total_deaths, daily_cardiovascular_perc, on='DATE', how='left').fillna(0)
 merged_data['Porcentaje'] = (merged_data['CARDIOVASCULAR'] / merged_data['Total']) * 100
-# Agregar Temperatura a la base (usando el valor más cercano)
 merged_data['Temperatura Máxima'] = df_temp.set_index('date').reindex(merged_data['DATE'], method='nearest')['t_max'].values
 
 ## Gráfico 3: Cantidad diaria de defunciones cardiovasculares por grupo de edad
@@ -133,7 +133,7 @@ merged_by_age = pd.merge(total_by_date, daily_by_age, on='DATE', how='left').fil
 merged_by_age['Porcentaje'] = (merged_by_age['CARDIOVASCULAR'] / merged_by_age['Total']) * 100
 merged_by_age['Temperatura Máxima'] = df_temp.set_index('date').reindex(merged_by_age['DATE'], method='nearest')['t_max'].values
 
-# %% 4. Renderización de Gráficos y Botones de Descarga
+# %% 4. Renderización de Gráficos, Tablas y Botones de Descarga
 
 ### Gráfico 1: Cantidad diaria de defunciones cardiovasculares + Temperatura y Alertas
 st.write("## Cantidad diaria de defunciones cardiovasculares")
@@ -152,16 +152,12 @@ fig1 = px.line(
     labels={'DATE': 'Fecha', 'CARDIOVASCULAR': 'Cantidad de defunciones'},
     template='plotly_white'
 )
-# Actualizar la traza de defunciones con el color definido
 fig1.update_traces(line_color=colors_def['Cardiovascular'])
-
-# Agregar la serie de Temperatura Máxima en eje secundario
 fig1.add_trace(go.Scatter(
     x=df_temp['date'], y=df_temp['t_max'],
     mode='lines', name='Temperatura Máxima',
     line=dict(color=color_temperatura), yaxis='y2'
 ))
-# Agregar marcadores para las alertas
 for alerta, color in colors_alerta.items():
     df_alerta = df_temp[df_temp['alerta'] == alerta]
     fig1.add_trace(go.Scatter(
@@ -173,6 +169,17 @@ fig1.update_layout(
     yaxis2=dict(title='Temperatura Máxima', overlaying='y', side='right')
 )
 st.plotly_chart(fig1, use_container_width=True)
+
+# Tabla 1: Últimos 10 días de defunciones cardiovasculares (Gráfico 1)
+table1 = daily_cardiovascular.sort_values(by='DATE').tail(10)
+st.write("### Tabla: Últimos 10 días (Defunciones Cardiovasculares)")
+st.table(table1)
+st.download_button(
+    label="Descargar Tabla (Excel)",
+    data=to_excel_bytes(table1),
+    file_name="tabla_defunciones_cardiovasculares.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+)
 st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
 st.download_button(
     label="Descargar Datos (Excel)",
@@ -199,7 +206,6 @@ fig2 = px.line(
     template='plotly_white'
 )
 fig2.update_traces(line_color=colors_def['Cardiovascular'])
-# Agregar Temperatura en eje secundario
 fig2.add_trace(go.Scatter(
     x=df_temp['date'], y=df_temp['t_max'],
     mode='lines', name='Temperatura Máxima',
@@ -216,6 +222,17 @@ fig2.update_layout(
     yaxis2=dict(title='Temperatura Máxima', overlaying='y', side='right')
 )
 st.plotly_chart(fig2, use_container_width=True)
+
+# Tabla 2: Últimos 10 días (Porcentaje de defunciones cardiovasculares)
+table2 = merged_data.sort_values(by='DATE').tail(10)
+st.write("### Tabla: Últimos 10 días (Porcentaje de Defunciones Cardiovasculares)")
+st.table(table2)
+st.download_button(
+    label="Descargar Tabla (Excel)",
+    data=to_excel_bytes(table2),
+    file_name="tabla_porcentaje_defunciones.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+)
 st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
 st.download_button(
     label="Descargar Datos (Excel)",
@@ -246,7 +263,6 @@ fig3 = px.line(
     template='plotly_white',
     color_discrete_map=colors_age
 )
-# Agregar Temperatura en eje secundario
 fig3.add_trace(go.Scatter(
     x=df_temp['date'], y=df_temp['t_max'],
     mode='lines', name='Temperatura Máxima',
@@ -263,6 +279,17 @@ fig3.update_layout(
     yaxis2=dict(title='Temperatura Máxima', overlaying='y', side='right')
 )
 st.plotly_chart(fig3, use_container_width=True)
+
+# Tabla 3: Últimos 10 días (Defunciones por grupo de edad)
+table3 = daily_by_age.sort_values(by='DATE').tail(10)
+st.write("### Tabla: Últimos 10 días (Defunciones por Grupo de Edad)")
+st.table(table3)
+st.download_button(
+    label="Descargar Tabla (Excel)",
+    data=to_excel_bytes(table3),
+    file_name="tabla_defunciones_por_grupo_edad.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+)
 st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
 st.download_button(
     label="Descargar Datos (Excel)",
@@ -307,6 +334,17 @@ fig4.update_layout(
     yaxis2=dict(title='Temperatura Máxima', overlaying='y', side='right')
 )
 st.plotly_chart(fig4, use_container_width=True)
+
+# Tabla 4: Últimos 10 días (Porcentaje de defunciones por grupo de edad)
+table4 = merged_by_age.sort_values(by='DATE').tail(10)
+st.write("### Tabla: Últimos 10 días (Porcentaje de Defunciones por Grupo de Edad)")
+st.table(table4)
+st.download_button(
+    label="Descargar Tabla (Excel)",
+    data=to_excel_bytes(table4),
+    file_name="tabla_porcentaje_defunciones_por_grupo.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+)
 st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
 st.download_button(
     label="Descargar Datos (Excel)",
@@ -320,7 +358,7 @@ st.write("## Descargar Bases de Datos Completas")
 st.markdown(
     """
     **Bases de Datos Completas:**  
-    A continuación, puedes descargar el archivo CSV original que contiene toda la información de defunciones.
+    A continuación, puedes descargar los archivos CSV originales que contienen toda la información.
     """
 )
 with open(path_def, "rb") as f:
@@ -329,5 +367,13 @@ st.download_button(
     label="Descargar Base de Defunciones (CSV)",
     data=base_defunciones,
     file_name="defunciones_2024.csv",
+    mime="text/csv"
+)
+with open("data_temperatura/tmm_historico_2024.csv", "rb") as f_temp:
+    base_temp = f_temp.read()
+st.download_button(
+    label="Descargar Base de Temperaturas (CSV)",
+    data=base_temp,
+    file_name="tmm_historico_2024.csv",
     mime="text/csv"
 )
