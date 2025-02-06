@@ -21,12 +21,11 @@ def home():
             - Alertas de temperatura
             - Atenciones de urgencias
             - Defunciones
-            - Enlace externo para la sección de Vigilancia
+        - **Vigilancia de notificaciones**
+            - Enlace externo para la sección de Vigilancia de notificaciones de personas afectadas por temperaturas
+        - **Plataforma territorial**
             - Enlace externo para la Plataforma territorial de monitoreo de calor extremo
-            - Enlace externo para el MAPA BOTÓN ROJO (RIESGO INCENDIOS FORESTALES) Y PRONOSTICO DE TEMPERATURA SEMANAL
-        - **Corredores endemicos**: Visualiza datos combinados para análisis en:
-            - Corredor endémico en menores de 1 año
-            - Corredor endémico en mayores de 80 años
+            - Enlace externo para el Mapa botón rojo
         
         Utiliza el menú de navegación (ubicado en la parte lateral) para desplazarte entre las diferentes secciones. Cada sección contiene visualizaciones y datos interactivos que permitirán explorar en detalle la información.
         """
@@ -34,7 +33,7 @@ def home():
 
 # Función para la página del enlace externo
 def external_link():
-    st.markdown("### Alertas y Atenciones de Urgencias")
+    st.markdown("### Vigilancia de notificaciones de personas afectadas por temperaturas extremas")
     st.write("Haga clic en el siguiente enlace para acceder al dashboard:")
     url = "https://lookerstudio.google.com/u/0/reporting/0307c04c-870f-4a62-83e3-bb015ed63136/page/SSDdE"
     st.markdown(f"[Ir al Dashboard Looker Studio]({url})", unsafe_allow_html=True)
@@ -59,14 +58,18 @@ pages = {
         st.Page("dashboard_atenciones_urgencia.py", title="Atenciones de urgencias", icon=":material/public:"),
         st.Page("dashboard_defunciones.py", title="Defunciones", icon=":material/public:"),
         # st.Page("dashboard_egresos.py", title="Egresos Hospitalarios", icon=":material/public:"),
-        st.Page(external_link, title="Enlace externo: Vigilancia de ", icon=":material/link:"),
-        st.Page(external_link2, title="Enlace externo: Plataforma territorial de monitoreo de calor extremo en la RM", icon=":material/link:"),
-        st.Page(external_link3, title="Enlace externo: Mapa calor extremo, pronostico temperatura semanal", icon=":material/link:")
+        st.Page(external_link, title="Vigilancia de notificaciones", icon=":material/link:")
     ],
-    "Graficos combinados":[
-        st.Page("dashboard_corredor_endemico_menor01.py", title="Corredor endemico menores de 1", icon=":material/public:"),
-        st.Page("dashboard_corredor_endemico_mayor80.py", title="Corredor endemico mayores de 80", icon=":material/public:")
-    ]
+    "Visor Territorial":[
+        st.Page(external_link2, title="Plataforma territorial de monitoreo de calor extremo en la RM", icon=":material/link:"),
+        st.Page(external_link3, title="Mapa calor extremo, pronostico temperatura semanal", icon=":material/link:")
+
+    ],
+
+    # "Graficos combinados":[
+    #     st.Page("dashboard_corredor_endemico_menor01.py", title="Corredor endemico menores de 1", icon=":material/public:"),
+    #     st.Page("dashboard_corredor_endemico_mayor80.py", title="Corredor endemico mayores de 80", icon=":material/public:")
+    # ]
 }
 
 # Navegación entre páginas
