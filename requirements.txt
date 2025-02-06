@@ -5,3 +5,4 @@ plotly
 plotly.express
 pydeck
 openpyxl
+xlsxwriter
