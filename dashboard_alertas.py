@@ -155,7 +155,12 @@ def grafico_alertas_seremi(df: pd.DataFrame):
     fig = px.line(df_alertas, x="date", y="t_max",
                   title="Temperaturas Máximas y Alertas - SEREMI",
                   color_discrete_sequence=["grey"])
-    
+    fig.add_hline(y=34, line_dash="dot", line_color="yellow",
+                  annotation_text="35°C", annotation_position="bottom right")
+    fig.add_hline(y=40, line_dash="dot", line_color="red",
+                  annotation_text="40°C", annotation_position="bottom right")
+    fig.add_hline(y=30, line_dash="dot", line_color="green",
+                  annotation_text="30°C", annotation_position="bottom right")
     for alerta, color in color_map.items():
         df_temp = df_alertas[df_alertas["alerta"] == alerta]
         fig.add_scatter(x=df_temp["date"], y=df_temp["t_max"],
@@ -225,46 +230,46 @@ st.title("SEREMI RM - Análisis Exploratorio de Datos de Temperaturas Extremas")
 st.write("Esta aplicación permite analizar y visualizar la evolución de las temperaturas máximas diarias en la Región Metropolitana, junto con la clasificación de alertas según criterios definidos.")
 
 # --- Sección 1: Gráfico y Tabla SENAPRED ---
-st.header("Días con Alertas **SENAPRED**")
-st.markdown(
-    """
-    **Gráfico SENAPRED:**  
-    Este gráfico muestra la evolución de las temperaturas máximas diarias, incluyendo líneas de referencia en 30°C, 34°C y 40°C.
-    Se destacan los días en los que la temperatura se encuentra en diferentes rangos:
-    - **Verde:** 30°C ≤ t_max < 34°C  
-    - **Amarillo:** 34°C ≤ t_max < 40°C  
-    - **Rojo:** t_max ≥ 40°C
-    """
-)
-fig_senapred = grafico_alertas_senapred(df)
-st.plotly_chart(fig_senapred, use_container_width=True)
+# st.header("Días con Alertas **SENAPRED**")
+# st.markdown(
+#     """
+#     **Gráfico SENAPRED:**  
+#     Este gráfico muestra la evolución de las temperaturas máximas diarias, incluyendo líneas de referencia en 30°C, 34°C y 40°C.
+#     Se destacan los días en los que la temperatura se encuentra en diferentes rangos:
+#     - **Verde:** 30°C ≤ t_max < 34°C  
+#     - **Amarillo:** 34°C ≤ t_max < 40°C  
+#     - **Rojo:** t_max ≥ 40°C
+#     """
+# )
+# fig_senapred = grafico_alertas_senapred(df)
+# st.plotly_chart(fig_senapred, use_container_width=True)
 
-# Botón para descargar los datos utilizados en el gráfico SENAPRED
-df_senapred = df.copy()  # Datos filtrados según fecha
-excel_senapred_data = to_excel(df_senapred)
-st.download_button(
-    label="Descargar datos del gráfico SENAPRED (Excel)",
-    data=excel_senapred_data,
-    file_name="datos_grafico_senapred.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
+# # Botón para descargar los datos utilizados en el gráfico SENAPRED
+# df_senapred = df.copy()  # Datos filtrados según fecha
+# excel_senapred_data = to_excel(df_senapred)
+# st.download_button(
+#     label="Descargar datos del gráfico SENAPRED (Excel)",
+#     data=excel_senapred_data,
+#     file_name="datos_grafico_senapred.xlsx",
+#     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+# )
 
-# Tabla de alertas SENAPRED y botón de descarga de la tabla
+# # Tabla de alertas SENAPRED y botón de descarga de la tabla
 
-with st.expander("Ver tabla"):
-    st.subheader("Tabla de Alertas SENAPRED")
-    tabla_senapred = tabla_alertas_senapred(df)
-    st.table(tabla_senapred)
-    excel_tabla_senapred = to_excel(tabla_senapred)
-    st.download_button(
-        label="Descargar tabla SENAPRED (Excel)",
-        data=excel_tabla_senapred,
-        file_name="tabla_senapred.xlsx",
-        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-    )
+# with st.expander("Ver tabla"):
+#     st.subheader("Tabla de Alertas SENAPRED")
+#     tabla_senapred = tabla_alertas_senapred(df)
+#     st.table(tabla_senapred)
+#     excel_tabla_senapred = to_excel(tabla_senapred)
+#     st.download_button(
+#         label="Descargar tabla SENAPRED (Excel)",
+#         data=excel_tabla_senapred,
+#         file_name="tabla_senapred.xlsx",
+#         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+#     )
 
 # --- Sección 2: Gráfico y Tabla SEREMI ---
-st.header("Días con Alertas **SEREMI**")
+st.header("Días con Alertas **SENAPRED**")
 st.markdown(
     """
     **Gráfico SEREMI:**  
@@ -318,42 +323,42 @@ with st.expander("Ver tabla"):
     )
 
 # --- Sección 3: Gráfico y Tabla Sobre 35°C ---
-st.header("Días con Temperatura **Sobre 35°C**")
-st.markdown(
-    """
-    **Gráfico Sobre 35°C:**  
-    Este gráfico destaca los días en que la temperatura máxima fue igual o superior a 35°C.  
-    Se utiliza:
-    - **Rojo:** Días con temperatura "Sobre 35"  
-    - **Azul:** Días con temperatura "Bajo 35"
-    """
-)
-# Preparar los datos para Sobre 35°C
-df_sobre35 = df.copy()
-df_sobre35["sobre_35"] = df_sobre35["t_max"].apply(lambda x: "Sobre 35" if x >= 35 else "Bajo 35")
-fig_sobre35 = grafico_alertas_sobre35(df)
-st.plotly_chart(fig_sobre35, use_container_width=True)
+# st.header("Días con Temperatura **Sobre 35°C**")
+# st.markdown(
+#     """
+#     **Gráfico Sobre 35°C:**  
+#     Este gráfico destaca los días en que la temperatura máxima fue igual o superior a 35°C.  
+#     Se utiliza:
+#     - **Rojo:** Días con temperatura "Sobre 35"  
+#     - **Azul:** Días con temperatura "Bajo 35"
+#     """
+# )
+# # Preparar los datos para Sobre 35°C
+# df_sobre35 = df.copy()
+# df_sobre35["sobre_35"] = df_sobre35["t_max"].apply(lambda x: "Sobre 35" if x >= 35 else "Bajo 35")
+# fig_sobre35 = grafico_alertas_sobre35(df)
+# st.plotly_chart(fig_sobre35, use_container_width=True)
 
-# Botón para descargar los datos utilizados en el gráfico Sobre 35°C
-excel_sobre35_data = to_excel(df_sobre35)
-st.download_button(
-    label="Descargar datos del gráfico Sobre 35°C (Excel)",
-    data=excel_sobre35_data,
-    file_name="datos_grafico_sobre35.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
+# # Botón para descargar los datos utilizados en el gráfico Sobre 35°C
+# excel_sobre35_data = to_excel(df_sobre35)
+# st.download_button(
+#     label="Descargar datos del gráfico Sobre 35°C (Excel)",
+#     data=excel_sobre35_data,
+#     file_name="datos_grafico_sobre35.xlsx",
+#     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+# )
 
-# Tabla de alertas Sobre 35°C y botón de descarga de la tabla
-with st.expander("Ver tabla"):
-    tabla_sobre35 = tabla_alertas_sobre35(df)
-    st.table(tabla_sobre35)
-    excel_tabla_sobre35 = to_excel(tabla_sobre35)
-    st.download_button(
-        label="Descargar tabla Sobre 35°C (Excel)",
-        data=excel_tabla_sobre35,
-        file_name="tabla_sobre35.xlsx",
-        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-    )
+# # Tabla de alertas Sobre 35°C y botón de descarga de la tabla
+# with st.expander("Ver tabla"):
+#     tabla_sobre35 = tabla_alertas_sobre35(df)
+#     st.table(tabla_sobre35)
+#     excel_tabla_sobre35 = to_excel(tabla_sobre35)
+#     st.download_button(
+#         label="Descargar tabla Sobre 35°C (Excel)",
+#         data=excel_tabla_sobre35,
+#         file_name="tabla_sobre35.xlsx",
+#         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+#     )
 
 # --- Sección Final: Descargar Base Completa ---
 st.header("Descargar Base Completa")
