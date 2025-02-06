@@ -281,7 +281,9 @@ fig3.update_layout(
 st.plotly_chart(fig3, use_container_width=True)
 
 # Tabla 3: Últimos 10 días (Defunciones por grupo de edad)
+daily_by_age = daily_by_age.loc[daily_by_age.Grupo_Edad=='>= 85']
 table3 = daily_by_age.sort_values(by='DATE').tail(10)
+
 st.write("### Tabla: Últimos 10 días (Defunciones por Grupo de Edad)")
 st.table(table3)
 st.download_button(
@@ -336,6 +338,7 @@ fig4.update_layout(
 st.plotly_chart(fig4, use_container_width=True)
 
 # Tabla 4: Últimos 10 días (Porcentaje de defunciones por grupo de edad)
+merged_by_age = merged_by_age.loc[merged_by_age.Grupo_Edad=='>= 85']
 table4 = merged_by_age.sort_values(by='DATE').tail(10)
 st.write("### Tabla: Últimos 10 días (Porcentaje de Defunciones por Grupo de Edad)")
 st.table(table4)
