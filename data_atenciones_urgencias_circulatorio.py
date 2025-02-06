@@ -3,8 +3,8 @@ import pandas as pd
 
 #%%
 # Leer el archivo CSV
-df_2024 = pd.read_csv(r'C:\Users\fariass\OneDrive - SUBSECRETARIA DE SALUD PUBLICA\Escritorio\DATA\ATENCIONES_URGENCIA\archivos_extraidos\AtencionesUrgencia2024.csv', sep=';', encoding='LATIN')
-df_2025 = pd.read_csv(r'C:\Users\fariass\OneDrive - SUBSECRETARIA DE SALUD PUBLICA\Escritorio\DATA\ATENCIONES_URGENCIA\archivos_extraidos\AtencionesUrgencia2025.csv', sep=';', encoding='LATIN')
+df_2024 = pd.read_csv(r'C:\Users\fariass\OneDrive - SUBSECRETARIA DE SALUD PUBLICA\Escritorio\DATA\ATENCIONES_URGENCIA\au_2024\AtencionesUrgencia2024.csv', sep=';', encoding='LATIN')
+df_2025 = pd.read_csv(r'C:\Users\fariass\OneDrive - SUBSECRETARIA DE SALUD PUBLICA\Escritorio\DATA\ATENCIONES_URGENCIA\au_2025\AtencionesUrgencia2025.csv', sep=';', encoding='LATIN')
 #%%
 diccionario_causas = {
     # Trastornos mentales y comportamentales

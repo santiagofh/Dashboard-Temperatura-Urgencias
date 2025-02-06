@@ -9,7 +9,27 @@ st.logo(logo_horizontal, icon_image=logo_icono)
 
 # Función de la página de inicio
 def home():
-    st.markdown('# Región Metropolitana: Temperatura extrema')
+    st.markdown('# Bienvenido a la Plataforma de Monitoreo de temperatura extrema')
+    st.write(
+        """
+        Este dashboar/visor está diseñada para brindar información actualizada sobre **temperaturas extremas** y sus posibles impactos en la salud de la Región Metropolitana.
+        
+        ### ¿Cómo utilizar?
+        
+        - **Inicio**: Aquí encuentras una visión general del proyecto.
+        - **Temperatura extrema**: Accede a dashboards específicos relacionados con:
+            - Alertas de temperatura
+            - Atenciones de urgencias
+            - Defunciones
+            - Egresos hospitalarios
+            - Un enlace externo para la sección de Vigilancia
+        - **Corredores endemicos**: Visualiza datos combinados para análisis en:
+            - Corredor endémico en menores de 1 año
+            - Corredor endémico en mayores de 80 años
+        
+        Utiliza el menú de navegación (ubicado en la parte lateral) para desplazarte entre las diferentes secciones. Cada sección contiene visualizaciones y datos interactivos que permitirán explorar en detalle la información.
+        """
+    )
 
 # Función para la página del enlace externo
 def external_link():
