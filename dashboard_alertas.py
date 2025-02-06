@@ -2,10 +2,11 @@
 """
 Aplicación Streamlit para el análisis exploratorio de datos de temperaturas extremas en la Región Metropolitana.
 Se muestran tres secciones:
-    1. Gráfico SENAPRED: Visualiza las temperaturas máximas diarias con rangos de alerta.
-    2. Gráfico SEREMI: Presenta las temperaturas máximas diarias con los tipos de alerta asignados.
-    3. Gráfico Sobre 35°C: Destaca los días en que la temperatura fue igual o superior a 35°C.
-En cada sección se incluye un botón para descargar la información en formato Excel.
+    1. Gráfico y tabla SENAPRED: Visualiza las temperaturas máximas diarias con rangos de alerta.
+    2. Gráfico y tabla SEREMI: Presenta las temperaturas máximas diarias con la clasificación de alertas, junto con una explicación de las reglas.
+    3. Gráfico y tabla Sobre 35°C: Destaca los días en que la temperatura fue igual o superior a 35°C.
+Debajo de cada gráfico se agrega un botón para descargar los datos utilizados en el mismo.
+Al final se agrega una sección para descargar la base completa (el CSV original).
 """
 
 # %% 1. Importar librerías y definir funciones auxiliares
@@ -13,9 +14,10 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import datetime
+import numpy as np  # Para la función de tabla SENAPRED
 import io
 
-# Función auxiliar: Convertir DataFrame a archivo Excel en bytes
+# Función auxiliar: Convertir DataFrame a archivo Excel en memoria
 def to_excel(df: pd.DataFrame) -> bytes:
     output = io.BytesIO()
     with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
@@ -23,8 +25,6 @@ def to_excel(df: pd.DataFrame) -> bytes:
     return output.getvalue()
 
 # %% 2. Configuración del Sidebar y carga de datos
-
-# Selección del rango de fechas
 st.sidebar.write("### Seleccione el rango de fechas")
 fecha_inicio = datetime.date(2024, 1, 1)
 fecha_fin = datetime.date.today()
@@ -51,7 +51,13 @@ if len(rango_fechas) == 2:
 def evaluar_alertas(df: pd.DataFrame) -> pd.DataFrame:
     """
     Evalúa y asigna alertas a los datos según la temperatura máxima y el mes.
-    Se determinan: 'Sin Alerta', 'Alerta temprana preventiva', 'Alerta Amarilla' y 'Alerta Roja'.
+    Se determinan las siguientes clasificaciones:
+      - **Sin Alerta:** Valor por defecto.
+      - **Alerta temprana preventiva:** Durante los meses de noviembre, diciembre, enero, febrero y marzo.
+      - **Alerta Roja:** Se asigna en dos casos:
+            1. Si la temperatura máxima en un día es igual o superior a 40°C.
+            2. Si se registran tres días consecutivos (ventana de 3 días) con temperaturas máximas iguales o superiores a 34°C.
+      - **Alerta Amarilla:** Se asigna cuando se registran al menos dos días consecutivos (ventana de 2 días) con temperaturas máximas iguales o superiores a 34°C, siempre que no se cumpla la condición de Alerta Roja.
     """
     df = df.copy()
     df["alerta"] = "Sin Alerta"
@@ -70,9 +76,9 @@ def grafico_alertas_senapred(df: pd.DataFrame):
     Gráfico SENAPRED:
     Muestra la evolución de las temperaturas máximas diarias y agrega líneas de referencia en 30°C, 34°C y 40°C.
     Se distinguen tres rangos:
-      - Verde: 30°C ≤ t_max < 34°C
-      - Amarillo: 34°C ≤ t_max < 40°C
-      - Rojo: t_max ≥ 40°C
+      - **Verde:** 30°C ≤ t_max < 34°C
+      - **Amarillo:** 34°C ≤ t_max < 40°C
+      - **Rojo:** t_max ≥ 40°C
     """
     fig = px.line(
         df,
@@ -108,15 +114,36 @@ def grafico_alertas_senapred(df: pd.DataFrame):
     )
     return fig
 
+def tabla_alertas_senapred(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Tabla SENAPRED:
+    Lista los días en que la temperatura máxima alcanzó las alertas amarilla o roja, según:
+      - **Alerta Amarilla:** 34°C ≤ t_max < 40°C
+      - **Alerta Roja:** t_max ≥ 40°C
+    """
+    df_copy = df.copy()
+    # Definir las condiciones usando np.select
+    conditions = [
+        (df_copy["t_max"] >= 34) & (df_copy["t_max"] < 40),
+        (df_copy["t_max"] >= 40)
+    ]
+    choices = ["Alerta Amarilla", "Alerta Roja"]
+    df_copy["alerta_senapred"] = np.select(conditions, choices, default="Sin Alerta")
+    # Filtrar solo las filas con alerta amarilla o roja
+    df_alertas = df_copy[df_copy["alerta_senapred"].isin(["Alerta Amarilla", "Alerta Roja"])].sort_values(by="date")
+    tabla = df_alertas[["date", "alerta_senapred", "t_max"]].reset_index(drop=True)
+    tabla.columns = ["Fecha", "Tipo de Alerta", "Temperatura Máxima"]
+    return tabla
+
 def grafico_alertas_seremi(df: pd.DataFrame):
     """
     Gráfico SEREMI:
     Visualiza las temperaturas máximas diarias con la clasificación de alertas obtenida.
     Se muestran en diferentes colores:
-      - Sin Alerta (Azul)
-      - Alerta temprana preventiva (Verde)
-      - Alerta Amarilla (Amarillo)
-      - Alerta Roja (Rojo)
+      - **Azul:** Sin Alerta
+      - **Verde:** Alerta temprana preventiva
+      - **Amarillo:** Alerta Amarilla
+      - **Rojo:** Alerta Roja
     """
     df_alertas = evaluar_alertas(df)
     color_map = {
@@ -154,10 +181,10 @@ def tabla_alertas_seremi(df: pd.DataFrame) -> pd.DataFrame:
 def grafico_alertas_sobre35(df: pd.DataFrame):
     """
     Gráfico Sobre 35°C:
-    Resalta los días en que la temperatura máxima alcanzó o superó los 35°C.
+    Resalta los días en que la temperatura máxima fue igual o superior a 35°C.
     Se utilizan dos colores:
-      - Rojo para días con temperatura "Sobre 35"
-      - Azul para días "Bajo 35"
+      - **Rojo:** Días con temperatura "Sobre 35"
+      - **Azul:** Días con temperatura "Bajo 35"
     """
     df_copy = df.copy()
     df_copy["sobre_35"] = df_copy["t_max"].apply(lambda x: "Sobre 35" if x >= 35 else "Bajo 35")
@@ -197,7 +224,7 @@ def tabla_alertas_sobre35(df: pd.DataFrame) -> pd.DataFrame:
 st.title("SEREMI RM - Análisis Exploratorio de Datos de Temperaturas Extremas")
 st.write("Esta aplicación permite analizar y visualizar la evolución de las temperaturas máximas diarias en la Región Metropolitana, junto con la clasificación de alertas según criterios definidos.")
 
-# --- Sección 1: Gráfico SENAPRED ---
+# --- Sección 1: Gráfico y Tabla SENAPRED ---
 st.header("Días con Alertas **SENAPRED**")
 st.markdown(
     """
@@ -212,12 +239,25 @@ st.markdown(
 fig_senapred = grafico_alertas_senapred(df)
 st.plotly_chart(fig_senapred, use_container_width=True)
 
-# Botón de descarga para los datos usados en el gráfico SENAPRED
-excel_senapred = to_excel(df)
+# Botón para descargar los datos utilizados en el gráfico SENAPRED
+df_senapred = df.copy()  # Datos filtrados según fecha
+excel_senapred_data = to_excel(df_senapred)
 st.download_button(
-    label="Descargar datos (Excel)",
-    data=excel_senapred,
-    file_name="datos_senapred.xlsx",
+    label="Descargar datos del gráfico SENAPRED (Excel)",
+    data=excel_senapred_data,
+    file_name="datos_grafico_senapred.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+)
+
+# Tabla de alertas SENAPRED y botón de descarga de la tabla
+st.subheader("Tabla de Alertas SENAPRED")
+tabla_senapred = tabla_alertas_senapred(df)
+st.table(tabla_senapred)
+excel_tabla_senapred = to_excel(tabla_senapred)
+st.download_button(
+    label="Descargar tabla SENAPRED (Excel)",
+    data=excel_tabla_senapred,
+    file_name="tabla_senapred.xlsx",
     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 )
 
@@ -226,26 +266,50 @@ st.header("Días con Alertas **SEREMI**")
 st.markdown(
     """
     **Gráfico SEREMI:**  
-    En este gráfico se representan las temperaturas máximas diarias junto con el tipo de alerta asignado (según criterios de alerta temprana, amarilla o roja).  
+    En este gráfico se representan las temperaturas máximas diarias junto con el tipo de alerta asignado, según las siguientes reglas:
+    
+    - **Alerta temprana preventiva:**  
+      Se asigna durante los meses de **noviembre, diciembre, enero, febrero y marzo** como medida preventiva.
+      
+    - **Alerta Roja:**  
+      Se asigna en dos casos:
+        1. Si la temperatura máxima en un día es **igual o superior a 40°C**.
+        2. Si se registran **tres días consecutivos** (ventana de 3 días) con temperaturas máximas iguales o superiores a **34°C**.
+      
+    - **Alerta Amarilla:**  
+      Se asigna cuando se registran **al menos dos días consecutivos** (ventana de 2 días) con temperaturas máximas iguales o superiores a **34°C**, siempre que no se cumpla la condición de Alerta Roja.
+      
+    - **Sin Alerta:**  
+      Cuando no se cumplen las condiciones anteriores.
+      
     Los colores utilizados son:
-    - **Azul:** Sin Alerta  
-    - **Verde:** Alerta temprana preventiva  
-    - **Amarillo:** Alerta Amarilla  
-    - **Rojo:** Alerta Roja
+      - **Azul:** Sin Alerta  
+      - **Verde:** Alerta temprana preventiva  
+      - **Amarillo:** Alerta Amarilla  
+      - **Rojo:** Alerta Roja
     """
 )
+# Los datos usados en SEREMI se obtienen aplicando evaluar_alertas()
+df_seremi = evaluar_alertas(df)
 fig_seremi = grafico_alertas_seremi(df)
 st.plotly_chart(fig_seremi, use_container_width=True)
 
-# Mostrar tabla de alertas SEREMI
+# Botón para descargar los datos utilizados en el gráfico SEREMI
+excel_seremi_data = to_excel(df_seremi)
+st.download_button(
+    label="Descargar datos del gráfico SEREMI (Excel)",
+    data=excel_seremi_data,
+    file_name="datos_grafico_seremi.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+)
+
+# Tabla de alertas SEREMI y botón de descarga de la tabla
 tabla_seremi = tabla_alertas_seremi(df)
 st.table(tabla_seremi)
-
-# Botón de descarga para la tabla de alertas SEREMI
-excel_seremi = to_excel(tabla_seremi)
+excel_tabla_seremi = to_excel(tabla_seremi)
 st.download_button(
-    label="Descargar tabla (Excel)",
-    data=excel_seremi,
+    label="Descargar tabla SEREMI (Excel)",
+    data=excel_tabla_seremi,
     file_name="tabla_seremi.xlsx",
     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 )
@@ -261,18 +325,39 @@ st.markdown(
     - **Azul:** Días con temperatura "Bajo 35"
     """
 )
+# Preparar los datos para Sobre 35°C
+df_sobre35 = df.copy()
+df_sobre35["sobre_35"] = df_sobre35["t_max"].apply(lambda x: "Sobre 35" if x >= 35 else "Bajo 35")
 fig_sobre35 = grafico_alertas_sobre35(df)
 st.plotly_chart(fig_sobre35, use_container_width=True)
 
-# Mostrar tabla de días con temperatura sobre 35°C
+# Botón para descargar los datos utilizados en el gráfico Sobre 35°C
+excel_sobre35_data = to_excel(df_sobre35)
+st.download_button(
+    label="Descargar datos del gráfico Sobre 35°C (Excel)",
+    data=excel_sobre35_data,
+    file_name="datos_grafico_sobre35.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+)
+
+# Tabla de alertas Sobre 35°C y botón de descarga de la tabla
 tabla_sobre35 = tabla_alertas_sobre35(df)
 st.table(tabla_sobre35)
-
-# Botón de descarga para la tabla Sobre 35°C
-excel_sobre35 = to_excel(tabla_sobre35)
+excel_tabla_sobre35 = to_excel(tabla_sobre35)
 st.download_button(
-    label="Descargar tabla (Excel)",
-    data=excel_sobre35,
+    label="Descargar tabla Sobre 35°C (Excel)",
+    data=excel_tabla_sobre35,
     file_name="tabla_sobre35.xlsx",
     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+)
+
+# --- Sección Final: Descargar Base Completa ---
+st.header("Descargar Base Completa")
+with open("data_temperatura/tmm_historico_2024.csv", "rb") as f:
+    full_data_csv = f.read()
+st.download_button(
+    label="Descargar base completa (CSV)",
+    data=full_data_csv,
+    file_name="tmm_historico_2024.csv",
+    mime="text/csv"
 )

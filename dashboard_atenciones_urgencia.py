@@ -1,14 +1,71 @@
-#%%
+# -*- coding: utf-8 -*-
+"""
+Página de Atenciones de Urgencia y Temperatura en el Sistema Circulatorio
+
+Esta aplicación permite visualizar diversos gráficos que relacionan las atenciones de urgencia 
+(con diferentes causas) con la evolución de la temperatura máxima. Cada gráfico incluye una breve 
+explicación y un botón para descargar (en Excel) los datos utilizados en su construcción. 
+Al final se ofrece la opción de descargar la base completa de datos en formato CSV.
+"""
+
+# %% 1. Importar librerías y definir funciones auxiliares
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import pydeck as pdk
 import plotly.graph_objects as go
+import pydeck as pdk
 from io import BytesIO
 import datetime
-#%%
+import numpy as np
+
+# --- Definición de paletas de colores profesionales ---
+
+# Paleta de colores para las series de atenciones (escala de azules)
+colors_atenciones = {
+    'Total Sistema Circulatorio': '#08306B',       # Azul oscuro
+    'Infarto agudo miocardio': '#2171B5',
+    'Accidente vascular encefálico': '#4292C6',
+    'Crisis hipertensiva': '#6BAED6',
+    'Arritmia grave': '#9ECAE1',
+    'Otras causas circulatorias': '#C6DBEF'
+}
+
+# Color para la serie de Temperatura (variable importante)
+color_temperatura = '#B22222'  # Firebrick
+
+# Paleta para los estados de alerta (importantes para resaltar)
+colors_alerta = {
+    'Sin Alerta': '#6c757d',                # Gris (muted)
+    'Alerta temprana preventiva': '#28a745',# Verde (Bootstrap)
+    'Alerta Amarilla': '#ffc107',           # Ámbar
+    'Alerta Roja': '#dc3545'                # Rojo (Bootstrap)
+}
+
+# Paleta para el gráfico de grupos etarios (escala de azules, similar a atenciones)
+colors_grupo_etario = {
+    'Menores_1': '#08306B',
+    'De_1_a_4': '#2171B5',
+    'De_5_a_14': '#4292C6',
+    'De_15_a_64': '#6BAED6',
+    'De_65_y_mas': '#9ECAE1'
+}
+
+# Función auxiliar para convertir un DataFrame a Excel en formato bytes
+def to_excel_bytes(df: pd.DataFrame) -> bytes:
+    output = BytesIO()
+    with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+        df.to_excel(writer, index=False, sheet_name='Datos')
+    return output.getvalue()
+
+# Función auxiliar para convertir un DataFrame a CSV en formato bytes (para bases completas)
+def df_to_csv_bytes(df: pd.DataFrame) -> bytes:
+    return df.to_csv(index=False, sep=';', decimal=',', encoding='utf-8').encode('utf-8')
+
+# %% 2. Configuración del Sidebar y carga de datos
+
+# Definir el rango de fechas permitido y predeterminado
 fecha_inicio = datetime.date(2024, 1, 1)  # Mínimo permitido
-fecha_fin = datetime.date.today()  # Máximo permitido
+fecha_fin = datetime.date.today()           # Máximo permitido
 fecha_inicio_default = datetime.date(2024, 11, 1)
 
 st.sidebar.write("### Seleccione el rango de fechas")
@@ -18,43 +75,54 @@ rango_fechas = st.sidebar.date_input(
     min_value=fecha_inicio,
     max_value=fecha_fin
 )
-#%%
+
+# Cargar la base de datos de atenciones de urgencia
 df_au = pd.read_csv("data_atenciones_urgencia/df_rm_circ_2024.csv")
 df_au['fecha'] = pd.to_datetime(df_au['fecha'])
-
 if len(rango_fechas) == 2:
-    fecha_inicio_seleccionada, fecha_fin_seleccionada = rango_fechas
-    df_au = df_au[(df_au['fecha'] >= pd.Timestamp(fecha_inicio_seleccionada)) &
-                     (df_au['fecha'] <= pd.Timestamp(fecha_fin_seleccionada))]
-else:
-    df_au = df_au
+    fecha_inicio_sel, fecha_fin_sel = rango_fechas
+    df_au = df_au[(df_au['fecha'] >= pd.Timestamp(fecha_inicio_sel)) &
+                  (df_au['fecha'] <= pd.Timestamp(fecha_fin_sel))]
 
+# Cargar la base de datos de temperaturas
 df_tmm = pd.read_csv("data_temperatura/tmm_historico_2024.csv")
 df_tmm['date'] = pd.to_datetime(df_tmm['date'])
-
 if len(rango_fechas) == 2:
-    fecha_inicio_seleccionada, fecha_fin_seleccionada = rango_fechas
-    df_tmm = df_tmm[(df_tmm['date'] >= pd.Timestamp(fecha_inicio_seleccionada)) &
-                     (df_tmm['date'] <= pd.Timestamp(fecha_fin_seleccionada))]
-else:
-    df_tmm = df_tmm
-#%%
-diccionario_causas_au={
-    1   :'Atenciones de urgencia - Total',
-    12   :'Atenciones de urgencia - Total Sistema Circulatorio',
-    13  :'Atenciones de urgencia - Infarto agudo miocardio',
-    14  :'Atenciones de urgencia - Accidente vascular encefálico',
-    15   :'Atenciones de urgencia - Crisis hipertensiva',
-    16   :'Atenciones de urgencia - Arritmia grave',
-    17   :'Atenciones de urgencia - Otras causas circulatorias',
-    25  :'Hospitalizaciones - Total',
-    22   :'Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO',
+    fecha_inicio_sel, fecha_fin_sel = rango_fechas
+    df_tmm = df_tmm[(df_tmm['date'] >= pd.Timestamp(fecha_inicio_sel)) &
+                    (df_tmm['date'] <= pd.Timestamp(fecha_fin_sel))]
+
+# Diccionario de causas de atenciones (para usar en varios gráficos)
+diccionario_causas_au = {
+    1: 'Atenciones de urgencia - Total',
+    12: 'Atenciones de urgencia - Total Sistema Circulatorio',
+    13: 'Atenciones de urgencia - Infarto agudo miocardio',
+    14: 'Atenciones de urgencia - Accidente vascular encefálico',
+    15: 'Atenciones de urgencia - Crisis hipertensiva',
+    16: 'Atenciones de urgencia - Arritmia grave',
+    17: 'Atenciones de urgencia - Otras causas circulatorias',
+    25: 'Hospitalizaciones - Total',
+    22: 'Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO',
 }
 
-#%%
+# %% 3. Definición de funciones para crear gráficos y bases de datos combinadas
 
 def grafico_area_atenciones_respiratorias(df_au, df_temp, col, title):
-    # Filtrar y agrupar los datos según las causas indicadas
+    """
+    Gráfico de evolución de atenciones de urgencia en el Sistema Circulatorio
+    junto con la evolución de la temperatura máxima.
+
+    Se muestran las líneas temporales de atenciones según:
+      - Total Sistema Circulatorio
+      - Infarto agudo miocardio
+      - Accidente vascular encefálico
+      - Crisis hipertensiva
+      - Arritmia grave
+      - Otras causas circulatorias
+
+    Además, se agrega la serie de la temperatura máxima y se muestran sus alertas.
+    """
+    # Filtrar y agrupar datos de atenciones por causa
     df_tota_sc = df_au[df_au['Causa'] == diccionario_causas_au[12]].groupby('fecha')[col].sum().reset_index()
     df_infarto = df_au[df_au['Causa'] == diccionario_causas_au[13]].groupby('fecha')[col].sum().reset_index()
     df_accidente = df_au[df_au['Causa'] == diccionario_causas_au[14]].groupby('fecha')[col].sum().reset_index()
@@ -63,6 +131,7 @@ def grafico_area_atenciones_respiratorias(df_au, df_temp, col, title):
     df_otras = df_au[df_au['Causa'] == diccionario_causas_au[17]].groupby('fecha')[col].sum().reset_index()
 
     # Configurar las alertas de temperatura
+    df_temp = df_temp.copy()
     df_temp['alerta'] = 'Sin Alerta'
     df_temp['mes'] = df_temp['date'].dt.month
     df_temp.loc[df_temp['mes'].isin([11, 12, 1, 2, 3]), 'alerta'] = 'Alerta temprana preventiva'
@@ -73,85 +142,49 @@ def grafico_area_atenciones_respiratorias(df_au, df_temp, col, title):
     df_temp['alerta_consecutiva_3'] = df_temp['alerta_temporal'].rolling(window=3).sum()
     df_temp.loc[df_temp['alerta_consecutiva_3'] >= 3, 'alerta'] = 'Alerta Roja'
 
-    # Crear la figura del gráfico
+    # Crear la figura
     fig = go.Figure()
-
-    # Agregar las trazas de atenciones de urgencia (eje Y1)
-    fig.add_trace(go.Scatter(
-        x=df_tota_sc['fecha'], y=df_tota_sc[col],
-        mode='lines', name='Atenciones de urgencia - Total Sistema Circulatorio'
-    ))
-    fig.add_trace(go.Scatter(
-        x=df_infarto['fecha'], y=df_infarto[col],
-        mode='lines', name='Atenciones de urgencia - Infarto agudo miocardio'
-    ))
-    fig.add_trace(go.Scatter(
-        x=df_accidente['fecha'], y=df_accidente[col],
-        mode='lines', name='Atenciones de urgencia - Accidente vascular encefálico'
-    ))
-    fig.add_trace(go.Scatter(
-        x=df_crisis['fecha'], y=df_crisis[col],
-        mode='lines', name='Atenciones de urgencia - Crisis hipertensiva'
-    ))
-    fig.add_trace(go.Scatter(
-        x=df_arritmia['fecha'], y=df_arritmia[col],
-        mode='lines', name='Atenciones de urgencia - Arritmia grave'
-    ))
-    fig.add_trace(go.Scatter(
-        x=df_otras['fecha'], y=df_otras[col],
-        mode='lines', name='Atenciones de urgencia - Otras causas circulatorias'
-    ))
-
-    # Agregar las trazas de temperatura máxima (eje Y2)
-    fig.add_trace(go.Scatter(
-        x=df_temp['date'], y=df_temp['t_max'],
-        mode='lines',
-        name='Temperatura Máxima',
-        line=dict(color='red'),
-        yaxis='y2'  # Especificar el eje secundario
-    ))
-
-    # Agregar los marcadores de alertas (eje Y2)
-    color_map = {
-        'Sin Alerta': 'blue',
-        'Alerta temprana preventiva': 'green',
-        'Alerta Amarilla': 'yellow',
-        'Alerta Roja': 'red'
-    }
-    for alerta, color in color_map.items():
+    # Agregar trazas de atenciones (eje Y1) usando la paleta de atenciones
+    fig.add_trace(go.Scatter(x=df_tota_sc['fecha'], y=df_tota_sc[col],
+                             mode='lines', name='Total Sistema Circulatorio',
+                             line=dict(color=colors_atenciones['Total Sistema Circulatorio'])))
+    fig.add_trace(go.Scatter(x=df_infarto['fecha'], y=df_infarto[col],
+                             mode='lines', name='Infarto agudo miocardio',
+                             line=dict(color=colors_atenciones['Infarto agudo miocardio'])))
+    fig.add_trace(go.Scatter(x=df_accidente['fecha'], y=df_accidente[col],
+                             mode='lines', name='Accidente vascular encefálico',
+                             line=dict(color=colors_atenciones['Accidente vascular encefálico'])))
+    fig.add_trace(go.Scatter(x=df_crisis['fecha'], y=df_crisis[col],
+                             mode='lines', name='Crisis hipertensiva',
+                             line=dict(color=colors_atenciones['Crisis hipertensiva'])))
+    fig.add_trace(go.Scatter(x=df_arritmia['fecha'], y=df_arritmia[col],
+                             mode='lines', name='Arritmia grave',
+                             line=dict(color=colors_atenciones['Arritmia grave'])))
+    fig.add_trace(go.Scatter(x=df_otras['fecha'], y=df_otras[col],
+                             mode='lines', name='Otras causas circulatorias',
+                             line=dict(color=colors_atenciones['Otras causas circulatorias'])))
+    # Agregar la traza de temperatura (eje Y2) con un color distintivo
+    fig.add_trace(go.Scatter(x=df_temp['date'], y=df_temp['t_max'],
+                             mode='lines', name='Temperatura Máxima',
+                             line=dict(color=color_temperatura), yaxis='y2'))
+    # Agregar marcadores de alertas usando la paleta de alertas
+    for alerta, color in colors_alerta.items():
         df_alerta = df_temp[df_temp['alerta'] == alerta]
-        fig.add_trace(go.Scatter(
-            x=df_alerta['date'],
-            y=df_alerta['t_max'],
-            mode='markers',
-            name=f'Alerta: {alerta}',
-            marker=dict(color=color),
-            yaxis='y2'  # Eje secundario
-        ))
+        fig.add_trace(go.Scatter(x=df_alerta['date'], y=df_alerta['t_max'],
+                                 mode='markers', name=f'Alerta: {alerta}',
+                                 marker=dict(color=color), yaxis='y2'))
 
-    # Configurar el diseño del gráfico
+    # Configurar diseño del gráfico
     fig.update_layout(
         title=title,
         xaxis_title='Fecha',
-        yaxis=dict(
-            title=col,                # Título del eje principal
-        ),
-        yaxis2=dict(
-            title='Temperatura Máxima',  # Título del eje secundario
-            overlaying='y',             # Superponer al eje principal
-            side='right'                # Mostrar en el lado derecho
-        ),
+        yaxis=dict(title=col),
+        yaxis2=dict(title='Temperatura Máxima', overlaying='y', side='right'),
         template='plotly_white',
-        legend=dict(
-            orientation="h",           # Leyenda horizontal
-            yanchor="top",             # Alinear parte superior
-            y=-0.2,                    # Posicionar debajo del gráfico
-            xanchor="auto",          # Centrar horizontalmente
-            x=0.5                      # Ubicación horizontal central
-        )
+        legend=dict(orientation="h", yanchor="top", y=-0.2, xanchor="center", x=0.5)
     )
 
-    # Crear una base de datos combinada para descarga
+    # Crear base combinada para descarga
     df_base = pd.DataFrame({
         'Fecha': df_tota_sc['fecha'],
         'Total Sistema Circulatorio': df_tota_sc[col],
@@ -166,57 +199,15 @@ def grafico_area_atenciones_respiratorias(df_au, df_temp, col, title):
     return fig, df_base
 
 
-def grafico_atenciones_urgencia_pie(df, df_temp, col, title):
-    diccionario_causas_au = {
-        1: 'Atenciones de urgencia - Total',
-        12: 'Atenciones de urgencia - Total Sistema Circulatorio',
-        13: 'Atenciones de urgencia - Infarto agudo miocardio',
-        14: 'Atenciones de urgencia - Accidente vascular encefálico',
-        15: 'Atenciones de urgencia - Crisis hipertensiva',
-        16: 'Atenciones de urgencia - Arritmia grave',
-        17: 'Atenciones de urgencia - Otras causas circulatorias'
-    }
-
-    data = []
-    labels = []
-    for key, value in diccionario_causas_au.items():
-        suma = df[df['Causa'] == value][col].sum()
-        data.append(suma)
-        labels.append(value)
-
-    fig = go.Figure(data=[go.Pie(labels=labels, values=data, hole=0.3)])
-
-    # Configurar alertas de temperatura
-    df_temp['alerta'] = 'Sin Alerta'
-    df_temp['mes'] = df_temp['date'].dt.month
-    df_temp.loc[df_temp['mes'].isin([11, 12, 1, 2, 3]), 'alerta'] = 'Alerta temprana preventiva'
-    df_temp.loc[df_temp['t_max'] >= 40, 'alerta'] = 'Alerta Roja'
-    df_temp['alerta_temporal'] = df_temp['t_max'] >= 34
-    df_temp['alerta_consecutiva'] = df_temp['alerta_temporal'].rolling(window=2).sum()
-    df_temp.loc[df_temp['alerta_consecutiva'] >= 2, 'alerta'] = 'Alerta Amarilla'
-    df_temp['alerta_consecutiva_3'] = df_temp['alerta_temporal'].rolling(window=3).sum()
-    df_temp.loc[df_temp['alerta_consecutiva_3'] >= 3, 'alerta'] = 'Alerta Roja'
-
-    # Configuración del diseño
-    fig.update_layout(
-        title=title,
-        template='plotly_white'
-    )
-
-    return fig
-
 def grafico_porcentaje_atenciones(df, df_temp, col, title):
-    diccionario_causas_au = {
-        1: 'Atenciones de urgencia - Total',
-        12: 'Atenciones de urgencia - Total Sistema Circulatorio',
-        13: 'Atenciones de urgencia - Infarto agudo miocardio',
-        14: 'Atenciones de urgencia - Accidente vascular encefálico',
-        15: 'Atenciones de urgencia - Crisis hipertensiva',
-        16: 'Atenciones de urgencia - Arritmia grave',
-        17: 'Atenciones de urgencia - Otras causas circulatorias'
-    }
+    """
+    Gráfico de porcentaje diario de atenciones de urgencia por causa en el Sistema Circulatorio.
 
-    # Filtrar los datos por causa y fecha
+    Se calcula el porcentaje que representa cada causa (infarto, accidente, crisis, arritmia y otras)
+    respecto al total de atenciones del sistema circulatorio. Además se agrega la serie de temperatura
+    máxima (con alertas) en un eje secundario.
+    """
+    # Agrupar datos por causa
     df_total_sc = df[df['Causa'] == diccionario_causas_au[12]].groupby('fecha')[col].sum().reset_index()
     df_infarto = df[df['Causa'] == diccionario_causas_au[13]].groupby('fecha')[col].sum().reset_index()
     df_accidente = df[df['Causa'] == diccionario_causas_au[14]].groupby('fecha')[col].sum().reset_index()
@@ -224,7 +215,7 @@ def grafico_porcentaje_atenciones(df, df_temp, col, title):
     df_arritmia = df[df['Causa'] == diccionario_causas_au[16]].groupby('fecha')[col].sum().reset_index()
     df_otras = df[df['Causa'] == diccionario_causas_au[17]].groupby('fecha')[col].sum().reset_index()
 
-    # Calcular los porcentajes por día
+    # Calcular porcentajes diarios
     porcentajes = pd.DataFrame()
     porcentajes['fecha'] = df_total_sc['fecha']
     porcentajes['Infarto agudo miocardio (%)'] = (df_infarto[col] / df_total_sc[col]) * 100
@@ -233,31 +224,26 @@ def grafico_porcentaje_atenciones(df, df_temp, col, title):
     porcentajes['Arritmia grave (%)'] = (df_arritmia[col] / df_total_sc[col]) * 100
     porcentajes['Otras causas circulatorias (%)'] = (df_otras[col] / df_total_sc[col]) * 100
 
-    # Crear la figura del gráfico
+    # Crear la figura
     fig = go.Figure()
-
-    fig.add_trace(go.Scatter(
-        x=porcentajes['fecha'], y=porcentajes['Infarto agudo miocardio (%)'],
-        mode='lines', name='Infarto agudo miocardio (%)'
-    ))
-    fig.add_trace(go.Scatter(
-        x=porcentajes['fecha'], y=porcentajes['Accidente vascular encefálico (%)'],
-        mode='lines', name='Accidente vascular encefálico (%)'
-    ))
-    fig.add_trace(go.Scatter(
-        x=porcentajes['fecha'], y=porcentajes['Crisis hipertensiva (%)'],
-        mode='lines', name='Crisis hipertensiva (%)'
-    ))
-    fig.add_trace(go.Scatter(
-        x=porcentajes['fecha'], y=porcentajes['Arritmia grave (%)'],
-        mode='lines', name='Arritmia grave (%)'
-    ))
-    fig.add_trace(go.Scatter(
-        x=porcentajes['fecha'], y=porcentajes['Otras causas circulatorias (%)'],
-        mode='lines', name='Otras causas circulatorias (%)'
-    ))
-
-    # Configurar alertas de temperatura
+    # Usar tonos de azul de la paleta de atenciones para cada causa
+    fig.add_trace(go.Scatter(x=porcentajes['fecha'], y=porcentajes['Infarto agudo miocardio (%)'],
+                             mode='lines', name='Infarto agudo miocardio (%)',
+                             line=dict(color=colors_atenciones['Infarto agudo miocardio'])))
+    fig.add_trace(go.Scatter(x=porcentajes['fecha'], y=porcentajes['Accidente vascular encefálico (%)'],
+                             mode='lines', name='Accidente vascular encefálico (%)',
+                             line=dict(color=colors_atenciones['Accidente vascular encefálico'])))
+    fig.add_trace(go.Scatter(x=porcentajes['fecha'], y=porcentajes['Crisis hipertensiva (%)'],
+                             mode='lines', name='Crisis hipertensiva (%)',
+                             line=dict(color=colors_atenciones['Crisis hipertensiva'])))
+    fig.add_trace(go.Scatter(x=porcentajes['fecha'], y=porcentajes['Arritmia grave (%)'],
+                             mode='lines', name='Arritmia grave (%)',
+                             line=dict(color=colors_atenciones['Arritmia grave'])))
+    fig.add_trace(go.Scatter(x=porcentajes['fecha'], y=porcentajes['Otras causas circulatorias (%)'],
+                             mode='lines', name='Otras causas circulatorias (%)',
+                             line=dict(color=colors_atenciones['Otras causas circulatorias'])))
+    # Agregar la traza de temperatura (eje Y2) con su color distintivo
+    df_temp = df_temp.copy()
     df_temp['alerta'] = 'Sin Alerta'
     df_temp['mes'] = df_temp['date'].dt.month
     df_temp.loc[df_temp['mes'].isin([11, 12, 1, 2, 3]), 'alerta'] = 'Alerta temprana preventiva'
@@ -267,66 +253,45 @@ def grafico_porcentaje_atenciones(df, df_temp, col, title):
     df_temp.loc[df_temp['alerta_consecutiva'] >= 2, 'alerta'] = 'Alerta Amarilla'
     df_temp['alerta_consecutiva_3'] = df_temp['alerta_temporal'].rolling(window=3).sum()
     df_temp.loc[df_temp['alerta_consecutiva_3'] >= 3, 'alerta'] = 'Alerta Roja'
-
-    # Agregar las trazas de temperatura máxima (eje Y2)
-    fig.add_trace(go.Scatter(
-        x=df_temp['date'], y=df_temp['t_max'],
-        mode='lines',
-        name='Temperatura Máxima',
-        line=dict(color='red'),
-        yaxis='y2'
-    ))
-
-    # Agregar los marcadores de alertas (eje Y2)
-    color_map = {
-        'Sin Alerta': 'blue',
-        'Alerta temprana preventiva': 'green',
-        'Alerta Amarilla': 'yellow',
-        'Alerta Roja': 'red'
-    }
-
-    for alerta, color in color_map.items():
+    fig.add_trace(go.Scatter(x=df_temp['date'], y=df_temp['t_max'],
+                             mode='lines', name='Temperatura Máxima',
+                             line=dict(color=color_temperatura), yaxis='y2'))
+    # Agregar marcadores de alerta (eje Y2)
+    for alerta, color in colors_alerta.items():
         df_alerta = df_temp[df_temp['alerta'] == alerta]
-        fig.add_trace(go.Scatter(
-            x=df_alerta['date'],
-            y=df_alerta['t_max'],
-            mode='markers',
-            name=f'Alerta: {alerta}',
-            marker=dict(color=color),
-            yaxis='y2'
-        ))
-
-    # Configurar el diseño del gráfico
+        fig.add_trace(go.Scatter(x=df_alerta['date'], y=df_alerta['t_max'],
+                                 mode='markers', name=f'Alerta: {alerta}',
+                                 marker=dict(color=color), yaxis='y2'))
     fig.update_layout(
         title=title,
         xaxis_title='Fecha',
-        yaxis=dict(
-            title=col
-        ),
-        yaxis2=dict(
-            title='Temperatura Máxima',
-            overlaying='y',
-            side='right'
-        ),
+        yaxis=dict(title='Porcentaje (%)'),
+        yaxis2=dict(title='Temperatura Máxima', overlaying='y', side='right'),
         template='plotly_white',
-        legend=dict(
-            orientation="h",
-            yanchor="top",
-            y=-0.2,
-            xanchor="center",
-            x=0.5
-        )
+        legend=dict(orientation="h", yanchor="top", y=-0.2, xanchor="center", x=0.5)
     )
-    # Crear una base de datos combinada para descarga
-    df_base = porcentajes.copy()
-    df_base['Temperatura Máxima'] = df_temp.set_index('date').reindex(porcentajes['fecha'], method='nearest')['t_max'].values
-
+    # Base combinada para descarga
+    df_base = pd.DataFrame({
+        'Fecha': porcentajes['fecha'],
+        'Infarto agudo miocardio (%)': porcentajes['Infarto agudo miocardio (%)'],
+        'Accidente vascular encefálico (%)': porcentajes['Accidente vascular encefálico (%)'],
+        'Crisis hipertensiva (%)': porcentajes['Crisis hipertensiva (%)'],
+        'Arritmia grave (%)': porcentajes['Arritmia grave (%)'],
+        'Otras causas circulatorias (%)': porcentajes['Otras causas circulatorias (%)'],
+        'Temperatura Máxima': df_temp.set_index('date').reindex(porcentajes['fecha'], method='nearest')['t_max'].values
+    })
     return fig, df_base
 
-def grafico_total_grupo_etario(df, df_temp, title):
-    df_filtrado = df[df['Causa'] == diccionario_causas_au[12]]
 
-    # Agrupar los datos por fecha para cada grupo etario
+def grafico_total_grupo_etario(df, df_temp, title):
+    """
+    Gráfico de consultas de urgencia por grupos etarios en el Sistema Circulatorio.
+
+    Se muestran tanto la tendencia total (línea azul) como la contribución por grupo etario mediante barras.
+    También se superpone la temperatura máxima (con alertas) en un eje secundario.
+    """
+    df_filtrado = df[df['Causa'] == diccionario_causas_au[12]]
+    # Agrupar por fecha para cada grupo etario
     df_total = df_filtrado.groupby('fecha')['Total'].sum().reset_index()
     df_menores_1 = df_filtrado.groupby('fecha')['Menores_1'].sum().reset_index()
     df_1_a_4 = df_filtrado.groupby('fecha')['De_1_a_4'].sum().reset_index()
@@ -334,48 +299,24 @@ def grafico_total_grupo_etario(df, df_temp, title):
     df_15_a_64 = df_filtrado.groupby('fecha')['De_15_a_64'].sum().reset_index()
     df_65_y_mas = df_filtrado.groupby('fecha')['De_65_y_mas'].sum().reset_index()
 
-    # Crear la figura del gráfico
     fig = go.Figure()
-
-    # Agregar la línea para el total
-    fig.add_trace(go.Scatter(
-        x=df_total['fecha'], y=df_total['Total'],
-        mode='lines', name='Total',
-        line=dict(color='blue')
-    ))
-
-    # Agregar las barras para cada grupo etario
-    fig.add_trace(go.Bar(
-        x=df_menores_1['fecha'], y=df_menores_1['Menores_1'],
-        name='Menores_1',
-        marker=dict(color='cyan')
-    ))
-
-    fig.add_trace(go.Bar(
-        x=df_1_a_4['fecha'], y=df_1_a_4['De_1_a_4'],
-        name='De_1_a_4',
-        marker=dict(color='magenta')
-    ))
-
-    fig.add_trace(go.Bar(
-        x=df_5_a_14['fecha'], y=df_5_a_14['De_5_a_14'],
-        name='De_5_a_14',
-        marker=dict(color='orange')
-    ))
-
-    fig.add_trace(go.Bar(
-        x=df_15_a_64['fecha'], y=df_15_a_64['De_15_a_64'],
-        name='De_15_a_64',
-        marker=dict(color='yellow')
-    ))
-
-    fig.add_trace(go.Bar(
-        x=df_65_y_mas['fecha'], y=df_65_y_mas['De_65_y_mas'],
-        name='De_65_y_mas',
-        marker=dict(color='green')
-    ))
-
-    # Configurar alertas de temperatura
+    # Línea del total (usamos un azul oscuro)
+    fig.add_trace(go.Scatter(x=df_total['fecha'], y=df_total['Total'],
+                             mode='lines', name='Total',
+                             line=dict(color='#08306B')))
+    # Barras por grupo etario usando la paleta definida
+    fig.add_trace(go.Bar(x=df_menores_1['fecha'], y=df_menores_1['Menores_1'],
+                         name='Menores_1', marker=dict(color=colors_grupo_etario['Menores_1'])))
+    fig.add_trace(go.Bar(x=df_1_a_4['fecha'], y=df_1_a_4['De_1_a_4'],
+                         name='De_1_a_4', marker=dict(color=colors_grupo_etario['De_1_a_4'])))
+    fig.add_trace(go.Bar(x=df_5_a_14['fecha'], y=df_5_a_14['De_5_a_14'],
+                         name='De_5_a_14', marker=dict(color=colors_grupo_etario['De_5_a_14'])))
+    fig.add_trace(go.Bar(x=df_15_a_64['fecha'], y=df_15_a_64['De_15_a_64'],
+                         name='De_15_a_64', marker=dict(color=colors_grupo_etario['De_15_a_64'])))
+    fig.add_trace(go.Bar(x=df_65_y_mas['fecha'], y=df_65_y_mas['De_65_y_mas'],
+                         name='De_65_y_mas', marker=dict(color=colors_grupo_etario['De_65_y_mas'])))
+    # Configurar alertas de temperatura y agregar la serie en eje Y2
+    df_temp = df_temp.copy()
     df_temp['alerta'] = 'Sin Alerta'
     df_temp['mes'] = df_temp['date'].dt.month
     df_temp.loc[df_temp['mes'].isin([11, 12, 1, 2, 3]), 'alerta'] = 'Alerta temprana preventiva'
@@ -385,57 +326,25 @@ def grafico_total_grupo_etario(df, df_temp, title):
     df_temp.loc[df_temp['alerta_consecutiva'] >= 2, 'alerta'] = 'Alerta Amarilla'
     df_temp['alerta_consecutiva_3'] = df_temp['alerta_temporal'].rolling(window=3).sum()
     df_temp.loc[df_temp['alerta_consecutiva_3'] >= 3, 'alerta'] = 'Alerta Roja'
-
-    # Agregar las trazas de temperatura máxima (eje Y2)
-    fig.add_trace(go.Scatter(
-        x=df_temp['date'], y=df_temp['t_max'],
-        mode='lines',
-        name='Temperatura Máxima',
-        line=dict(color='red'),
-        yaxis='y2'
-    ))
-
-    # Agregar los marcadores de alertas (eje Y2)
-    color_map = {
-        'Sin Alerta': 'blue',
-        'Alerta temprana preventiva': 'green',
-        'Alerta Amarilla': 'yellow',
-        'Alerta Roja': 'red'
-    }
-
-    for alerta, color in color_map.items():
+    fig.add_trace(go.Scatter(x=df_temp['date'], y=df_temp['t_max'],
+                             mode='lines', name='Temperatura Máxima',
+                             line=dict(color=color_temperatura), yaxis='y2'))
+    # Agregar marcadores de alerta (eje Y2)
+    for alerta, color in colors_alerta.items():
         df_alerta = df_temp[df_temp['alerta'] == alerta]
-        fig.add_trace(go.Scatter(
-            x=df_alerta['date'],
-            y=df_alerta['t_max'],
-            mode='markers',
-            name=f'Alerta: {alerta}',
-            marker=dict(color=color),
-            yaxis='y2'
-        ))
-
-    # Configurar el diseño del gráfico
+        fig.add_trace(go.Scatter(x=df_alerta['date'], y=df_alerta['t_max'],
+                                 mode='markers', name=f'Alerta: {alerta}',
+                                 marker=dict(color=color), yaxis='y2'))
     fig.update_layout(
         title=title,
         xaxis_title='Fecha',
         yaxis_title='Cantidad de Consultas',
         barmode='stack',
         template='plotly_white',
-        yaxis2=dict(
-            title='Temperatura Máxima',
-            overlaying='y',
-            side='right'
-        ),
-        legend=dict(
-            title='Grupos Etarios',
-            orientation="h",  # Leyenda horizontal
-            yanchor="top",    # Alinear la parte superior de la leyenda
-            y=-0.2,           # Posicionar debajo del gráfico
-            xanchor="center", # Centrar horizontalmente
-            x=0.5             # Ubicación horizontal central
-        )
-
+        yaxis2=dict(title='Temperatura Máxima', overlaying='y', side='right'),
+        legend=dict(title='Grupos Etarios', orientation="h", yanchor="top", y=-0.2, xanchor="center", x=0.5)
     )
+    # Base para descarga
     df_base = pd.DataFrame({
         'Fecha': df_total['fecha'],
         'Total': df_total['Total'],
@@ -449,31 +358,27 @@ def grafico_total_grupo_etario(df, df_temp, title):
 
     return fig, df_base
 
-def grafico_grupos_interes_epidemiologico(df, df_temp, title):
-    # Filtrar el DataFrame para 'Atenciones de urgencia - Total Sistema Circulatorio'
-    df_filtrado = df[df['Causa'] == diccionario_causas_au[12]]
 
-    # Agrupar los datos por fecha para cada grupo de interés epidemiológico
+def grafico_grupos_interes_epidemiologico(df, df_temp, title):
+    """
+    Gráfico de consultas de urgencia en grupos de interés epidemiológico.
+
+    Se filtra la información para el sistema circulatorio y se muestran las consultas de:
+      - Menores de 1 año
+      - Adultos mayores (De_65_y_mas)
+    También se superpone la serie de temperatura máxima (con alertas) en un eje secundario.
+    """
+    df_filtrado = df[df['Causa'] == diccionario_causas_au[12]]
     df_menores_1 = df_filtrado.groupby('fecha')['Menores_1'].sum().reset_index()
     df_65_y_mas = df_filtrado.groupby('fecha')['De_65_y_mas'].sum().reset_index()
 
-    # Crear la figura del gráfico
     fig = go.Figure()
+    fig.add_trace(go.Bar(x=df_menores_1['fecha'], y=df_menores_1['Menores_1'],
+                         name='Menores_1', marker=dict(color=colors_grupo_etario['Menores_1'])))
+    fig.add_trace(go.Bar(x=df_65_y_mas['fecha'], y=df_65_y_mas['De_65_y_mas'],
+                         name='De_65_y_mas', marker=dict(color=colors_grupo_etario['De_65_y_mas'])))
 
-    # Agregar las barras para cada grupo de interés epidemiológico
-    fig.add_trace(go.Bar(
-        x=df_menores_1['fecha'], y=df_menores_1['Menores_1'],
-        name='Menores_1',
-        marker=dict(color='cyan')
-    ))
-
-    fig.add_trace(go.Bar(
-        x=df_65_y_mas['fecha'], y=df_65_y_mas['De_65_y_mas'],
-        name='De_65_y_mas',
-        marker=dict(color='green')
-    ))
-
-    # Configurar alertas de temperatura
+    df_temp = df_temp.copy()
     df_temp['alerta'] = 'Sin Alerta'
     df_temp['mes'] = df_temp['date'].dt.month
     df_temp.loc[df_temp['mes'].isin([11, 12, 1, 2, 3]), 'alerta'] = 'Alerta temprana preventiva'
@@ -484,56 +389,23 @@ def grafico_grupos_interes_epidemiologico(df, df_temp, title):
     df_temp['alerta_consecutiva_3'] = df_temp['alerta_temporal'].rolling(window=3).sum()
     df_temp.loc[df_temp['alerta_consecutiva_3'] >= 3, 'alerta'] = 'Alerta Roja'
 
-    # Agregar las trazas de temperatura máxima (eje Y2)
-    fig.add_trace(go.Scatter(
-        x=df_temp['date'], y=df_temp['t_max'],
-        mode='lines',
-        name='Temperatura Máxima',
-        line=dict(color='red'),
-        yaxis='y2'
-    ))
-
-    # Agregar los marcadores de alertas (eje Y2)
-    color_map = {
-        'Sin Alerta': 'blue',
-        'Alerta temprana preventiva': 'green',
-        'Alerta Amarilla': 'yellow',
-        'Alerta Roja': 'red'
-    }
-
-    for alerta, color in color_map.items():
+    fig.add_trace(go.Scatter(x=df_temp['date'], y=df_temp['t_max'],
+                             mode='lines', name='Temperatura Máxima',
+                             line=dict(color=color_temperatura), yaxis='y2'))
+    for alerta, color in colors_alerta.items():
         df_alerta = df_temp[df_temp['alerta'] == alerta]
-        fig.add_trace(go.Scatter(
-            x=df_alerta['date'],
-            y=df_alerta['t_max'],
-            mode='markers',
-            name=f'Alerta: {alerta}',
-            marker=dict(color=color),
-            yaxis='y2'
-        ))
-
-    # Configurar el diseño del gráfico
+        fig.add_trace(go.Scatter(x=df_alerta['date'], y=df_alerta['t_max'],
+                                 mode='markers', name=f'Alerta: {alerta}',
+                                 marker=dict(color=color), yaxis='y2'))
     fig.update_layout(
         title=title,
         xaxis_title='Fecha',
         yaxis_title='Cantidad de Consultas',
         barmode='stack',
         template='plotly_white',
-        yaxis2=dict(
-            title='Temperatura Máxima',
-            overlaying='y',
-            side='right'
-        ),
-        legend=dict(
-            title='Grupos Etario de interés',
-            orientation="h",  # Leyenda horizontal
-            yanchor="top",    # Alinear la parte superior de la leyenda
-            y=-0.2,           # Posicionar debajo del gráfico
-            xanchor="center", # Centrar horizontalmente
-            x=0.5             # Ubicación horizontal central
-        )
+        yaxis2=dict(title='Temperatura Máxima', overlaying='y', side='right'),
+        legend=dict(title='Grupos de Interés', orientation="h", yanchor="top", y=-0.2, xanchor="center", x=0.5)
     )
-    # Crear una base de datos combinada para descarga
     df_base = pd.DataFrame({
         'Fecha': df_menores_1['fecha'],
         'Menores_1': df_menores_1['Menores_1'],
@@ -545,7 +417,12 @@ def grafico_grupos_interes_epidemiologico(df, df_temp, title):
 
 
 def grafico_porcentaje_total(df, df_temp, col, title):
-    # Filtrar datos por causas específicas y calcular el total general de atenciones de urgencia
+    """
+    Gráfico del porcentaje de atenciones de urgencia de causas del sistema circulatorio
+    respecto al total general de atenciones de urgencia.
+
+    Se calculan los porcentajes diarios y se superpone la serie de temperatura máxima (con alertas) en un eje secundario.
+    """
     df_total_urgencias = df[df['Causa'] == 'Atenciones de urgencia - Total'].groupby('fecha')[col].sum().reset_index()
     df_total_sc = df[df['Causa'] == 'Atenciones de urgencia - Total Sistema Circulatorio'].groupby('fecha')[col].sum().reset_index()
     df_infarto = df[df['Causa'] == 'Atenciones de urgencia - Infarto agudo miocardio'].groupby('fecha')[col].sum().reset_index()
@@ -554,7 +431,6 @@ def grafico_porcentaje_total(df, df_temp, col, title):
     df_arritmia = df[df['Causa'] == 'Atenciones de urgencia - Arritmia grave'].groupby('fecha')[col].sum().reset_index()
     df_otras = df[df['Causa'] == 'Atenciones de urgencia - Otras causas circulatorias'].groupby('fecha')[col].sum().reset_index()
 
-    # Calcular los porcentajes por día
     porcentajes = pd.DataFrame()
     porcentajes['fecha'] = df_total_urgencias['fecha']
     porcentajes['Sistema Circulatorio (%)'] = (df_total_sc[col] / df_total_urgencias[col]) * 100
@@ -564,35 +440,24 @@ def grafico_porcentaje_total(df, df_temp, col, title):
     porcentajes['Arritmia grave (%)'] = (df_arritmia[col] / df_total_urgencias[col]) * 100
     porcentajes['Otras causas circulatorias (%)'] = (df_otras[col] / df_total_urgencias[col]) * 100
 
-    # Crear la figura del gráfico
     fig = go.Figure()
-
-    fig.add_trace(go.Scatter(
-        x=porcentajes['fecha'], y=porcentajes['Sistema Circulatorio (%)'],
-        mode='lines', name='Sistema Circulatorio (%)'
-    ))
-    fig.add_trace(go.Scatter(
-        x=porcentajes['fecha'], y=porcentajes['Infarto agudo miocardio (%)'],
-        mode='lines', name='Infarto agudo miocardio (%)'
-    ))
-    fig.add_trace(go.Scatter(
-        x=porcentajes['fecha'], y=porcentajes['Accidente vascular encefálico (%)'],
-        mode='lines', name='Accidente vascular encefálico (%)'
-    ))
-    fig.add_trace(go.Scatter(
-        x=porcentajes['fecha'], y=porcentajes['Crisis hipertensiva (%)'],
-        mode='lines', name='Crisis hipertensiva (%)'
-    ))
-    fig.add_trace(go.Scatter(
-        x=porcentajes['fecha'], y=porcentajes['Arritmia grave (%)'],
-        mode='lines', name='Arritmia grave (%)'
-    ))
-    fig.add_trace(go.Scatter(
-        x=porcentajes['fecha'], y=porcentajes['Otras causas circulatorias (%)'],
-        mode='lines', name='Otras causas circulatorias (%)'
-    ))
-
-    # Configurar alertas de temperatura
+    fig.add_trace(go.Scatter(x=porcentajes['fecha'], y=porcentajes['Infarto agudo miocardio (%)'],
+                             mode='lines', name='Infarto agudo miocardio (%)',
+                             line=dict(color=colors_atenciones['Infarto agudo miocardio'])))
+    fig.add_trace(go.Scatter(x=porcentajes['fecha'], y=porcentajes['Accidente vascular encefálico (%)'],
+                             mode='lines', name='Accidente vascular encefálico (%)',
+                             line=dict(color=colors_atenciones['Accidente vascular encefálico'])))
+    fig.add_trace(go.Scatter(x=porcentajes['fecha'], y=porcentajes['Crisis hipertensiva (%)'],
+                             mode='lines', name='Crisis hipertensiva (%)',
+                             line=dict(color=colors_atenciones['Crisis hipertensiva'])))
+    fig.add_trace(go.Scatter(x=porcentajes['fecha'], y=porcentajes['Arritmia grave (%)'],
+                             mode='lines', name='Arritmia grave (%)',
+                             line=dict(color=colors_atenciones['Arritmia grave'])))
+    fig.add_trace(go.Scatter(x=porcentajes['fecha'], y=porcentajes['Otras causas circulatorias (%)'],
+                             mode='lines', name='Otras causas circulatorias (%)',
+                             line=dict(color=colors_atenciones['Otras causas circulatorias'])))
+    # Agregar la traza de temperatura (eje Y2)
+    df_temp = df_temp.copy()
     df_temp['alerta'] = 'Sin Alerta'
     df_temp['mes'] = df_temp['date'].dt.month
     df_temp.loc[df_temp['mes'].isin([11, 12, 1, 2, 3]), 'alerta'] = 'Alerta temprana preventiva'
@@ -602,60 +467,24 @@ def grafico_porcentaje_total(df, df_temp, col, title):
     df_temp.loc[df_temp['alerta_consecutiva'] >= 2, 'alerta'] = 'Alerta Amarilla'
     df_temp['alerta_consecutiva_3'] = df_temp['alerta_temporal'].rolling(window=3).sum()
     df_temp.loc[df_temp['alerta_consecutiva_3'] >= 3, 'alerta'] = 'Alerta Roja'
-
-    # Agregar las trazas de temperatura máxima (eje Y2)
-    fig.add_trace(go.Scatter(
-        x=df_temp['date'], y=df_temp['t_max'],
-        mode='lines',
-        name='Temperatura Máxima',
-        line=dict(color='red'),
-        yaxis='y2'
-    ))
-
-    # Agregar los marcadores de alertas (eje Y2)
-    color_map = {
-        'Sin Alerta': 'blue',
-        'Alerta temprana preventiva': 'green',
-        'Alerta Amarilla': 'yellow',
-        'Alerta Roja': 'red'
-    }
-
-    for alerta, color in color_map.items():
+    fig.add_trace(go.Scatter(x=df_temp['date'], y=df_temp['t_max'],
+                             mode='lines', name='Temperatura Máxima',
+                             line=dict(color=color_temperatura), yaxis='y2'))
+    for alerta, color in colors_alerta.items():
         df_alerta = df_temp[df_temp['alerta'] == alerta]
-        fig.add_trace(go.Scatter(
-            x=df_alerta['date'],
-            y=df_alerta['t_max'],
-            mode='markers',
-            name=f'Alerta: {alerta}',
-            marker=dict(color=color),
-            yaxis='y2'
-        ))
-
-    # Configurar el diseño del gráfico
+        fig.add_trace(go.Scatter(x=df_alerta['date'], y=df_alerta['t_max'],
+                                 mode='markers', name=f'Alerta: {alerta}',
+                                 marker=dict(color=color), yaxis='y2'))
     fig.update_layout(
         title=title,
         xaxis_title='Fecha',
-        yaxis=dict(
-            title='Porcentaje (%)'
-        ),
-        yaxis2=dict(
-            title='Temperatura Máxima',
-            overlaying='y',
-            side='right'
-        ),
+        yaxis=dict(title='Porcentaje (%)'),
+        yaxis2=dict(title='Temperatura Máxima', overlaying='y', side='right'),
         template='plotly_white',
-        legend=dict(
-            orientation="h",
-            yanchor="top",
-            y=-0.2,
-            xanchor="center",
-            x=0.5
-        )
+        legend=dict(orientation="h", yanchor="top", y=-0.2, xanchor="center", x=0.5)
     )
-    # Crear una base de datos combinada para descarga
     df_base = pd.DataFrame({
         'Fecha': porcentajes['fecha'],
-        'Sistema Circulatorio (%)': porcentajes['Sistema Circulatorio (%)'],
         'Infarto agudo miocardio (%)': porcentajes['Infarto agudo miocardio (%)'],
         'Accidente vascular encefálico (%)': porcentajes['Accidente vascular encefálico (%)'],
         'Crisis hipertensiva (%)': porcentajes['Crisis hipertensiva (%)'],
@@ -663,97 +492,137 @@ def grafico_porcentaje_total(df, df_temp, col, title):
         'Otras causas circulatorias (%)': porcentajes['Otras causas circulatorias (%)'],
         'Temperatura Máxima': df_temp.set_index('date').reindex(porcentajes['fecha'], method='nearest')['t_max'].values
     })
-
     return fig, df_base
 
+# %% 4. Construcción de la aplicación principal y renderización de gráficos
 
-#%%
-# Llamar a las funciones y capturar tanto el gráfico como el DataFrame base
-fig_area_atenciones_respiratorias, base_area_atenciones_respiratorias = grafico_area_atenciones_respiratorias(
-    df_au, df_tmm, 'Total', 'Evolución de Atenciones de Urgencia en el Sistema Circulatorio'
-)
-
-fig_porcentaje_atenciones, base_porcentaje_atenciones = grafico_porcentaje_atenciones(
-    df_au, df_tmm, 'Total', 'Porcentaje de Atenciones de Urgencia por Causa en el Sistema Circulatorio'
-)
-
-fig_porcentaje_atenciones_total, base_porcentaje_atenciones_total = grafico_porcentaje_total(
-    df_au, df_tmm, 'Total', 'Porcentaje de Atenciones de Urgencia por Causa en Relación al Total General'
-)
-
-fig_total_grupo_etario, base_total_grupo_etario = grafico_total_grupo_etario(
-    df_au, df_tmm, 'Consultas de Urgencia por Grupos Etarios del Sistema Circulatorio'
-)
-
-fig_grupos_interes_epidemiologico, base_grupos_interes_epidemiologico = grafico_grupos_interes_epidemiologico(
-    df_au, df_tmm, 'Consultas de Urgencia en Grupos de Interés Epidemiológico'
-)
-
-# Renderizar los gráficos y agregar los botones de descarga correspondientes
-
-# Renderizar los gráficos y agregar los botones de descarga correspondientes
+st.title("Análisis de Atenciones de Urgencia y Temperatura en el Sistema Circulatorio")
+st.write("Esta página permite analizar la evolución de las atenciones de urgencia en el sistema circulatorio y su relación con la temperatura máxima. Cada sección incluye una explicación y la posibilidad de descargar los datos utilizados en cada gráfico en formato Excel.")
 
 # 1. Evolución de Atenciones de Urgencia por Sistema Circulatorio
-st.write("## Evolución de cantidad Atenciones de Urgencia por Sistema Circulatorio")
-st.write("Este gráfico muestra la evolución temporal de las atenciones de urgencia relacionadas con diferentes causas del sistema circulatorio.")
-st.plotly_chart(fig_area_atenciones_respiratorias, use_container_width=True)
-st.write("### Descargar Datos Utilizados en el Gráfico")
-data_csv_area = base_area_atenciones_respiratorias.to_csv(index=False, sep=';', decimal=',', encoding='utf-8').encode('utf-8')
+st.header("Evolución de Atenciones de Urgencia en el Sistema Circulatorio")
+st.markdown(
+    """
+    **Descripción:**  
+    Este gráfico muestra la evolución temporal de las atenciones de urgencia relacionadas con el sistema circulatorio, desglosadas por causa (infarto, accidente, crisis, arritmia y otras).  
+    Además, se superpone la serie de temperatura máxima, en la que se visualizan los distintos estados de alerta.
+    """
+)
+fig_area, base_area = grafico_area_atenciones_respiratorias(df_au, df_tmm, 'Total',
+                                                             'Evolución de Atenciones de Urgencia en el Sistema Circulatorio')
+st.plotly_chart(fig_area, use_container_width=True)
+st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
 st.download_button(
-    label="Descargar Datos",
-    data=data_csv_area,
-    file_name="datos_atenciones_urgencia.csv",
-    mime="text/csv"
+    label="Descargar Datos (Excel)",
+    data=to_excel_bytes(base_area),
+    file_name="datos_area_atenciones_urgencia.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 )
 
 # 2. Porcentaje de Atenciones de Urgencia por Causa en el Sistema Circulatorio
-st.write("## Porcentaje de Atenciones de Urgencia por Causas por Sistema Circulatorio")
-st.write("Se presenta la proporción diaria de las distintas causas de urgencia dentro del total de atenciones del sistema circulatorio.")
-st.plotly_chart(fig_porcentaje_atenciones, use_container_width=True)
-st.write("### Descargar Datos Utilizados en el Gráfico")
-data_csv_porcentaje = base_porcentaje_atenciones.to_csv(index=False, sep=';', decimal=',', encoding='utf-8').encode('utf-8')
+st.header("Porcentaje de Atenciones de Urgencia por Causa en el Sistema Circulatorio")
+st.markdown(
+    """
+    **Descripción:**  
+    Este gráfico presenta el porcentaje diario de atenciones de urgencia por causa (infarto, accidente, crisis, arritmia y otras) en relación al total de atenciones del sistema circulatorio.  
+    Se incluye también la serie de temperatura máxima con sus respectivas alertas.
+    """
+)
+fig_porcentaje, base_porcentaje = grafico_porcentaje_atenciones(df_au, df_tmm, 'Total',
+                                                                'Porcentaje de Atenciones de Urgencia por Causa')
+st.plotly_chart(fig_porcentaje, use_container_width=True)
+st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
 st.download_button(
-    label="Descargar Datos",
-    data=data_csv_porcentaje,
-    file_name="datos_porcentaje_atenciones.csv",
-    mime="text/csv"
+    label="Descargar Datos (Excel)",
+    data=to_excel_bytes(base_porcentaje),
+    file_name="datos_porcentaje_atenciones.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 )
 
-# 3. Porcentaje de Atenciones de Urgencia por Causa en Relación al Total General
-st.write("## Porcentaje de Atenciones de Urgencia por Causa de Sistema Circulatorio en Relación al Total General de Atenciones de Urgencia")
-st.write("Este gráfico muestra el porcentaje de atenciones de urgencia de causas circulatorias específicas respecto al total de consultas de urgencia.")
-st.plotly_chart(fig_porcentaje_atenciones_total, use_container_width=True)
-st.write("### Descargar Datos Utilizados en el Gráfico")
-data_csv_porcentaje_total = base_porcentaje_atenciones_total.to_csv(index=False, sep=';', decimal=',', encoding='utf-8').encode('utf-8')
+# 3. Porcentaje de Atenciones de Urgencia en Relación al Total General
+st.header("Porcentaje de Atenciones de Urgencia (Causas Circulatorias) respecto al Total General")
+st.markdown(
+    """
+    **Descripción:**  
+    Este gráfico muestra el porcentaje que representan las atenciones de urgencia de causas del sistema circulatorio (infarto, accidente, etc.) en relación al total general de atenciones de urgencia.
+    Se superpone la serie de temperatura máxima (con alertas) para complementar el análisis.
+    """
+)
+fig_porcentaje_total, base_porcentaje_total = grafico_porcentaje_total(df_au, df_tmm, 'Total',
+                                                                      'Porcentaje de Atenciones de Urgencia por Causa (Total General)')
+st.plotly_chart(fig_porcentaje_total, use_container_width=True)
+st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
 st.download_button(
-    label="Descargar Datos",
-    data=data_csv_porcentaje_total,
-    file_name="datos_porcentaje_total_atenciones.csv",
-    mime="text/csv"
+    label="Descargar Datos (Excel)",
+    data=to_excel_bytes(base_porcentaje_total),
+    file_name="datos_porcentaje_total_atenciones.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 )
 
 # 4. Consultas de Urgencia por Grupos Etarios en el Sistema Circulatorio
-st.write("## Consultas de Urgencia por Grupos Etarios en el Sistema Circulatorio")
-st.write("Representación de la distribución total de atenciones de urgencia del sistema circulatorio según grupos etarios.")
-st.plotly_chart(fig_total_grupo_etario, use_container_width=True)
-st.write("### Descargar Datos Utilizados en el Gráfico")
-data_csv_grupo_etario = base_total_grupo_etario.to_csv(index=False, sep=';', decimal=',', encoding='utf-8').encode('utf-8')
+st.header("Consultas de Urgencia por Grupos Etarios")
+st.markdown(
+    """
+    **Descripción:**  
+    Este gráfico representa la distribución de las consultas de urgencia en el sistema circulatorio según distintos grupos etarios.  
+    Se muestra la tendencia total (línea azul) y la contribución de cada grupo (barras).  
+    Además, se superpone la serie de temperatura máxima (con alertas) en un eje secundario.
+    """
+)
+fig_grupo_etario, base_grupo_etario = grafico_total_grupo_etario(df_au, df_tmm,
+                                                                'Consultas de Urgencia por Grupos Etarios del Sistema Circulatorio')
+st.plotly_chart(fig_grupo_etario, use_container_width=True)
+st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
 st.download_button(
-    label="Descargar Datos",
-    data=data_csv_grupo_etario,
-    file_name="datos_grupo_etario_atenciones.csv",
-    mime="text/csv"
+    label="Descargar Datos (Excel)",
+    data=to_excel_bytes(base_grupo_etario),
+    file_name="datos_grupo_etario_atenciones.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 )
 
 # 5. Consultas de Urgencia en Grupos de Interés Epidemiológico
-st.write("## Consultas de Urgencia en Grupos de Interés Epidemiológico")
-st.write("Este gráfico ilustra la cantidad de consultas de urgencia de grupos clave: menores de 1 año, y adultos mayores de 65 años.")
-st.plotly_chart(fig_grupos_interes_epidemiologico, use_container_width=True)
-st.write("### Descargar Datos Utilizados en el Gráfico")
-data_csv_grupos_interes = base_grupos_interes_epidemiologico.to_csv(index=False, sep=';', decimal=',', encoding='utf-8').encode('utf-8')
+st.header("Consultas de Urgencia en Grupos de Interés Epidemiológico")
+st.markdown(
+    """
+    **Descripción:**  
+    Este gráfico ilustra la cantidad de consultas de urgencia para grupos clave de interés epidemiológico: menores de 1 año y adultos mayores (De_65_y_mas).  
+    Se superpone la serie de temperatura máxima (con alertas) en un eje secundario.
+    """
+)
+fig_grupo_interes, base_grupo_interes = grafico_grupos_interes_epidemiologico(df_au, df_tmm,
+                                                                              'Consultas de Urgencia en Grupos de Interés Epidemiológico')
+st.plotly_chart(fig_grupo_interes, use_container_width=True)
+st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
 st.download_button(
-    label="Descargar Datos",
-    data=data_csv_grupos_interes,
-    file_name="datos_grupos_interes_epidemiologico.csv",
+    label="Descargar Datos (Excel)",
+    data=to_excel_bytes(base_grupo_interes),
+    file_name="datos_grupos_interes_epidemiologico.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+)
+
+# %% 5. Sección Final: Descargar Bases de Datos Completas (en CSV)
+st.header("Descargar Bases de Datos Completas")
+st.markdown(
+    """
+    **Bases de Datos Completas:**  
+    A continuación, puedes descargar los archivos CSV originales que contienen toda la información utilizada en este análisis.
+    """
+)
+# Descargar base de atenciones de urgencia
+with open("data_atenciones_urgencia/df_rm_circ_2024.csv", "rb") as file_au:
+    data_au = file_au.read()
+st.download_button(
+    label="Descargar Base de Atenciones de Urgencia (CSV)",
+    data=data_au,
+    file_name="df_rm_circ_2024.csv",
+    mime="text/csv"
+)
+# Descargar base de temperaturas
+with open("data_temperatura/tmm_historico_2024.csv", "rb") as file_tmm:
+    data_tmm = file_tmm.read()
+st.download_button(
+    label="Descargar Base de Temperaturas (CSV)",
+    data=data_tmm,
+    file_name="tmm_historico_2024.csv",
     mime="text/csv"
 )
