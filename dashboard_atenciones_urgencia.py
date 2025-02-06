@@ -506,22 +506,23 @@ st.markdown(
 fig1, base_area = grafico_area_atenciones_respiratorias(df_au, df_tmm, 'Total',
                                                         'Evolución de Atenciones de Urgencia en el Sistema Circulatorio')
 st.plotly_chart(fig1, use_container_width=True)
-st.markdown("**Tabla: Últimos 10 días (Defunciones Cardiovasculares)**")
-table1 = base_area.sort_values(by='Fecha').tail(10)
-st.table(table1)
-st.download_button(
-    label="Descargar Tabla (Excel)",
-    data=to_excel_bytes(table1),
-    file_name="tabla_area_atenciones_urgencia.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
-st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
-st.download_button(
-    label="Descargar Datos (Excel)",
-    data=to_excel_bytes(base_area),
-    file_name="datos_area_atenciones_urgencia.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
+with st.expander("Ver tabla: Últimos 10 días (Cardiovasculares)"):
+    st.markdown("**Tabla: Últimos 10 días (Cardiovasculares)**")
+    table1 = base_area.sort_values(by='Fecha').tail(10)
+    st.table(table1)
+    st.download_button(
+        label="Descargar Tabla (Excel)",
+        data=to_excel_bytes(table1),
+        file_name="tabla_area_atenciones_urgencia.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+    st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
+    st.download_button(
+        label="Descargar Datos (Excel)",
+        data=to_excel_bytes(base_area),
+        file_name="datos_area_atenciones_urgencia.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
 
 ### Gráfico 2: Porcentaje de Atenciones de Urgencia
 st.header("Porcentaje de Atenciones de Urgencia por Causa")
@@ -535,22 +536,23 @@ st.markdown(
 fig2, base_porcentaje = grafico_porcentaje_atenciones(df_au, df_tmm, 'Total',
                                                       'Porcentaje de Atenciones de Urgencia por Causa')
 st.plotly_chart(fig2, use_container_width=True)
-st.markdown("**Tabla: Últimos 10 días (Porcentaje de Atenciones)**")
-table2 = base_porcentaje.sort_values(by='Fecha').tail(10)
-st.table(table2)
-st.download_button(
-    label="Descargar Tabla (Excel)",
-    data=to_excel_bytes(table2),
-    file_name="tabla_porcentaje_atenciones.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
-st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
-st.download_button(
-    label="Descargar Datos (Excel)",
-    data=to_excel_bytes(base_porcentaje),
-    file_name="datos_porcentaje_atenciones.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
+with st.expander("Ver tabla: Últimos 10 días (Porcentaje de Atenciones)"):
+    st.markdown("**Tabla: Últimos 10 días (Porcentaje de Atenciones)**")
+    table2 = base_porcentaje.sort_values(by='Fecha').tail(10)
+    st.table(table2)
+    st.download_button(
+        label="Descargar Tabla (Excel)",
+        data=to_excel_bytes(table2),
+        file_name="tabla_porcentaje_atenciones.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+    st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
+    st.download_button(
+        label="Descargar Datos (Excel)",
+        data=to_excel_bytes(base_porcentaje),
+        file_name="datos_porcentaje_atenciones.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
 
 ### Gráfico 3: Atenciones por Grupo de Edad
 st.header("Atenciones de Urgencia por Grupo de Edad")
@@ -564,22 +566,23 @@ st.markdown(
 fig3, base_grupo = grafico_total_grupo_etario(df_au, df_tmm,
                                               'Consultas de Urgencia por Grupos Etarios del Sistema Circulatorio')
 st.plotly_chart(fig3, use_container_width=True)
-st.markdown("**Tabla: Últimos 10 días (Atenciones por Grupo de Edad)**")
-table3 = base_grupo.sort_values(by='Fecha').tail(10)
-st.table(table3)
-st.download_button(
-    label="Descargar Tabla (Excel)",
-    data=to_excel_bytes(table3),
-    file_name="tabla_atenciones_por_grupo.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
-st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
-st.download_button(
-    label="Descargar Datos (Excel)",
-    data=to_excel_bytes(base_grupo),
-    file_name="datos_atenciones_por_grupo.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
+with st.expander("Ver tabla: Últimos 10 días (Atenciones por Grupo de Edad)"):
+    st.markdown("**Tabla: Últimos 10 días (Atenciones por Grupo de Edad)**")
+    table3 = base_grupo.sort_values(by='Fecha').tail(10)
+    st.table(table3)
+    st.download_button(
+        label="Descargar Tabla (Excel)",
+        data=to_excel_bytes(table3),
+        file_name="tabla_atenciones_por_grupo.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+    st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
+    st.download_button(
+        label="Descargar Datos (Excel)",
+        data=to_excel_bytes(base_grupo),
+        file_name="datos_atenciones_por_grupo.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
 
 ### Gráfico 4: Porcentaje de Atenciones por Grupo de Edad
 st.header("Porcentaje de Atenciones por Grupo de Edad")
@@ -594,22 +597,23 @@ st.markdown(
 fig4, base_porcentaje_grupo = grafico_porcentaje_total(df_au, df_tmm, 'Total',
                                                        'Porcentaje de Atenciones por Causa (Total General)')
 st.plotly_chart(fig4, use_container_width=True)
-st.markdown("**Tabla: Últimos 10 días (Porcentaje de Atenciones por Grupo de Edad)**")
-table4 = base_porcentaje_grupo.sort_values(by='Fecha').tail(10)
-st.table(table4)
-st.download_button(
-    label="Descargar Tabla (Excel)",
-    data=to_excel_bytes(table4),
-    file_name="tabla_porcentaje_atenciones_por_grupo.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
-st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
-st.download_button(
-    label="Descargar Datos (Excel)",
-    data=to_excel_bytes(base_porcentaje_grupo),
-    file_name="datos_porcentaje_atenciones_por_grupo.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
+with st.expander("Ver tabla: Últimos 10 días (Porcentaje de Atenciones por Grupo de Edad)"):
+    st.markdown("**Tabla: Últimos 10 días (Porcentaje de Atenciones por Grupo de Edad)**")
+    table4 = base_porcentaje_grupo.sort_values(by='Fecha').tail(10)
+    st.table(table4)
+    st.download_button(
+        label="Descargar Tabla (Excel)",
+        data=to_excel_bytes(table4),
+        file_name="tabla_porcentaje_atenciones_por_grupo.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+    st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
+    st.download_button(
+        label="Descargar Datos (Excel)",
+        data=to_excel_bytes(base_porcentaje_grupo),
+        file_name="datos_porcentaje_atenciones_por_grupo.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
 
 # %% 5. Sección Final: Descargar Bases de Datos Completas (en CSV)
 st.header("Descargar Bases de Datos Completas")

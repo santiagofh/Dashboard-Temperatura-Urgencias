@@ -170,23 +170,24 @@ fig1.update_layout(
 )
 st.plotly_chart(fig1, use_container_width=True)
 
-# Tabla 1: Últimos 10 días de defunciones cardiovasculares (Gráfico 1)
-table1 = daily_cardiovascular.sort_values(by='DATE').tail(10)
-st.write("### Tabla: Últimos 10 días (Defunciones Cardiovasculares)")
-st.table(table1)
-st.download_button(
-    label="Descargar Tabla (Excel)",
-    data=to_excel_bytes(table1),
-    file_name="tabla_defunciones_cardiovasculares.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
-st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
-st.download_button(
-    label="Descargar Datos (Excel)",
-    data=to_excel_bytes(daily_cardiovascular),
-    file_name="datos_defunciones_cardiovasculares.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
+with st.expander("Ver tabla: Últimos 10 días (Defunciones Cardiovasculares)"):
+    # Tabla 1: Últimos 10 días de defunciones cardiovasculares (Gráfico 1)
+    table1 = daily_cardiovascular.sort_values(by='DATE').tail(10)
+    st.write("### Tabla: Últimos 10 días (Defunciones Cardiovasculares)")
+    st.table(table1)
+    st.download_button(
+        label="Descargar Tabla (Excel)",
+        data=to_excel_bytes(table1),
+        file_name="tabla_defunciones_cardiovasculares.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+    st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
+    st.download_button(
+        label="Descargar Datos (Excel)",
+        data=to_excel_bytes(daily_cardiovascular),
+        file_name="datos_defunciones_cardiovasculares.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
 
 ### Gráfico 2: Porcentaje de defunciones cardiovasculares + Temperatura y Alertas
 st.write("## Porcentaje de defunciones cardiovasculares")
@@ -222,24 +223,24 @@ fig2.update_layout(
     yaxis2=dict(title='Temperatura Máxima', overlaying='y', side='right')
 )
 st.plotly_chart(fig2, use_container_width=True)
-
-# Tabla 2: Últimos 10 días (Porcentaje de defunciones cardiovasculares)
-table2 = merged_data.sort_values(by='DATE').tail(10)
-st.write("### Tabla: Últimos 10 días (Porcentaje de Defunciones Cardiovasculares)")
-st.table(table2)
-st.download_button(
-    label="Descargar Tabla (Excel)",
-    data=to_excel_bytes(table2),
-    file_name="tabla_porcentaje_defunciones.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
-st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
-st.download_button(
-    label="Descargar Datos (Excel)",
-    data=to_excel_bytes(merged_data),
-    file_name="datos_porcentaje_defunciones.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
+with st.expander("Ver tabla: Últimos 10 días (Porcentaje de defunciones cardiovasculares)"):
+    # Tabla 2: Últimos 10 días (Porcentaje de defunciones cardiovasculares)
+    table2 = merged_data.sort_values(by='DATE').tail(10)
+    st.write("### Tabla: Últimos 10 días (Porcentaje de Defunciones Cardiovasculares)")
+    st.table(table2)
+    st.download_button(
+        label="Descargar Tabla (Excel)",
+        data=to_excel_bytes(table2),
+        file_name="tabla_porcentaje_defunciones.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+    st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
+    st.download_button(
+        label="Descargar Datos (Excel)",
+        data=to_excel_bytes(merged_data),
+        file_name="datos_porcentaje_defunciones.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
 
 ### Gráfico 3: Cantidad diaria de defunciones cardiovasculares por grupo de edad + Temperatura y Alertas
 st.write("## Cantidad diaria de defunciones cardiovasculares por grupo de edad")
@@ -280,25 +281,27 @@ fig3.update_layout(
 )
 st.plotly_chart(fig3, use_container_width=True)
 
-# Tabla 3: Últimos 10 días (Defunciones por grupo de edad)
-daily_by_age = daily_by_age.loc[daily_by_age.Grupo_Edad=='>= 85']
-table3 = daily_by_age.sort_values(by='DATE').tail(10)
+with st.expander("Ver tabla: Últimos 10 días (Defunciones por grupo de edad)"):
+    # Tabla 3: Últimos 10 días (Defunciones por grupo de edad)
 
-st.write("### Tabla: Últimos 10 días (Defunciones por Grupo de Edad)")
-st.table(table3)
-st.download_button(
-    label="Descargar Tabla (Excel)",
-    data=to_excel_bytes(table3),
-    file_name="tabla_defunciones_por_grupo_edad.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
-st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
-st.download_button(
-    label="Descargar Datos (Excel)",
-    data=to_excel_bytes(daily_by_age),
-    file_name="datos_defunciones_por_grupo_edad.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
+    daily_by_age = daily_by_age.loc[daily_by_age.Grupo_Edad=='>= 85']
+    table3 = daily_by_age.sort_values(by='DATE').tail(10)
+
+    st.write("### Tabla: Últimos 10 días (Defunciones por Grupo de Edad)")
+    st.table(table3)
+    st.download_button(
+        label="Descargar Tabla (Excel)",
+        data=to_excel_bytes(table3),
+        file_name="tabla_defunciones_por_grupo_edad.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+    st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
+    st.download_button(
+        label="Descargar Datos (Excel)",
+        data=to_excel_bytes(daily_by_age),
+        file_name="datos_defunciones_por_grupo_edad.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
 
 ### Gráfico 4: Porcentaje de defunciones cardiovasculares por grupo de edad + Temperatura y Alertas
 st.write("## Porcentaje de defunciones cardiovasculares por grupo de edad")
@@ -336,25 +339,25 @@ fig4.update_layout(
     yaxis2=dict(title='Temperatura Máxima', overlaying='y', side='right')
 )
 st.plotly_chart(fig4, use_container_width=True)
-
+with st.expander("Ver tabla: Últimos 10 días (Porcentaje de Defunciones por Grupo de Edad)"):
 # Tabla 4: Últimos 10 días (Porcentaje de defunciones por grupo de edad)
-merged_by_age = merged_by_age.loc[merged_by_age.Grupo_Edad=='>= 85']
-table4 = merged_by_age.sort_values(by='DATE').tail(10)
-st.write("### Tabla: Últimos 10 días (Porcentaje de Defunciones por Grupo de Edad)")
-st.table(table4)
-st.download_button(
-    label="Descargar Tabla (Excel)",
-    data=to_excel_bytes(table4),
-    file_name="tabla_porcentaje_defunciones_por_grupo.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
-st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
-st.download_button(
-    label="Descargar Datos (Excel)",
-    data=to_excel_bytes(merged_by_age),
-    file_name="datos_porcentaje_defunciones_por_grupo.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
+    merged_by_age = merged_by_age.loc[merged_by_age.Grupo_Edad=='>= 85']
+    table4 = merged_by_age.sort_values(by='DATE').tail(10)
+    st.write("### Tabla: Últimos 10 días (Porcentaje de Defunciones por Grupo de Edad)")
+    st.table(table4)
+    st.download_button(
+        label="Descargar Tabla (Excel)",
+        data=to_excel_bytes(table4),
+        file_name="tabla_porcentaje_defunciones_por_grupo.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+    st.markdown("**Descargar Datos Utilizados en el Gráfico (Excel):**")
+    st.download_button(
+        label="Descargar Datos (Excel)",
+        data=to_excel_bytes(merged_by_age),
+        file_name="datos_porcentaje_defunciones_por_grupo.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
 
 # %% 5. Sección Final: Descargar Bases de Datos Completas (en CSV)
 st.write("## Descargar Bases de Datos Completas")

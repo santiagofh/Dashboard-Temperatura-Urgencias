@@ -250,16 +250,18 @@ st.download_button(
 )
 
 # Tabla de alertas SENAPRED y botón de descarga de la tabla
-st.subheader("Tabla de Alertas SENAPRED")
-tabla_senapred = tabla_alertas_senapred(df)
-st.table(tabla_senapred)
-excel_tabla_senapred = to_excel(tabla_senapred)
-st.download_button(
-    label="Descargar tabla SENAPRED (Excel)",
-    data=excel_tabla_senapred,
-    file_name="tabla_senapred.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
+
+with st.expander("Ver tabla"):
+    st.subheader("Tabla de Alertas SENAPRED")
+    tabla_senapred = tabla_alertas_senapred(df)
+    st.table(tabla_senapred)
+    excel_tabla_senapred = to_excel(tabla_senapred)
+    st.download_button(
+        label="Descargar tabla SENAPRED (Excel)",
+        data=excel_tabla_senapred,
+        file_name="tabla_senapred.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
 
 # --- Sección 2: Gráfico y Tabla SEREMI ---
 st.header("Días con Alertas **SEREMI**")
@@ -304,15 +306,16 @@ st.download_button(
 )
 
 # Tabla de alertas SEREMI y botón de descarga de la tabla
-tabla_seremi = tabla_alertas_seremi(df)
-st.table(tabla_seremi)
-excel_tabla_seremi = to_excel(tabla_seremi)
-st.download_button(
-    label="Descargar tabla SEREMI (Excel)",
-    data=excel_tabla_seremi,
-    file_name="tabla_seremi.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
+with st.expander("Ver tabla"):
+    tabla_seremi = tabla_alertas_seremi(df)
+    st.table(tabla_seremi)
+    excel_tabla_seremi = to_excel(tabla_seremi)
+    st.download_button(
+        label="Descargar tabla SEREMI (Excel)",
+        data=excel_tabla_seremi,
+        file_name="tabla_seremi.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
 
 # --- Sección 3: Gráfico y Tabla Sobre 35°C ---
 st.header("Días con Temperatura **Sobre 35°C**")
@@ -341,15 +344,16 @@ st.download_button(
 )
 
 # Tabla de alertas Sobre 35°C y botón de descarga de la tabla
-tabla_sobre35 = tabla_alertas_sobre35(df)
-st.table(tabla_sobre35)
-excel_tabla_sobre35 = to_excel(tabla_sobre35)
-st.download_button(
-    label="Descargar tabla Sobre 35°C (Excel)",
-    data=excel_tabla_sobre35,
-    file_name="tabla_sobre35.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
+with st.expander("Ver tabla"):
+    tabla_sobre35 = tabla_alertas_sobre35(df)
+    st.table(tabla_sobre35)
+    excel_tabla_sobre35 = to_excel(tabla_sobre35)
+    st.download_button(
+        label="Descargar tabla Sobre 35°C (Excel)",
+        data=excel_tabla_sobre35,
+        file_name="tabla_sobre35.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
 
 # --- Sección Final: Descargar Base Completa ---
 st.header("Descargar Base Completa")
