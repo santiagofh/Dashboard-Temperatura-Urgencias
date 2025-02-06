@@ -38,12 +38,12 @@ def external_link2():
     st.markdown("### Plataforma territorial de monitoreo de calor extremo en la RM")
     st.write("Haga clic en el siguiente enlace para acceder al dashboard:")
     url = "https://experience.arcgis.com/experience/0b9588782e134bbfb01b841511201c6f/?draft=true#data_s=id%3AdataSource_5-1930c7963ae-layer-74%3A2"
-    st.markdown(f"[Ir al Dashboard Looker Studio]({url})", unsafe_allow_html=True)
+    st.markdown(f"[Ir al Dashboard]({url})", unsafe_allow_html=True)
 def external_link3():
     st.markdown("### MAPA BOTÓN ROJO (RIESGO INCENDIOS FORESTALES) Y PRONOSTICO DE TEMPERATURA SEMANAL")
     st.write("Haga clic en el siguiente enlace para acceder al dashboard:")
     url = "https://esri-minsal.maps.arcgis.com/apps/webappviewer/index.html?id=03dde8456f914b25946843e077a05123"
-    st.markdown(f"[Ir al Dashboard Looker Studio]({url})", unsafe_allow_html=True)
+    st.markdown(f"[Ir al Mapa]({url})", unsafe_allow_html=True)
 
 # Definir las páginas
 pages = {
