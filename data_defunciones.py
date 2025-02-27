@@ -28,3 +28,5 @@ filtered_df.to_csv(r'data_defunciones/defunciones_2024.csv', index=False, sep='|
 print("Los datos filtrados y agrupados se han guardado correctamente.")
 
 # %%
+a=pd.DataFrame({'diag':list((filtered_df['DIAG1'][filtered_df['DIAG1'].str.startswith('I', na=False)].unique()))})
+# %%
