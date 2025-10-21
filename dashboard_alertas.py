@@ -73,7 +73,7 @@ def evaluar_alertas(df: pd.DataFrame) -> pd.DataFrame:
 
 def grafico_alertas_senapred(df: pd.DataFrame):
     """
-    Gráfico SENAPRED:
+    Gráfico:
     Muestra la evolución de las temperaturas máximas diarias y agrega líneas de referencia en 30°C, 34°C y 40°C.
     Se distinguen tres rangos:
       - **Verde:** 30°C ≤ t_max < 34°C
@@ -84,7 +84,7 @@ def grafico_alertas_senapred(df: pd.DataFrame):
         df,
         x="date",
         y="t_max",
-        title="Temperaturas Máximas - SENAPRED",
+        title="Temperaturas Máximas",
         markers=True
     )
     # Líneas de referencia
@@ -153,7 +153,7 @@ def grafico_alertas_seremi(df: pd.DataFrame):
         "Alerta Roja": "red"
     }
     fig = px.line(df_alertas, x="date", y="t_max",
-                  title="Temperaturas Máximas y Alertas - SEREMI",
+                  title="Temperaturas Máximas y Alertas",
                   color_discrete_sequence=["grey"])
     fig.add_hline(y=34, line_dash="dot", line_color="yellow",
                   annotation_text="35°C", annotation_position="bottom right")
@@ -226,7 +226,7 @@ def tabla_alertas_sobre35(df: pd.DataFrame) -> pd.DataFrame:
 
 # %% 4. Construir la aplicación principal
 
-st.title("SEREMI RM - Análisis Exploratorio de Datos de Temperaturas Extremas")
+st.title("SEREMI RM - Análisis exploratorio de datos de temperaturas máximas")
 st.write("Esta aplicación permite analizar y visualizar la evolución de las temperaturas máximas diarias en la Región Metropolitana, junto con la clasificación de alertas según criterios definidos.")
 
 # --- Sección 1: Gráfico y Tabla SENAPRED ---
@@ -269,10 +269,10 @@ st.write("Esta aplicación permite analizar y visualizar la evolución de las te
 #     )
 
 # --- Sección 2: Gráfico y Tabla SEREMI ---
-st.header("Días con Alertas **SENAPRED**")
+st.header("Días con Alertas")
 st.markdown(
     """
-    **Gráfico SEREMI:**  
+    ****  
     En este gráfico se representan las temperaturas máximas diarias junto con el tipo de alerta asignado, según las siguientes reglas:
     
     - **Alerta temprana preventiva:**  

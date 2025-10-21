@@ -492,11 +492,11 @@ def grafico_porcentaje_total(df, df_temp, col, title):
 
 # %% 4. Construcción de la aplicación principal y renderización de gráficos
 
-st.title("Análisis de Atenciones de Urgencia y Temperatura en el Sistema Circulatorio")
+st.title("Análisis de atenciones de urgencia por causas del sistema circulatorio y calor extremo")
 st.write("Esta página permite analizar la evolución de las atenciones de urgencia y su relación con la temperatura máxima. Cada sección incluye una explicación, el gráfico interactivo, y una tabla con los datos de los últimos 10 días, con opción de descargar los datos en Excel.")
 
 ### Gráfico 1: Evolución de Atenciones de Urgencia
-st.header("Evolución de Atenciones de Urgencia en el Sistema Circulatorio")
+st.header("Evolución de atenciones de urgencia por causas del sistema circulatorio.")
 st.markdown(
     """
     **Descripción:**  
@@ -525,7 +525,7 @@ with st.expander("Ver tabla: Últimos 10 días (Cardiovasculares)"):
     )
 
 ### Gráfico 2: Porcentaje de Atenciones de Urgencia
-st.header("Porcentaje de Atenciones de Urgencia por Causa")
+st.header("Porcentaje de atenciones de urgencia por causas del sistema circulatorio")
 st.markdown(
     """
     **Descripción:**  
@@ -555,7 +555,7 @@ with st.expander("Ver tabla: Últimos 10 días (Porcentaje de Atenciones)"):
     )
 
 ### Gráfico 3: Atenciones por Grupo de Edad
-st.header("Atenciones de Urgencia por Grupo de Edad")
+st.header("Porcentaje de atenciones de urgencia por causas del sistema circulatorio")
 st.markdown(
     """
     **Descripción:**  
