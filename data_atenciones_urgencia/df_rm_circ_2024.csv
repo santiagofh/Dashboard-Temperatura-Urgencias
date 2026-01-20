@@ -13211,13 +13211,13 @@ Hospital,2025-04-01,16,Atenciones de urgencia - Arritmia grave,17,0,0,0,10,7
 Hospital,2025-04-01,17,Atenciones de urgencia - Otras causas circulatorias,115,0,0,0,49,66
 Hospital,2025-04-01,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,49,0,0,1,15,33
 Hospital,2025-04-01,25,Hospitalizaciones - Total,553,15,28,51,266,193
-Hospital,2025-05-01,1,Atenciones de urgencia - Total,3908,191,440,697,1932,648
-Hospital,2025-05-01,12,Atenciones de urgencia - Total Sistema Circulatorio,157,0,2,3,78,74
-Hospital,2025-05-01,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,2,2
+Hospital,2025-05-01,1,Atenciones de urgencia - Total,3830,191,440,697,1867,635
+Hospital,2025-05-01,12,Atenciones de urgencia - Total Sistema Circulatorio,156,0,2,3,79,72
+Hospital,2025-05-01,13,Atenciones de urgencia - Infarto agudo miocardio,5,0,0,0,3,2
 Hospital,2025-05-01,14,Atenciones de urgencia - Accidente vascular encefálico,30,0,0,0,17,13
 Hospital,2025-05-01,15,Atenciones de urgencia - Crisis hipertensiva,9,0,0,0,5,4
 Hospital,2025-05-01,16,Atenciones de urgencia - Arritmia grave,8,0,0,0,2,6
-Hospital,2025-05-01,17,Atenciones de urgencia - Otras causas circulatorias,106,0,2,3,52,49
+Hospital,2025-05-01,17,Atenciones de urgencia - Otras causas circulatorias,104,0,2,3,52,47
 Hospital,2025-05-01,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,43,0,0,0,16,27
 Hospital,2025-05-01,25,Hospitalizaciones - Total,387,11,11,26,196,143
 Hospital,2025-06-01,1,Atenciones de urgencia - Total,3927,212,502,716,1849,648
@@ -13274,7 +13274,7 @@ Hospital,2025-11-01,16,Atenciones de urgencia - Arritmia grave,14,0,0,0,4,10
 Hospital,2025-11-01,17,Atenciones de urgencia - Otras causas circulatorias,68,0,1,2,35,30
 Hospital,2025-11-01,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,43,0,0,0,16,27
 Hospital,2025-11-01,25,Hospitalizaciones - Total,450,25,35,52,200,138
-Hospital,2025-12-01,1,Atenciones de urgencia - Total,5016,221,610,1219,2169,797
+Hospital,2025-12-01,1,Atenciones de urgencia - Total,5015,221,610,1219,2168,797
 Hospital,2025-12-01,12,Atenciones de urgencia - Total Sistema Circulatorio,205,1,2,3,106,93
 Hospital,2025-12-01,13,Atenciones de urgencia - Infarto agudo miocardio,13,0,0,0,5,8
 Hospital,2025-12-01,14,Atenciones de urgencia - Accidente vascular encefálico,28,0,0,0,15,13
@@ -13319,13 +13319,13 @@ Hospital,2025-04-02,16,Atenciones de urgencia - Arritmia grave,11,0,0,0,8,3
 Hospital,2025-04-02,17,Atenciones de urgencia - Otras causas circulatorias,112,1,0,0,66,45
 Hospital,2025-04-02,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,60,0,0,0,30,30
 Hospital,2025-04-02,25,Hospitalizaciones - Total,509,12,27,32,242,196
-Hospital,2025-05-02,1,Atenciones de urgencia - Total,4368,229,542,768,2064,765
-Hospital,2025-05-02,12,Atenciones de urgencia - Total Sistema Circulatorio,194,0,0,3,107,84
-Hospital,2025-05-02,13,Atenciones de urgencia - Infarto agudo miocardio,11,0,0,0,7,4
-Hospital,2025-05-02,14,Atenciones de urgencia - Accidente vascular encefálico,31,0,0,0,10,21
+Hospital,2025-05-02,1,Atenciones de urgencia - Total,4322,229,542,768,2015,768
+Hospital,2025-05-02,12,Atenciones de urgencia - Total Sistema Circulatorio,195,0,0,3,107,85
+Hospital,2025-05-02,13,Atenciones de urgencia - Infarto agudo miocardio,10,0,0,0,6,4
+Hospital,2025-05-02,14,Atenciones de urgencia - Accidente vascular encefálico,32,0,0,0,11,21
 Hospital,2025-05-02,15,Atenciones de urgencia - Crisis hipertensiva,12,0,0,0,10,2
 Hospital,2025-05-02,16,Atenciones de urgencia - Arritmia grave,21,0,0,0,8,13
-Hospital,2025-05-02,17,Atenciones de urgencia - Otras causas circulatorias,119,0,0,3,72,44
+Hospital,2025-05-02,17,Atenciones de urgencia - Otras causas circulatorias,120,0,0,3,72,45
 Hospital,2025-05-02,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,66,0,0,0,30,36
 Hospital,2025-05-02,25,Hospitalizaciones - Total,469,14,28,43,212,172
 Hospital,2025-06-02,1,Atenciones de urgencia - Total,5420,258,644,1436,2345,737
@@ -13427,10 +13427,10 @@ Hospital,2025-04-03,16,Atenciones de urgencia - Arritmia grave,14,0,0,1,6,7
 Hospital,2025-04-03,17,Atenciones de urgencia - Otras causas circulatorias,134,0,1,6,61,66
 Hospital,2025-04-03,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,54,0,0,1,26,27
 Hospital,2025-04-03,25,Hospitalizaciones - Total,525,19,21,49,247,189
-Hospital,2025-05-03,1,Atenciones de urgencia - Total,4141,205,514,740,1919,763
-Hospital,2025-05-03,12,Atenciones de urgencia - Total Sistema Circulatorio,157,0,0,3,70,84
+Hospital,2025-05-03,1,Atenciones de urgencia - Total,4090,205,514,740,1882,749
+Hospital,2025-05-03,12,Atenciones de urgencia - Total Sistema Circulatorio,156,0,0,3,69,84
 Hospital,2025-05-03,13,Atenciones de urgencia - Infarto agudo miocardio,12,0,0,0,8,4
-Hospital,2025-05-03,14,Atenciones de urgencia - Accidente vascular encefálico,36,0,0,0,13,23
+Hospital,2025-05-03,14,Atenciones de urgencia - Accidente vascular encefálico,35,0,0,0,12,23
 Hospital,2025-05-03,15,Atenciones de urgencia - Crisis hipertensiva,13,0,0,1,8,4
 Hospital,2025-05-03,16,Atenciones de urgencia - Arritmia grave,16,0,0,0,6,10
 Hospital,2025-05-03,17,Atenciones de urgencia - Otras causas circulatorias,80,0,0,2,35,43
@@ -13490,10 +13490,10 @@ Hospital,2025-11-03,16,Atenciones de urgencia - Arritmia grave,21,0,0,0,10,11
 Hospital,2025-11-03,17,Atenciones de urgencia - Otras causas circulatorias,149,0,1,7,74,67
 Hospital,2025-11-03,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,69,0,0,0,27,42
 Hospital,2025-11-03,25,Hospitalizaciones - Total,535,24,31,52,222,206
-Hospital,2025-12-03,1,Atenciones de urgencia - Total,4579,228,548,993,2016,794
-Hospital,2025-12-03,12,Atenciones de urgencia - Total Sistema Circulatorio,193,0,1,1,90,101
+Hospital,2025-12-03,1,Atenciones de urgencia - Total,4579,228,548,993,2015,795
+Hospital,2025-12-03,12,Atenciones de urgencia - Total Sistema Circulatorio,194,0,1,1,90,102
 Hospital,2025-12-03,13,Atenciones de urgencia - Infarto agudo miocardio,15,0,0,0,10,5
-Hospital,2025-12-03,14,Atenciones de urgencia - Accidente vascular encefálico,29,0,0,0,9,20
+Hospital,2025-12-03,14,Atenciones de urgencia - Accidente vascular encefálico,30,0,0,0,9,21
 Hospital,2025-12-03,15,Atenciones de urgencia - Crisis hipertensiva,7,0,0,0,3,4
 Hospital,2025-12-03,16,Atenciones de urgencia - Arritmia grave,14,0,0,1,5,8
 Hospital,2025-12-03,17,Atenciones de urgencia - Otras causas circulatorias,128,0,1,0,63,64
@@ -14030,7 +14030,7 @@ Hospital,2025-11-08,16,Atenciones de urgencia - Arritmia grave,19,0,0,0,8,11
 Hospital,2025-11-08,17,Atenciones de urgencia - Otras causas circulatorias,93,0,2,1,51,39
 Hospital,2025-11-08,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,51,0,0,0,17,34
 Hospital,2025-11-08,25,Hospitalizaciones - Total,510,26,25,50,210,199
-Hospital,2025-12-08,1,Atenciones de urgencia - Total,4075,209,522,697,1956,691
+Hospital,2025-12-08,1,Atenciones de urgencia - Total,4072,209,522,697,1953,691
 Hospital,2025-12-08,12,Atenciones de urgencia - Total Sistema Circulatorio,156,1,0,0,77,78
 Hospital,2025-12-08,13,Atenciones de urgencia - Infarto agudo miocardio,9,0,0,0,4,5
 Hospital,2025-12-08,14,Atenciones de urgencia - Accidente vascular encefálico,27,0,0,0,12,15
@@ -14246,7 +14246,7 @@ Hospital,2025-11-10,16,Atenciones de urgencia - Arritmia grave,17,0,1,0,5,11
 Hospital,2025-11-10,17,Atenciones de urgencia - Otras causas circulatorias,153,1,0,5,87,60
 Hospital,2025-11-10,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,53,0,0,0,20,33
 Hospital,2025-11-10,25,Hospitalizaciones - Total,524,22,32,62,221,187
-Hospital,2025-12-10,1,Atenciones de urgencia - Total,4464,226,532,811,2108,787
+Hospital,2025-12-10,1,Atenciones de urgencia - Total,4463,226,532,811,2107,787
 Hospital,2025-12-10,12,Atenciones de urgencia - Total Sistema Circulatorio,186,0,1,1,91,93
 Hospital,2025-12-10,13,Atenciones de urgencia - Infarto agudo miocardio,10,0,0,0,5,5
 Hospital,2025-12-10,14,Atenciones de urgencia - Accidente vascular encefálico,24,0,0,0,8,16
@@ -14354,7 +14354,7 @@ Hospital,2025-11-11,16,Atenciones de urgencia - Arritmia grave,20,0,0,0,5,15
 Hospital,2025-11-11,17,Atenciones de urgencia - Otras causas circulatorias,125,0,1,0,60,64
 Hospital,2025-11-11,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,65,1,0,0,26,38
 Hospital,2025-11-11,25,Hospitalizaciones - Total,584,28,31,48,271,206
-Hospital,2025-12-11,1,Atenciones de urgencia - Total,4194,209,460,759,1985,781
+Hospital,2025-12-11,1,Atenciones de urgencia - Total,4192,209,460,759,1983,781
 Hospital,2025-12-11,12,Atenciones de urgencia - Total Sistema Circulatorio,173,1,0,1,81,90
 Hospital,2025-12-11,13,Atenciones de urgencia - Infarto agudo miocardio,6,0,0,0,2,4
 Hospital,2025-12-11,14,Atenciones de urgencia - Accidente vascular encefálico,24,0,0,0,8,16
@@ -14462,7 +14462,7 @@ Hospital,2025-11-12,16,Atenciones de urgencia - Arritmia grave,20,0,0,0,7,13
 Hospital,2025-11-12,17,Atenciones de urgencia - Otras causas circulatorias,159,0,1,1,69,88
 Hospital,2025-11-12,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,75,0,0,0,27,48
 Hospital,2025-11-12,25,Hospitalizaciones - Total,601,25,32,56,265,223
-Hospital,2025-12-12,1,Atenciones de urgencia - Total,3911,235,416,641,1840,779
+Hospital,2025-12-12,1,Atenciones de urgencia - Total,3910,235,416,641,1839,779
 Hospital,2025-12-12,12,Atenciones de urgencia - Total Sistema Circulatorio,178,0,0,2,80,96
 Hospital,2025-12-12,13,Atenciones de urgencia - Infarto agudo miocardio,5,0,0,0,3,2
 Hospital,2025-12-12,14,Atenciones de urgencia - Accidente vascular encefálico,31,0,0,0,12,19
@@ -14678,7 +14678,7 @@ Hospital,2025-11-14,16,Atenciones de urgencia - Arritmia grave,14,0,0,0,3,11
 Hospital,2025-11-14,17,Atenciones de urgencia - Otras causas circulatorias,118,0,1,2,61,54
 Hospital,2025-11-14,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,53,0,0,0,19,34
 Hospital,2025-11-14,25,Hospitalizaciones - Total,572,23,30,44,246,229
-Hospital,2025-12-14,1,Atenciones de urgencia - Total,3415,186,429,579,1641,580
+Hospital,2025-12-14,1,Atenciones de urgencia - Total,3414,186,429,579,1640,580
 Hospital,2025-12-14,12,Atenciones de urgencia - Total Sistema Circulatorio,136,0,1,5,68,62
 Hospital,2025-12-14,13,Atenciones de urgencia - Infarto agudo miocardio,7,0,0,0,3,4
 Hospital,2025-12-14,14,Atenciones de urgencia - Accidente vascular encefálico,20,0,0,0,11,9
@@ -14786,13 +14786,13 @@ Hospital,2025-11-15,16,Atenciones de urgencia - Arritmia grave,11,0,0,0,4,7
 Hospital,2025-11-15,17,Atenciones de urgencia - Otras causas circulatorias,87,0,1,2,43,41
 Hospital,2025-11-15,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,66,0,0,1,29,36
 Hospital,2025-11-15,25,Hospitalizaciones - Total,512,18,21,40,244,189
-Hospital,2025-12-15,1,Atenciones de urgencia - Total,4310,231,502,724,2068,785
-Hospital,2025-12-15,12,Atenciones de urgencia - Total Sistema Circulatorio,184,0,1,1,85,97
+Hospital,2025-12-15,1,Atenciones de urgencia - Total,4372,231,510,732,2100,799
+Hospital,2025-12-15,12,Atenciones de urgencia - Total Sistema Circulatorio,185,0,1,1,85,98
 Hospital,2025-12-15,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,1,3
 Hospital,2025-12-15,14,Atenciones de urgencia - Accidente vascular encefálico,23,0,0,0,7,16
 Hospital,2025-12-15,15,Atenciones de urgencia - Crisis hipertensiva,7,0,0,0,4,3
-Hospital,2025-12-15,16,Atenciones de urgencia - Arritmia grave,20,0,0,1,5,14
-Hospital,2025-12-15,17,Atenciones de urgencia - Otras causas circulatorias,130,0,1,0,68,61
+Hospital,2025-12-15,16,Atenciones de urgencia - Arritmia grave,22,0,0,1,6,15
+Hospital,2025-12-15,17,Atenciones de urgencia - Otras causas circulatorias,129,0,1,0,67,61
 Hospital,2025-12-15,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,54,1,1,0,18,34
 Hospital,2025-12-15,25,Hospitalizaciones - Total,471,18,20,31,233,169
 Hospital,2025-01-16,1,Atenciones de urgencia - Total,4053,204,368,563,2112,806
@@ -14894,7 +14894,7 @@ Hospital,2025-11-16,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,3,4
 Hospital,2025-11-16,17,Atenciones de urgencia - Otras causas circulatorias,81,1,0,2,36,42
 Hospital,2025-11-16,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,40,0,0,0,14,26
 Hospital,2025-11-16,25,Hospitalizaciones - Total,399,16,28,45,168,142
-Hospital,2025-12-16,1,Atenciones de urgencia - Total,4302,251,484,669,2054,844
+Hospital,2025-12-16,1,Atenciones de urgencia - Total,4302,251,484,669,2053,845
 Hospital,2025-12-16,12,Atenciones de urgencia - Total Sistema Circulatorio,207,0,0,1,90,116
 Hospital,2025-12-16,13,Atenciones de urgencia - Infarto agudo miocardio,14,0,0,0,7,7
 Hospital,2025-12-16,14,Atenciones de urgencia - Accidente vascular encefálico,33,0,0,0,14,19
@@ -15002,7 +15002,7 @@ Hospital,2025-11-17,16,Atenciones de urgencia - Arritmia grave,15,0,0,0,7,8
 Hospital,2025-11-17,17,Atenciones de urgencia - Otras causas circulatorias,119,0,0,1,67,51
 Hospital,2025-11-17,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,57,0,0,0,27,30
 Hospital,2025-11-17,25,Hospitalizaciones - Total,546,20,17,47,251,211
-Hospital,2025-12-17,1,Atenciones de urgencia - Total,4175,246,484,616,2040,789
+Hospital,2025-12-17,1,Atenciones de urgencia - Total,4172,246,484,614,2039,789
 Hospital,2025-12-17,12,Atenciones de urgencia - Total Sistema Circulatorio,176,0,0,1,80,95
 Hospital,2025-12-17,13,Atenciones de urgencia - Infarto agudo miocardio,10,0,0,0,6,4
 Hospital,2025-12-17,14,Atenciones de urgencia - Accidente vascular encefálico,35,0,0,0,10,25
@@ -15110,13 +15110,13 @@ Hospital,2025-11-18,16,Atenciones de urgencia - Arritmia grave,15,0,0,0,5,10
 Hospital,2025-11-18,17,Atenciones de urgencia - Otras causas circulatorias,144,0,2,1,76,65
 Hospital,2025-11-18,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,71,0,0,1,30,40
 Hospital,2025-11-18,25,Hospitalizaciones - Total,588,32,32,47,257,220
-Hospital,2025-12-18,1,Atenciones de urgencia - Total,4095,254,444,582,2045,770
-Hospital,2025-12-18,12,Atenciones de urgencia - Total Sistema Circulatorio,173,0,1,4,83,85
+Hospital,2025-12-18,1,Atenciones de urgencia - Total,4091,254,444,582,2040,771
+Hospital,2025-12-18,12,Atenciones de urgencia - Total Sistema Circulatorio,174,0,1,4,83,86
 Hospital,2025-12-18,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,3,1
 Hospital,2025-12-18,14,Atenciones de urgencia - Accidente vascular encefálico,26,0,0,0,8,18
 Hospital,2025-12-18,15,Atenciones de urgencia - Crisis hipertensiva,8,0,0,1,5,2
 Hospital,2025-12-18,16,Atenciones de urgencia - Arritmia grave,26,0,1,0,11,14
-Hospital,2025-12-18,17,Atenciones de urgencia - Otras causas circulatorias,109,0,0,3,56,50
+Hospital,2025-12-18,17,Atenciones de urgencia - Otras causas circulatorias,110,0,0,3,56,51
 Hospital,2025-12-18,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,65,0,0,1,21,43
 Hospital,2025-12-18,25,Hospitalizaciones - Total,490,27,21,29,218,195
 Hospital,2025-01-19,1,Atenciones de urgencia - Total,3523,178,374,530,1856,585
@@ -15218,12 +15218,12 @@ Hospital,2025-11-19,16,Atenciones de urgencia - Arritmia grave,12,0,0,0,5,7
 Hospital,2025-11-19,17,Atenciones de urgencia - Otras causas circulatorias,133,0,1,1,66,65
 Hospital,2025-11-19,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,51,0,0,0,22,29
 Hospital,2025-11-19,25,Hospitalizaciones - Total,559,27,34,58,254,186
-Hospital,2025-12-19,1,Atenciones de urgencia - Total,3906,213,464,574,1862,793
-Hospital,2025-12-19,12,Atenciones de urgencia - Total Sistema Circulatorio,166,0,0,1,84,81
+Hospital,2025-12-19,1,Atenciones de urgencia - Total,3974,213,470,580,1912,799
+Hospital,2025-12-19,12,Atenciones de urgencia - Total Sistema Circulatorio,168,0,0,1,85,82
 Hospital,2025-12-19,13,Atenciones de urgencia - Infarto agudo miocardio,16,0,0,0,9,7
 Hospital,2025-12-19,14,Atenciones de urgencia - Accidente vascular encefálico,27,0,0,0,14,13
-Hospital,2025-12-19,15,Atenciones de urgencia - Crisis hipertensiva,13,0,0,0,6,7
-Hospital,2025-12-19,16,Atenciones de urgencia - Arritmia grave,13,0,0,0,3,10
+Hospital,2025-12-19,15,Atenciones de urgencia - Crisis hipertensiva,14,0,0,0,7,7
+Hospital,2025-12-19,16,Atenciones de urgencia - Arritmia grave,14,0,0,0,3,11
 Hospital,2025-12-19,17,Atenciones de urgencia - Otras causas circulatorias,97,0,0,1,52,44
 Hospital,2025-12-19,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,55,0,0,0,24,31
 Hospital,2025-12-19,25,Hospitalizaciones - Total,515,17,19,39,248,192
@@ -15326,7 +15326,7 @@ Hospital,2025-11-20,16,Atenciones de urgencia - Arritmia grave,20,1,0,0,11,8
 Hospital,2025-11-20,17,Atenciones de urgencia - Otras causas circulatorias,143,0,0,4,57,82
 Hospital,2025-11-20,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,58,0,0,0,24,34
 Hospital,2025-11-20,25,Hospitalizaciones - Total,546,27,33,51,246,189
-Hospital,2025-12-20,1,Atenciones de urgencia - Total,3543,202,384,555,1700,702
+Hospital,2025-12-20,1,Atenciones de urgencia - Total,3544,202,384,555,1700,703
 Hospital,2025-12-20,12,Atenciones de urgencia - Total Sistema Circulatorio,129,0,1,0,60,68
 Hospital,2025-12-20,13,Atenciones de urgencia - Infarto agudo miocardio,8,0,0,0,3,5
 Hospital,2025-12-20,14,Atenciones de urgencia - Accidente vascular encefálico,16,0,0,0,5,11
@@ -15434,7 +15434,7 @@ Hospital,2025-11-21,16,Atenciones de urgencia - Arritmia grave,11,0,0,0,3,8
 Hospital,2025-11-21,17,Atenciones de urgencia - Otras causas circulatorias,121,0,0,2,59,60
 Hospital,2025-11-21,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,56,0,0,0,26,30
 Hospital,2025-11-21,25,Hospitalizaciones - Total,528,20,30,43,231,204
-Hospital,2025-12-21,1,Atenciones de urgencia - Total,3497,206,398,567,1698,628
+Hospital,2025-12-21,1,Atenciones de urgencia - Total,3494,206,398,567,1696,627
 Hospital,2025-12-21,12,Atenciones de urgencia - Total Sistema Circulatorio,118,0,0,0,56,62
 Hospital,2025-12-21,13,Atenciones de urgencia - Infarto agudo miocardio,5,0,0,0,1,4
 Hospital,2025-12-21,14,Atenciones de urgencia - Accidente vascular encefálico,27,0,0,0,16,11
@@ -15542,15 +15542,15 @@ Hospital,2025-11-22,16,Atenciones de urgencia - Arritmia grave,9,0,0,0,3,6
 Hospital,2025-11-22,17,Atenciones de urgencia - Otras causas circulatorias,97,0,0,3,49,45
 Hospital,2025-11-22,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,53,0,0,0,22,31
 Hospital,2025-11-22,25,Hospitalizaciones - Total,427,17,18,29,191,172
-Hospital,2025-12-22,1,Atenciones de urgencia - Total,4120,206,451,591,2048,824
+Hospital,2025-12-22,1,Atenciones de urgencia - Total,4117,206,451,591,2045,824
 Hospital,2025-12-22,12,Atenciones de urgencia - Total Sistema Circulatorio,186,0,1,1,87,97
 Hospital,2025-12-22,13,Atenciones de urgencia - Infarto agudo miocardio,12,0,0,0,5,7
 Hospital,2025-12-22,14,Atenciones de urgencia - Accidente vascular encefálico,30,0,0,0,15,15
 Hospital,2025-12-22,15,Atenciones de urgencia - Crisis hipertensiva,9,0,0,0,5,4
 Hospital,2025-12-22,16,Atenciones de urgencia - Arritmia grave,15,0,0,0,7,8
 Hospital,2025-12-22,17,Atenciones de urgencia - Otras causas circulatorias,120,0,1,1,55,63
-Hospital,2025-12-22,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,70,0,0,0,34,36
-Hospital,2025-12-22,25,Hospitalizaciones - Total,495,19,21,47,223,185
+Hospital,2025-12-22,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,71,0,0,0,34,37
+Hospital,2025-12-22,25,Hospitalizaciones - Total,505,19,21,47,224,194
 Hospital,2025-01-23,1,Atenciones de urgencia - Total,3868,193,327,472,2035,841
 Hospital,2025-01-23,12,Atenciones de urgencia - Total Sistema Circulatorio,185,0,1,4,85,95
 Hospital,2025-01-23,13,Atenciones de urgencia - Infarto agudo miocardio,6,0,0,0,3,3
@@ -15650,15 +15650,15 @@ Hospital,2025-11-23,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,2,4
 Hospital,2025-11-23,17,Atenciones de urgencia - Otras causas circulatorias,117,0,1,1,73,42
 Hospital,2025-11-23,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,47,0,1,0,25,21
 Hospital,2025-11-23,25,Hospitalizaciones - Total,402,12,27,28,192,143
-Hospital,2025-12-23,1,Atenciones de urgencia - Total,3443,151,371,486,1706,729
-Hospital,2025-12-23,12,Atenciones de urgencia - Total Sistema Circulatorio,152,0,2,3,71,76
-Hospital,2025-12-23,13,Atenciones de urgencia - Infarto agudo miocardio,9,0,0,0,4,5
-Hospital,2025-12-23,14,Atenciones de urgencia - Accidente vascular encefálico,27,0,0,0,8,19
-Hospital,2025-12-23,15,Atenciones de urgencia - Crisis hipertensiva,6,0,0,0,1,5
+Hospital,2025-12-23,1,Atenciones de urgencia - Total,3726,191,414,577,1786,758
+Hospital,2025-12-23,12,Atenciones de urgencia - Total Sistema Circulatorio,156,0,2,3,72,79
+Hospital,2025-12-23,13,Atenciones de urgencia - Infarto agudo miocardio,10,0,0,0,5,5
+Hospital,2025-12-23,14,Atenciones de urgencia - Accidente vascular encefálico,29,0,0,0,8,21
+Hospital,2025-12-23,15,Atenciones de urgencia - Crisis hipertensiva,7,0,0,0,2,5
 Hospital,2025-12-23,16,Atenciones de urgencia - Arritmia grave,10,0,0,0,2,8
-Hospital,2025-12-23,17,Atenciones de urgencia - Otras causas circulatorias,100,0,2,3,56,39
-Hospital,2025-12-23,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,47,0,0,0,20,27
-Hospital,2025-12-23,25,Hospitalizaciones - Total,417,14,15,33,199,156
+Hospital,2025-12-23,17,Atenciones de urgencia - Otras causas circulatorias,100,0,2,3,55,40
+Hospital,2025-12-23,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,49,0,0,0,21,28
+Hospital,2025-12-23,25,Hospitalizaciones - Total,435,15,18,37,203,162
 Hospital,2025-01-24,1,Atenciones de urgencia - Total,3869,186,337,472,2047,827
 Hospital,2025-01-24,12,Atenciones de urgencia - Total Sistema Circulatorio,197,0,1,3,98,95
 Hospital,2025-01-24,13,Atenciones de urgencia - Infarto agudo miocardio,10,0,0,0,7,3
@@ -15758,15 +15758,15 @@ Hospital,2025-11-24,16,Atenciones de urgencia - Arritmia grave,18,0,0,0,5,13
 Hospital,2025-11-24,17,Atenciones de urgencia - Otras causas circulatorias,134,0,0,4,64,66
 Hospital,2025-11-24,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,62,0,0,0,30,32
 Hospital,2025-11-24,25,Hospitalizaciones - Total,507,23,33,52,232,167
-Hospital,2025-12-24,1,Atenciones de urgencia - Total,2771,130,310,306,1416,609
-Hospital,2025-12-24,12,Atenciones de urgencia - Total Sistema Circulatorio,136,0,1,1,67,67
-Hospital,2025-12-24,13,Atenciones de urgencia - Infarto agudo miocardio,11,0,0,0,9,2
-Hospital,2025-12-24,14,Atenciones de urgencia - Accidente vascular encefálico,26,0,0,0,11,15
-Hospital,2025-12-24,15,Atenciones de urgencia - Crisis hipertensiva,5,0,0,0,2,3
-Hospital,2025-12-24,16,Atenciones de urgencia - Arritmia grave,15,0,0,0,3,12
-Hospital,2025-12-24,17,Atenciones de urgencia - Otras causas circulatorias,79,0,1,1,42,35
-Hospital,2025-12-24,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,58,0,2,0,22,34
-Hospital,2025-12-24,25,Hospitalizaciones - Total,431,14,14,12,208,183
+Hospital,2025-12-24,1,Atenciones de urgencia - Total,3143,154,344,363,1571,711
+Hospital,2025-12-24,12,Atenciones de urgencia - Total Sistema Circulatorio,148,0,1,1,69,77
+Hospital,2025-12-24,13,Atenciones de urgencia - Infarto agudo miocardio,12,0,0,0,9,3
+Hospital,2025-12-24,14,Atenciones de urgencia - Accidente vascular encefálico,30,0,0,0,11,19
+Hospital,2025-12-24,15,Atenciones de urgencia - Crisis hipertensiva,6,0,0,0,2,4
+Hospital,2025-12-24,16,Atenciones de urgencia - Arritmia grave,16,0,0,0,3,13
+Hospital,2025-12-24,17,Atenciones de urgencia - Otras causas circulatorias,84,0,1,1,44,38
+Hospital,2025-12-24,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,59,0,2,0,22,35
+Hospital,2025-12-24,25,Hospitalizaciones - Total,448,15,16,16,214,187
 Hospital,2025-01-25,1,Atenciones de urgencia - Total,3760,169,347,539,2100,605
 Hospital,2025-01-25,12,Atenciones de urgencia - Total Sistema Circulatorio,170,0,0,3,104,63
 Hospital,2025-01-25,13,Atenciones de urgencia - Infarto agudo miocardio,13,0,0,0,12,1
@@ -15866,15 +15866,15 @@ Hospital,2025-11-25,16,Atenciones de urgencia - Arritmia grave,15,0,0,0,5,10
 Hospital,2025-11-25,17,Atenciones de urgencia - Otras causas circulatorias,117,0,1,3,54,59
 Hospital,2025-11-25,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,52,0,0,0,21,31
 Hospital,2025-11-25,25,Hospitalizaciones - Total,533,22,33,61,222,195
-Hospital,2025-12-25,1,Atenciones de urgencia - Total,3183,177,342,475,1555,634
-Hospital,2025-12-25,12,Atenciones de urgencia - Total Sistema Circulatorio,134,0,0,3,53,78
+Hospital,2025-12-25,1,Atenciones de urgencia - Total,3647,222,382,550,1790,703
+Hospital,2025-12-25,12,Atenciones de urgencia - Total Sistema Circulatorio,146,0,0,3,59,84
 Hospital,2025-12-25,13,Atenciones de urgencia - Infarto agudo miocardio,8,0,0,0,4,4
-Hospital,2025-12-25,14,Atenciones de urgencia - Accidente vascular encefálico,21,0,0,0,6,15
-Hospital,2025-12-25,15,Atenciones de urgencia - Crisis hipertensiva,4,0,0,0,0,4
-Hospital,2025-12-25,16,Atenciones de urgencia - Arritmia grave,15,0,0,0,6,9
-Hospital,2025-12-25,17,Atenciones de urgencia - Otras causas circulatorias,86,0,0,3,37,46
-Hospital,2025-12-25,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,54,0,0,0,21,33
-Hospital,2025-12-25,25,Hospitalizaciones - Total,435,18,25,29,191,172
+Hospital,2025-12-25,14,Atenciones de urgencia - Accidente vascular encefálico,22,0,0,0,6,16
+Hospital,2025-12-25,15,Atenciones de urgencia - Crisis hipertensiva,5,0,0,0,1,4
+Hospital,2025-12-25,16,Atenciones de urgencia - Arritmia grave,17,0,0,0,6,11
+Hospital,2025-12-25,17,Atenciones de urgencia - Otras causas circulatorias,94,0,0,3,42,49
+Hospital,2025-12-25,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,56,0,0,0,23,33
+Hospital,2025-12-25,25,Hospitalizaciones - Total,460,21,27,34,198,180
 Hospital,2025-01-26,1,Atenciones de urgencia - Total,3438,189,362,475,1843,569
 Hospital,2025-01-26,12,Atenciones de urgencia - Total Sistema Circulatorio,148,0,0,1,88,59
 Hospital,2025-01-26,13,Atenciones de urgencia - Infarto agudo miocardio,6,0,0,0,4,2
@@ -15974,15 +15974,15 @@ Hospital,2025-11-26,16,Atenciones de urgencia - Arritmia grave,18,0,0,0,4,14
 Hospital,2025-11-26,17,Atenciones de urgencia - Otras causas circulatorias,127,0,1,2,59,65
 Hospital,2025-11-26,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,52,0,0,0,22,30
 Hospital,2025-11-26,25,Hospitalizaciones - Total,526,22,31,49,232,192
-Hospital,2025-12-26,1,Atenciones de urgencia - Total,3549,195,404,546,1716,688
-Hospital,2025-12-26,12,Atenciones de urgencia - Total Sistema Circulatorio,151,0,0,6,63,82
+Hospital,2025-12-26,1,Atenciones de urgencia - Total,4167,231,453,643,2024,816
+Hospital,2025-12-26,12,Atenciones de urgencia - Total Sistema Circulatorio,173,0,0,6,74,93
 Hospital,2025-12-26,13,Atenciones de urgencia - Infarto agudo miocardio,9,0,0,0,3,6
-Hospital,2025-12-26,14,Atenciones de urgencia - Accidente vascular encefálico,35,0,0,0,6,29
-Hospital,2025-12-26,15,Atenciones de urgencia - Crisis hipertensiva,3,0,0,0,1,2
-Hospital,2025-12-26,16,Atenciones de urgencia - Arritmia grave,12,0,0,1,4,7
-Hospital,2025-12-26,17,Atenciones de urgencia - Otras causas circulatorias,92,0,0,5,49,38
-Hospital,2025-12-26,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,56,0,0,2,14,40
-Hospital,2025-12-26,25,Hospitalizaciones - Total,474,17,18,44,225,170
+Hospital,2025-12-26,14,Atenciones de urgencia - Accidente vascular encefálico,43,0,0,0,9,34
+Hospital,2025-12-26,15,Atenciones de urgencia - Crisis hipertensiva,4,0,0,0,1,3
+Hospital,2025-12-26,16,Atenciones de urgencia - Arritmia grave,13,0,0,1,4,8
+Hospital,2025-12-26,17,Atenciones de urgencia - Otras causas circulatorias,104,0,0,5,57,42
+Hospital,2025-12-26,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,58,0,0,2,14,42
+Hospital,2025-12-26,25,Hospitalizaciones - Total,498,18,22,49,230,179
 Hospital,2025-01-27,1,Atenciones de urgencia - Total,4269,225,391,589,2231,833
 Hospital,2025-01-27,12,Atenciones de urgencia - Total Sistema Circulatorio,176,0,2,0,103,71
 Hospital,2025-01-27,13,Atenciones de urgencia - Infarto agudo miocardio,9,0,0,0,5,4
@@ -16082,15 +16082,15 @@ Hospital,2025-11-27,16,Atenciones de urgencia - Arritmia grave,18,0,0,0,4,14
 Hospital,2025-11-27,17,Atenciones de urgencia - Otras causas circulatorias,140,0,0,1,81,58
 Hospital,2025-11-27,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,59,0,0,0,21,38
 Hospital,2025-11-27,25,Hospitalizaciones - Total,555,20,28,45,272,190
-Hospital,2025-12-27,1,Atenciones de urgencia - Total,3842,212,434,560,1852,784
-Hospital,2025-12-27,12,Atenciones de urgencia - Total Sistema Circulatorio,174,0,1,1,84,88
-Hospital,2025-12-27,13,Atenciones de urgencia - Infarto agudo miocardio,10,0,0,0,6,4
+Hospital,2025-12-27,1,Atenciones de urgencia - Total,3992,212,435,567,1959,819
+Hospital,2025-12-27,12,Atenciones de urgencia - Total Sistema Circulatorio,175,0,1,1,85,88
+Hospital,2025-12-27,13,Atenciones de urgencia - Infarto agudo miocardio,11,0,0,0,7,4
 Hospital,2025-12-27,14,Atenciones de urgencia - Accidente vascular encefálico,39,0,0,0,15,24
 Hospital,2025-12-27,15,Atenciones de urgencia - Crisis hipertensiva,7,0,0,0,3,4
 Hospital,2025-12-27,16,Atenciones de urgencia - Arritmia grave,19,0,0,0,4,15
 Hospital,2025-12-27,17,Atenciones de urgencia - Otras causas circulatorias,99,0,1,1,56,41
 Hospital,2025-12-27,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,58,0,0,0,24,34
-Hospital,2025-12-27,25,Hospitalizaciones - Total,488,12,20,22,232,202
+Hospital,2025-12-27,25,Hospitalizaciones - Total,489,12,20,22,233,202
 Hospital,2025-01-28,1,Atenciones de urgencia - Total,3898,182,363,594,1960,799
 Hospital,2025-01-28,12,Atenciones de urgencia - Total Sistema Circulatorio,172,0,0,0,80,92
 Hospital,2025-01-28,13,Atenciones de urgencia - Infarto agudo miocardio,6,0,0,0,2,4
@@ -16190,7 +16190,7 @@ Hospital,2025-11-28,16,Atenciones de urgencia - Arritmia grave,11,0,0,0,3,8
 Hospital,2025-11-28,17,Atenciones de urgencia - Otras causas circulatorias,113,0,0,1,55,57
 Hospital,2025-11-28,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,57,0,0,0,19,38
 Hospital,2025-11-28,25,Hospitalizaciones - Total,504,21,29,53,219,182
-Hospital,2025-12-28,1,Atenciones de urgencia - Total,3747,242,409,579,1866,651
+Hospital,2025-12-28,1,Atenciones de urgencia - Total,3926,243,417,585,1984,697
 Hospital,2025-12-28,12,Atenciones de urgencia - Total Sistema Circulatorio,155,0,1,2,77,75
 Hospital,2025-12-28,13,Atenciones de urgencia - Infarto agudo miocardio,7,0,0,0,1,6
 Hospital,2025-12-28,14,Atenciones de urgencia - Accidente vascular encefálico,30,0,0,0,15,15
@@ -16198,7 +16198,7 @@ Hospital,2025-12-28,15,Atenciones de urgencia - Crisis hipertensiva,3,0,0,0,2,1
 Hospital,2025-12-28,16,Atenciones de urgencia - Arritmia grave,11,0,0,0,4,7
 Hospital,2025-12-28,17,Atenciones de urgencia - Otras causas circulatorias,104,0,1,2,55,46
 Hospital,2025-12-28,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,42,0,0,0,14,28
-Hospital,2025-12-28,25,Hospitalizaciones - Total,405,14,26,32,194,139
+Hospital,2025-12-28,25,Hospitalizaciones - Total,407,14,26,32,194,141
 Hospital,2025-01-29,1,Atenciones de urgencia - Total,3958,198,375,564,2026,795
 Hospital,2025-01-29,12,Atenciones de urgencia - Total Sistema Circulatorio,213,0,1,6,101,105
 Hospital,2025-01-29,13,Atenciones de urgencia - Infarto agudo miocardio,8,0,0,0,1,7
@@ -16289,15 +16289,15 @@ Hospital,2025-11-29,16,Atenciones de urgencia - Arritmia grave,12,0,0,0,3,9
 Hospital,2025-11-29,17,Atenciones de urgencia - Otras causas circulatorias,92,0,0,2,42,48
 Hospital,2025-11-29,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,52,0,0,0,19,33
 Hospital,2025-11-29,25,Hospitalizaciones - Total,468,12,23,38,205,190
-Hospital,2025-12-29,1,Atenciones de urgencia - Total,3877,205,461,649,1855,707
-Hospital,2025-12-29,12,Atenciones de urgencia - Total Sistema Circulatorio,166,0,0,4,83,79
-Hospital,2025-12-29,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,2,2
-Hospital,2025-12-29,14,Atenciones de urgencia - Accidente vascular encefálico,32,0,0,0,16,16
-Hospital,2025-12-29,15,Atenciones de urgencia - Crisis hipertensiva,5,0,0,0,2,3
+Hospital,2025-12-29,1,Atenciones de urgencia - Total,4195,206,476,662,2067,784
+Hospital,2025-12-29,12,Atenciones de urgencia - Total Sistema Circulatorio,177,0,0,4,91,82
+Hospital,2025-12-29,13,Atenciones de urgencia - Infarto agudo miocardio,7,0,0,0,4,3
+Hospital,2025-12-29,14,Atenciones de urgencia - Accidente vascular encefálico,34,0,0,0,18,16
+Hospital,2025-12-29,15,Atenciones de urgencia - Crisis hipertensiva,7,0,0,0,3,4
 Hospital,2025-12-29,16,Atenciones de urgencia - Arritmia grave,11,0,0,0,4,7
-Hospital,2025-12-29,17,Atenciones de urgencia - Otras causas circulatorias,114,0,0,4,59,51
+Hospital,2025-12-29,17,Atenciones de urgencia - Otras causas circulatorias,118,0,0,4,62,52
 Hospital,2025-12-29,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,62,1,0,0,31,30
-Hospital,2025-12-29,25,Hospitalizaciones - Total,489,28,21,45,214,181
+Hospital,2025-12-29,25,Hospitalizaciones - Total,498,28,21,45,220,184
 Hospital,2025-01-30,1,Atenciones de urgencia - Total,3947,173,335,569,2042,828
 Hospital,2025-01-30,12,Atenciones de urgencia - Total Sistema Circulatorio,186,0,1,4,93,88
 Hospital,2025-01-30,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,1,2
@@ -16388,15 +16388,15 @@ Hospital,2025-11-30,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,2,5
 Hospital,2025-11-30,17,Atenciones de urgencia - Otras causas circulatorias,88,0,0,2,47,39
 Hospital,2025-11-30,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,37,2,0,0,11,24
 Hospital,2025-11-30,25,Hospitalizaciones - Total,423,16,16,28,193,170
-Hospital,2025-12-30,1,Atenciones de urgencia - Total,3313,179,359,527,1598,650
-Hospital,2025-12-30,12,Atenciones de urgencia - Total Sistema Circulatorio,168,1,0,2,87,78
-Hospital,2025-12-30,13,Atenciones de urgencia - Infarto agudo miocardio,6,0,0,0,2,4
-Hospital,2025-12-30,14,Atenciones de urgencia - Accidente vascular encefálico,37,0,0,0,21,16
-Hospital,2025-12-30,15,Atenciones de urgencia - Crisis hipertensiva,3,0,0,0,1,2
-Hospital,2025-12-30,16,Atenciones de urgencia - Arritmia grave,14,0,0,0,8,6
-Hospital,2025-12-30,17,Atenciones de urgencia - Otras causas circulatorias,108,1,0,2,55,50
-Hospital,2025-12-30,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,51,1,0,0,23,27
-Hospital,2025-12-30,25,Hospitalizaciones - Total,420,23,25,31,173,168
+Hospital,2025-12-30,1,Atenciones de urgencia - Total,4200,207,443,627,2077,846
+Hospital,2025-12-30,12,Atenciones de urgencia - Total Sistema Circulatorio,208,1,0,3,101,103
+Hospital,2025-12-30,13,Atenciones de urgencia - Infarto agudo miocardio,8,0,0,0,2,6
+Hospital,2025-12-30,14,Atenciones de urgencia - Accidente vascular encefálico,45,0,0,0,24,21
+Hospital,2025-12-30,15,Atenciones de urgencia - Crisis hipertensiva,5,0,0,0,2,3
+Hospital,2025-12-30,16,Atenciones de urgencia - Arritmia grave,16,0,0,0,8,8
+Hospital,2025-12-30,17,Atenciones de urgencia - Otras causas circulatorias,134,1,0,3,65,65
+Hospital,2025-12-30,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,70,1,0,0,33,36
+Hospital,2025-12-30,25,Hospitalizaciones - Total,537,25,30,41,232,209
 Hospital,2025-01-31,1,Atenciones de urgencia - Total,3809,190,330,482,2013,794
 Hospital,2025-01-31,12,Atenciones de urgencia - Total Sistema Circulatorio,178,2,1,1,91,83
 Hospital,2025-01-31,13,Atenciones de urgencia - Infarto agudo miocardio,9,0,0,0,5,4
@@ -16451,15 +16451,15 @@ Hospital,2025-10-31,16,Atenciones de urgencia - Arritmia grave,14,0,0,1,6,7
 Hospital,2025-10-31,17,Atenciones de urgencia - Otras causas circulatorias,84,0,2,4,42,36
 Hospital,2025-10-31,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,57,0,0,1,21,35
 Hospital,2025-10-31,25,Hospitalizaciones - Total,453,22,28,42,199,162
-Hospital,2025-12-31,1,Atenciones de urgencia - Total,746,10,38,60,431,207
-Hospital,2025-12-31,12,Atenciones de urgencia - Total Sistema Circulatorio,48,0,0,0,22,26
-Hospital,2025-12-31,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,1,1
-Hospital,2025-12-31,14,Atenciones de urgencia - Accidente vascular encefálico,6,0,0,0,4,2
-Hospital,2025-12-31,15,Atenciones de urgencia - Crisis hipertensiva,2,0,0,0,1,1
-Hospital,2025-12-31,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,2,3
-Hospital,2025-12-31,17,Atenciones de urgencia - Otras causas circulatorias,33,0,0,0,14,19
-Hospital,2025-12-31,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,13,0,0,0,9,4
-Hospital,2025-12-31,25,Hospitalizaciones - Total,137,0,2,1,80,54
+Hospital,2025-12-31,1,Atenciones de urgencia - Total,3162,171,346,478,1500,667
+Hospital,2025-12-31,12,Atenciones de urgencia - Total Sistema Circulatorio,158,0,0,2,76,80
+Hospital,2025-12-31,13,Atenciones de urgencia - Infarto agudo miocardio,11,0,0,0,4,7
+Hospital,2025-12-31,14,Atenciones de urgencia - Accidente vascular encefálico,23,0,0,0,13,10
+Hospital,2025-12-31,15,Atenciones de urgencia - Crisis hipertensiva,9,0,0,0,4,5
+Hospital,2025-12-31,16,Atenciones de urgencia - Arritmia grave,11,0,0,1,2,8
+Hospital,2025-12-31,17,Atenciones de urgencia - Otras causas circulatorias,104,0,0,1,53,50
+Hospital,2025-12-31,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,56,0,0,1,30,25
+Hospital,2025-12-31,25,Hospitalizaciones - Total,449,15,15,30,233,156
 SAPU,2025-01-01,1,Atenciones de urgencia - Total,7569,105,405,885,5045,1129
 SAPU,2025-01-01,12,Atenciones de urgencia - Total Sistema Circulatorio,171,1,6,3,100,61
 SAPU,2025-01-01,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,3,1
@@ -17180,7 +17180,7 @@ SAPU,2025-08-07,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,2,2
 SAPU,2025-08-07,17,Atenciones de urgencia - Otras causas circulatorias,56,0,0,0,32,24
 SAPU,2025-08-07,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-08-07,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-09-07,1,Atenciones de urgencia - Total,9795,118,753,1609,6007,1308
+SAPU,2025-09-07,1,Atenciones de urgencia - Total,9888,118,758,1627,6062,1323
 SAPU,2025-09-07,12,Atenciones de urgencia - Total Sistema Circulatorio,123,0,1,2,75,45
 SAPU,2025-09-07,13,Atenciones de urgencia - Infarto agudo miocardio,5,0,0,0,3,2
 SAPU,2025-09-07,14,Atenciones de urgencia - Accidente vascular encefálico,7,0,0,0,2,5
@@ -17207,13 +17207,13 @@ SAPU,2025-11-07,16,Atenciones de urgencia - Arritmia grave,7,0,0,1,2,4
 SAPU,2025-11-07,17,Atenciones de urgencia - Otras causas circulatorias,59,0,0,1,33,25
 SAPU,2025-11-07,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-07,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-07,1,Atenciones de urgencia - Total,8857,107,646,1135,5569,1400
-SAPU,2025-12-07,12,Atenciones de urgencia - Total Sistema Circulatorio,128,0,0,5,72,51
+SAPU,2025-12-07,1,Atenciones de urgencia - Total,9027,109,653,1161,5675,1429
+SAPU,2025-12-07,12,Atenciones de urgencia - Total Sistema Circulatorio,132,0,0,5,74,53
 SAPU,2025-12-07,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,4,0
 SAPU,2025-12-07,14,Atenciones de urgencia - Accidente vascular encefálico,8,0,0,0,4,4
-SAPU,2025-12-07,15,Atenciones de urgencia - Crisis hipertensiva,36,0,0,0,20,16
+SAPU,2025-12-07,15,Atenciones de urgencia - Crisis hipertensiva,39,0,0,0,22,17
 SAPU,2025-12-07,16,Atenciones de urgencia - Arritmia grave,11,0,0,0,5,6
-SAPU,2025-12-07,17,Atenciones de urgencia - Otras causas circulatorias,69,0,0,5,39,25
+SAPU,2025-12-07,17,Atenciones de urgencia - Otras causas circulatorias,70,0,0,5,39,26
 SAPU,2025-12-07,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-12-07,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAPU,2025-01-08,1,Atenciones de urgencia - Total,6995,79,363,757,4691,1105
@@ -17315,13 +17315,13 @@ SAPU,2025-11-08,16,Atenciones de urgencia - Arritmia grave,11,0,0,0,3,8
 SAPU,2025-11-08,17,Atenciones de urgencia - Otras causas circulatorias,61,0,1,0,30,30
 SAPU,2025-11-08,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-08,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-08,1,Atenciones de urgencia - Total,9321,109,680,1211,5784,1537
-SAPU,2025-12-08,12,Atenciones de urgencia - Total Sistema Circulatorio,145,0,0,1,79,65
+SAPU,2025-12-08,1,Atenciones de urgencia - Total,9385,109,683,1216,5827,1550
+SAPU,2025-12-08,12,Atenciones de urgencia - Total Sistema Circulatorio,149,0,0,1,82,66
 SAPU,2025-12-08,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,2,2
 SAPU,2025-12-08,14,Atenciones de urgencia - Accidente vascular encefálico,13,0,0,0,3,10
-SAPU,2025-12-08,15,Atenciones de urgencia - Crisis hipertensiva,40,0,0,0,23,17
+SAPU,2025-12-08,15,Atenciones de urgencia - Crisis hipertensiva,42,0,0,0,25,17
 SAPU,2025-12-08,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,2,4
-SAPU,2025-12-08,17,Atenciones de urgencia - Otras causas circulatorias,82,0,0,1,49,32
+SAPU,2025-12-08,17,Atenciones de urgencia - Otras causas circulatorias,84,0,0,1,50,33
 SAPU,2025-12-08,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-12-08,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAPU,2025-01-09,1,Atenciones de urgencia - Total,7047,89,362,785,4808,1003
@@ -17423,10 +17423,10 @@ SAPU,2025-11-09,16,Atenciones de urgencia - Arritmia grave,13,0,0,1,6,6
 SAPU,2025-11-09,17,Atenciones de urgencia - Otras causas circulatorias,51,0,0,1,29,21
 SAPU,2025-11-09,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-09,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-09,1,Atenciones de urgencia - Total,8526,104,636,1135,5431,1220
-SAPU,2025-12-09,12,Atenciones de urgencia - Total Sistema Circulatorio,139,0,1,1,77,60
+SAPU,2025-12-09,1,Atenciones de urgencia - Total,8543,104,638,1137,5440,1224
+SAPU,2025-12-09,12,Atenciones de urgencia - Total Sistema Circulatorio,140,0,1,1,77,61
 SAPU,2025-12-09,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,2,1
-SAPU,2025-12-09,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,1,3
+SAPU,2025-12-09,14,Atenciones de urgencia - Accidente vascular encefálico,5,0,0,0,1,4
 SAPU,2025-12-09,15,Atenciones de urgencia - Crisis hipertensiva,48,0,0,0,27,21
 SAPU,2025-12-09,16,Atenciones de urgencia - Arritmia grave,10,0,0,0,4,6
 SAPU,2025-12-09,17,Atenciones de urgencia - Otras causas circulatorias,74,0,1,1,43,29
@@ -17531,11 +17531,11 @@ SAPU,2025-11-10,16,Atenciones de urgencia - Arritmia grave,14,0,0,0,5,9
 SAPU,2025-11-10,17,Atenciones de urgencia - Otras causas circulatorias,40,0,0,0,27,13
 SAPU,2025-11-10,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-10,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-10,1,Atenciones de urgencia - Total,7558,74,512,993,4824,1155
-SAPU,2025-12-10,12,Atenciones de urgencia - Total Sistema Circulatorio,114,0,0,0,71,43
+SAPU,2025-12-10,1,Atenciones de urgencia - Total,7592,74,514,996,4850,1158
+SAPU,2025-12-10,12,Atenciones de urgencia - Total Sistema Circulatorio,115,0,0,0,72,43
 SAPU,2025-12-10,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,2,1
 SAPU,2025-12-10,14,Atenciones de urgencia - Accidente vascular encefálico,8,0,0,0,4,4
-SAPU,2025-12-10,15,Atenciones de urgencia - Crisis hipertensiva,45,0,0,0,28,17
+SAPU,2025-12-10,15,Atenciones de urgencia - Crisis hipertensiva,46,0,0,0,29,17
 SAPU,2025-12-10,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,4,3
 SAPU,2025-12-10,17,Atenciones de urgencia - Otras causas circulatorias,51,0,0,0,33,18
 SAPU,2025-12-10,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
@@ -17747,11 +17747,11 @@ SAPU,2025-11-12,16,Atenciones de urgencia - Arritmia grave,8,0,0,0,3,5
 SAPU,2025-11-12,17,Atenciones de urgencia - Otras causas circulatorias,38,0,0,1,15,22
 SAPU,2025-11-12,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-12,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-12,1,Atenciones de urgencia - Total,6610,72,419,798,4220,1101
-SAPU,2025-12-12,12,Atenciones de urgencia - Total Sistema Circulatorio,126,0,0,2,71,53
+SAPU,2025-12-12,1,Atenciones de urgencia - Total,6645,72,420,801,4245,1107
+SAPU,2025-12-12,12,Atenciones de urgencia - Total Sistema Circulatorio,127,0,0,2,71,54
 SAPU,2025-12-12,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,1,3
 SAPU,2025-12-12,14,Atenciones de urgencia - Accidente vascular encefálico,6,0,0,0,3,3
-SAPU,2025-12-12,15,Atenciones de urgencia - Crisis hipertensiva,55,0,0,2,33,20
+SAPU,2025-12-12,15,Atenciones de urgencia - Crisis hipertensiva,56,0,0,2,33,21
 SAPU,2025-12-12,16,Atenciones de urgencia - Arritmia grave,8,0,0,0,6,2
 SAPU,2025-12-12,17,Atenciones de urgencia - Otras causas circulatorias,53,0,0,0,28,25
 SAPU,2025-12-12,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
@@ -17855,16 +17855,16 @@ SAPU,2025-11-13,16,Atenciones de urgencia - Arritmia grave,12,0,0,0,7,5
 SAPU,2025-11-13,17,Atenciones de urgencia - Otras causas circulatorias,72,0,2,3,40,27
 SAPU,2025-11-13,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-13,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-13,1,Atenciones de urgencia - Total,8741,102,548,1024,5624,1443
-SAPU,2025-12-13,12,Atenciones de urgencia - Total Sistema Circulatorio,136,0,0,4,67,65
+SAPU,2025-12-13,1,Atenciones de urgencia - Total,8815,105,551,1031,5665,1463
+SAPU,2025-12-13,12,Atenciones de urgencia - Total Sistema Circulatorio,141,0,0,4,69,68
 SAPU,2025-12-13,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,3,0
 SAPU,2025-12-13,14,Atenciones de urgencia - Accidente vascular encefálico,7,0,0,0,1,6
-SAPU,2025-12-13,15,Atenciones de urgencia - Crisis hipertensiva,45,0,0,0,21,24
+SAPU,2025-12-13,15,Atenciones de urgencia - Crisis hipertensiva,47,0,0,0,22,25
 SAPU,2025-12-13,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,4,2
-SAPU,2025-12-13,17,Atenciones de urgencia - Otras causas circulatorias,75,0,0,4,38,33
+SAPU,2025-12-13,17,Atenciones de urgencia - Otras causas circulatorias,78,0,0,4,39,35
 SAPU,2025-12-13,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-12-13,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-01-14,1,Atenciones de urgencia - Total,6901,81,389,761,4698,972
+SAPU,2025-01-14,1,Atenciones de urgencia - Total,6970,82,397,766,4744,981
 SAPU,2025-01-14,12,Atenciones de urgencia - Total Sistema Circulatorio,119,1,2,5,67,44
 SAPU,2025-01-14,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,2,0
 SAPU,2025-01-14,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,0,3
@@ -17963,11 +17963,11 @@ SAPU,2025-11-14,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,3,4
 SAPU,2025-11-14,17,Atenciones de urgencia - Otras causas circulatorias,75,0,1,2,40,32
 SAPU,2025-11-14,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-14,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-14,1,Atenciones de urgencia - Total,9131,100,541,1021,6099,1370
-SAPU,2025-12-14,12,Atenciones de urgencia - Total Sistema Circulatorio,127,0,0,1,75,51
+SAPU,2025-12-14,1,Atenciones de urgencia - Total,9193,102,547,1027,6140,1377
+SAPU,2025-12-14,12,Atenciones de urgencia - Total Sistema Circulatorio,128,0,0,1,76,51
 SAPU,2025-12-14,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,0,1
 SAPU,2025-12-14,14,Atenciones de urgencia - Accidente vascular encefálico,9,0,0,0,6,3
-SAPU,2025-12-14,15,Atenciones de urgencia - Crisis hipertensiva,46,0,0,0,32,14
+SAPU,2025-12-14,15,Atenciones de urgencia - Crisis hipertensiva,47,0,0,0,33,14
 SAPU,2025-12-14,16,Atenciones de urgencia - Arritmia grave,10,0,0,0,4,6
 SAPU,2025-12-14,17,Atenciones de urgencia - Otras causas circulatorias,61,0,0,1,33,27
 SAPU,2025-12-14,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
@@ -18071,10 +18071,10 @@ SAPU,2025-11-15,16,Atenciones de urgencia - Arritmia grave,11,0,0,0,6,5
 SAPU,2025-11-15,17,Atenciones de urgencia - Otras causas circulatorias,95,0,3,2,44,46
 SAPU,2025-11-15,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-15,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-15,1,Atenciones de urgencia - Total,7633,101,559,849,4968,1156
-SAPU,2025-12-15,12,Atenciones de urgencia - Total Sistema Circulatorio,128,0,1,5,68,54
+SAPU,2025-12-15,1,Atenciones de urgencia - Total,7751,101,568,863,5047,1172
+SAPU,2025-12-15,12,Atenciones de urgencia - Total Sistema Circulatorio,129,0,1,5,69,54
 SAPU,2025-12-15,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,0,2
-SAPU,2025-12-15,14,Atenciones de urgencia - Accidente vascular encefálico,5,0,0,0,0,5
+SAPU,2025-12-15,14,Atenciones de urgencia - Accidente vascular encefálico,6,0,0,0,1,5
 SAPU,2025-12-15,15,Atenciones de urgencia - Crisis hipertensiva,56,0,0,0,35,21
 SAPU,2025-12-15,16,Atenciones de urgencia - Arritmia grave,17,0,0,1,4,12
 SAPU,2025-12-15,17,Atenciones de urgencia - Otras causas circulatorias,48,0,1,4,29,14
@@ -18179,13 +18179,13 @@ SAPU,2025-11-16,16,Atenciones de urgencia - Arritmia grave,8,0,0,0,5,3
 SAPU,2025-11-16,17,Atenciones de urgencia - Otras causas circulatorias,63,0,2,3,29,29
 SAPU,2025-11-16,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-16,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-16,1,Atenciones de urgencia - Total,7397,87,507,844,4864,1095
-SAPU,2025-12-16,12,Atenciones de urgencia - Total Sistema Circulatorio,132,0,1,0,77,54
+SAPU,2025-12-16,1,Atenciones de urgencia - Total,7485,88,516,862,4911,1108
+SAPU,2025-12-16,12,Atenciones de urgencia - Total Sistema Circulatorio,133,0,1,0,78,54
 SAPU,2025-12-16,13,Atenciones de urgencia - Infarto agudo miocardio,5,0,0,0,2,3
 SAPU,2025-12-16,14,Atenciones de urgencia - Accidente vascular encefálico,6,0,0,0,2,4
 SAPU,2025-12-16,15,Atenciones de urgencia - Crisis hipertensiva,57,0,0,0,39,18
 SAPU,2025-12-16,16,Atenciones de urgencia - Arritmia grave,8,0,0,0,4,4
-SAPU,2025-12-16,17,Atenciones de urgencia - Otras causas circulatorias,56,0,1,0,30,25
+SAPU,2025-12-16,17,Atenciones de urgencia - Otras causas circulatorias,57,0,1,0,31,25
 SAPU,2025-12-16,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-12-16,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAPU,2025-01-17,1,Atenciones de urgencia - Total,6353,78,298,661,4277,1039
@@ -18287,13 +18287,13 @@ SAPU,2025-11-17,16,Atenciones de urgencia - Arritmia grave,12,0,0,0,6,6
 SAPU,2025-11-17,17,Atenciones de urgencia - Otras causas circulatorias,74,0,0,3,40,31
 SAPU,2025-11-17,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-17,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-17,1,Atenciones de urgencia - Total,6894,83,456,742,4533,1080
-SAPU,2025-12-17,12,Atenciones de urgencia - Total Sistema Circulatorio,115,0,0,0,67,48
+SAPU,2025-12-17,1,Atenciones de urgencia - Total,6933,83,457,745,4560,1088
+SAPU,2025-12-17,12,Atenciones de urgencia - Total Sistema Circulatorio,120,0,0,1,69,50
 SAPU,2025-12-17,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,1,2
-SAPU,2025-12-17,14,Atenciones de urgencia - Accidente vascular encefálico,8,0,0,0,3,5
-SAPU,2025-12-17,15,Atenciones de urgencia - Crisis hipertensiva,42,0,0,0,27,15
+SAPU,2025-12-17,14,Atenciones de urgencia - Accidente vascular encefálico,9,0,0,0,3,6
+SAPU,2025-12-17,15,Atenciones de urgencia - Crisis hipertensiva,45,0,0,0,29,16
 SAPU,2025-12-17,16,Atenciones de urgencia - Arritmia grave,9,0,0,0,5,4
-SAPU,2025-12-17,17,Atenciones de urgencia - Otras causas circulatorias,53,0,0,0,31,22
+SAPU,2025-12-17,17,Atenciones de urgencia - Otras causas circulatorias,54,0,0,1,31,22
 SAPU,2025-12-17,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-12-17,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAPU,2025-01-18,1,Atenciones de urgencia - Total,7609,102,396,807,5029,1275
@@ -18395,12 +18395,12 @@ SAPU,2025-11-18,16,Atenciones de urgencia - Arritmia grave,9,0,0,0,6,3
 SAPU,2025-11-18,17,Atenciones de urgencia - Otras causas circulatorias,62,0,0,0,32,30
 SAPU,2025-11-18,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-18,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-18,1,Atenciones de urgencia - Total,6836,79,465,760,4436,1096
-SAPU,2025-12-18,12,Atenciones de urgencia - Total Sistema Circulatorio,126,0,0,1,65,60
+SAPU,2025-12-18,1,Atenciones de urgencia - Total,6866,79,466,766,4457,1098
+SAPU,2025-12-18,12,Atenciones de urgencia - Total Sistema Circulatorio,127,0,0,1,66,60
 SAPU,2025-12-18,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,1,1
 SAPU,2025-12-18,14,Atenciones de urgencia - Accidente vascular encefálico,8,0,0,0,0,8
 SAPU,2025-12-18,15,Atenciones de urgencia - Crisis hipertensiva,42,0,0,0,27,15
-SAPU,2025-12-18,16,Atenciones de urgencia - Arritmia grave,12,0,0,0,7,5
+SAPU,2025-12-18,16,Atenciones de urgencia - Arritmia grave,13,0,0,0,8,5
 SAPU,2025-12-18,17,Atenciones de urgencia - Otras causas circulatorias,62,0,0,1,30,31
 SAPU,2025-12-18,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-12-18,25,Hospitalizaciones - Total,0,0,0,0,0,0
@@ -18503,11 +18503,11 @@ SAPU,2025-11-19,16,Atenciones de urgencia - Arritmia grave,9,0,0,0,5,4
 SAPU,2025-11-19,17,Atenciones de urgencia - Otras causas circulatorias,53,0,1,0,24,28
 SAPU,2025-11-19,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-19,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-19,1,Atenciones de urgencia - Total,6643,81,401,692,4268,1201
-SAPU,2025-12-19,12,Atenciones de urgencia - Total Sistema Circulatorio,115,0,0,4,58,53
+SAPU,2025-12-19,1,Atenciones de urgencia - Total,6669,82,404,694,4280,1209
+SAPU,2025-12-19,12,Atenciones de urgencia - Total Sistema Circulatorio,116,0,0,4,59,53
 SAPU,2025-12-19,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,0,1
 SAPU,2025-12-19,14,Atenciones de urgencia - Accidente vascular encefálico,7,0,0,0,3,4
-SAPU,2025-12-19,15,Atenciones de urgencia - Crisis hipertensiva,41,0,0,2,21,18
+SAPU,2025-12-19,15,Atenciones de urgencia - Crisis hipertensiva,42,0,0,2,22,18
 SAPU,2025-12-19,16,Atenciones de urgencia - Arritmia grave,8,0,0,0,6,2
 SAPU,2025-12-19,17,Atenciones de urgencia - Otras causas circulatorias,58,0,0,2,28,28
 SAPU,2025-12-19,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
@@ -18611,7 +18611,7 @@ SAPU,2025-11-20,16,Atenciones de urgencia - Arritmia grave,5,0,0,1,4,0
 SAPU,2025-11-20,17,Atenciones de urgencia - Otras causas circulatorias,56,0,0,0,27,29
 SAPU,2025-11-20,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-20,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-20,1,Atenciones de urgencia - Total,8240,87,482,870,5361,1440
+SAPU,2025-12-20,1,Atenciones de urgencia - Total,8286,89,487,874,5389,1447
 SAPU,2025-12-20,12,Atenciones de urgencia - Total Sistema Circulatorio,152,0,1,3,83,65
 SAPU,2025-12-20,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SAPU,2025-12-20,14,Atenciones de urgencia - Accidente vascular encefálico,8,0,0,0,3,5
@@ -18827,13 +18827,13 @@ SAPU,2025-11-22,16,Atenciones de urgencia - Arritmia grave,9,0,0,0,4,5
 SAPU,2025-11-22,17,Atenciones de urgencia - Otras causas circulatorias,103,0,0,0,56,47
 SAPU,2025-11-22,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-22,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-22,1,Atenciones de urgencia - Total,7137,72,445,693,4757,1170
-SAPU,2025-12-22,12,Atenciones de urgencia - Total Sistema Circulatorio,134,3,2,1,72,56
+SAPU,2025-12-22,1,Atenciones de urgencia - Total,7166,73,447,696,4771,1179
+SAPU,2025-12-22,12,Atenciones de urgencia - Total Sistema Circulatorio,135,3,2,1,73,56
 SAPU,2025-12-22,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,1,1
 SAPU,2025-12-22,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,1,3
 SAPU,2025-12-22,15,Atenciones de urgencia - Crisis hipertensiva,54,1,0,0,32,21
 SAPU,2025-12-22,16,Atenciones de urgencia - Arritmia grave,9,1,0,0,2,6
-SAPU,2025-12-22,17,Atenciones de urgencia - Otras causas circulatorias,65,1,2,1,36,25
+SAPU,2025-12-22,17,Atenciones de urgencia - Otras causas circulatorias,66,1,2,1,37,25
 SAPU,2025-12-22,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-12-22,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAPU,2025-01-23,1,Atenciones de urgencia - Total,6498,57,322,668,4457,994
@@ -18935,12 +18935,12 @@ SAPU,2025-11-23,16,Atenciones de urgencia - Arritmia grave,16,0,0,0,7,9
 SAPU,2025-11-23,17,Atenciones de urgencia - Otras causas circulatorias,66,0,0,2,30,34
 SAPU,2025-11-23,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-23,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-23,1,Atenciones de urgencia - Total,6741,81,391,687,4456,1126
-SAPU,2025-12-23,12,Atenciones de urgencia - Total Sistema Circulatorio,117,0,1,2,59,55
+SAPU,2025-12-23,1,Atenciones de urgencia - Total,6808,81,394,694,4506,1133
+SAPU,2025-12-23,12,Atenciones de urgencia - Total Sistema Circulatorio,118,0,1,2,59,56
 SAPU,2025-12-23,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SAPU,2025-12-23,14,Atenciones de urgencia - Accidente vascular encefálico,5,0,0,0,1,4
 SAPU,2025-12-23,15,Atenciones de urgencia - Crisis hipertensiva,48,0,1,1,23,23
-SAPU,2025-12-23,16,Atenciones de urgencia - Arritmia grave,11,0,0,0,6,5
+SAPU,2025-12-23,16,Atenciones de urgencia - Arritmia grave,12,0,0,0,6,6
 SAPU,2025-12-23,17,Atenciones de urgencia - Otras causas circulatorias,53,0,0,1,29,23
 SAPU,2025-12-23,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-12-23,25,Hospitalizaciones - Total,0,0,0,0,0,0
@@ -19043,13 +19043,13 @@ SAPU,2025-11-24,16,Atenciones de urgencia - Arritmia grave,13,0,0,0,8,5
 SAPU,2025-11-24,17,Atenciones de urgencia - Otras causas circulatorias,59,0,1,0,38,20
 SAPU,2025-11-24,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-24,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-24,1,Atenciones de urgencia - Total,4786,52,247,550,3087,850
-SAPU,2025-12-24,12,Atenciones de urgencia - Total Sistema Circulatorio,86,0,0,8,40,38
+SAPU,2025-12-24,1,Atenciones de urgencia - Total,5041,55,264,576,3237,909
+SAPU,2025-12-24,12,Atenciones de urgencia - Total Sistema Circulatorio,89,0,0,8,42,39
 SAPU,2025-12-24,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,1,0
 SAPU,2025-12-24,14,Atenciones de urgencia - Accidente vascular encefálico,8,0,0,0,3,5
 SAPU,2025-12-24,15,Atenciones de urgencia - Crisis hipertensiva,29,0,0,1,17,11
-SAPU,2025-12-24,16,Atenciones de urgencia - Arritmia grave,9,0,0,0,2,7
-SAPU,2025-12-24,17,Atenciones de urgencia - Otras causas circulatorias,39,0,0,7,17,15
+SAPU,2025-12-24,16,Atenciones de urgencia - Arritmia grave,10,0,0,0,3,7
+SAPU,2025-12-24,17,Atenciones de urgencia - Otras causas circulatorias,41,0,0,7,18,16
 SAPU,2025-12-24,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-12-24,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAPU,2025-01-25,1,Atenciones de urgencia - Total,7883,120,391,828,5248,1296
@@ -19151,13 +19151,13 @@ SAPU,2025-11-25,16,Atenciones de urgencia - Arritmia grave,11,0,0,0,2,9
 SAPU,2025-11-25,17,Atenciones de urgencia - Otras causas circulatorias,64,0,0,3,36,25
 SAPU,2025-11-25,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-25,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-25,1,Atenciones de urgencia - Total,7925,96,450,840,5216,1323
-SAPU,2025-12-25,12,Atenciones de urgencia - Total Sistema Circulatorio,146,0,0,2,87,57
+SAPU,2025-12-25,1,Atenciones de urgencia - Total,8106,98,459,859,5330,1360
+SAPU,2025-12-25,12,Atenciones de urgencia - Total Sistema Circulatorio,144,0,0,2,86,56
 SAPU,2025-12-25,13,Atenciones de urgencia - Infarto agudo miocardio,6,0,0,0,3,3
-SAPU,2025-12-25,14,Atenciones de urgencia - Accidente vascular encefálico,10,0,0,0,4,6
+SAPU,2025-12-25,14,Atenciones de urgencia - Accidente vascular encefálico,8,0,0,0,4,4
 SAPU,2025-12-25,15,Atenciones de urgencia - Crisis hipertensiva,40,0,0,0,30,10
 SAPU,2025-12-25,16,Atenciones de urgencia - Arritmia grave,12,0,0,0,5,7
-SAPU,2025-12-25,17,Atenciones de urgencia - Otras causas circulatorias,78,0,0,2,45,31
+SAPU,2025-12-25,17,Atenciones de urgencia - Otras causas circulatorias,78,0,0,2,44,32
 SAPU,2025-12-25,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-12-25,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAPU,2025-01-26,1,Atenciones de urgencia - Total,7967,90,398,839,5428,1212
@@ -19259,13 +19259,13 @@ SAPU,2025-11-26,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,1,5
 SAPU,2025-11-26,17,Atenciones de urgencia - Otras causas circulatorias,68,0,0,2,39,27
 SAPU,2025-11-26,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-26,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-26,1,Atenciones de urgencia - Total,7574,98,412,744,5062,1258
-SAPU,2025-12-26,12,Atenciones de urgencia - Total Sistema Circulatorio,113,0,0,0,70,43
+SAPU,2025-12-26,1,Atenciones de urgencia - Total,7935,99,423,779,5321,1313
+SAPU,2025-12-26,12,Atenciones de urgencia - Total Sistema Circulatorio,117,0,0,0,71,46
 SAPU,2025-12-26,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,3,1
 SAPU,2025-12-26,14,Atenciones de urgencia - Accidente vascular encefálico,5,0,0,0,2,3
-SAPU,2025-12-26,15,Atenciones de urgencia - Crisis hipertensiva,35,0,0,0,27,8
+SAPU,2025-12-26,15,Atenciones de urgencia - Crisis hipertensiva,36,0,0,0,27,9
 SAPU,2025-12-26,16,Atenciones de urgencia - Arritmia grave,9,0,0,0,6,3
-SAPU,2025-12-26,17,Atenciones de urgencia - Otras causas circulatorias,60,0,0,0,32,28
+SAPU,2025-12-26,17,Atenciones de urgencia - Otras causas circulatorias,63,0,0,0,33,30
 SAPU,2025-12-26,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-12-26,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAPU,2025-01-27,1,Atenciones de urgencia - Total,7232,86,320,736,5037,1053
@@ -19367,13 +19367,13 @@ SAPU,2025-11-27,16,Atenciones de urgencia - Arritmia grave,12,0,0,0,4,8
 SAPU,2025-11-27,17,Atenciones de urgencia - Otras causas circulatorias,78,0,0,0,38,40
 SAPU,2025-11-27,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-27,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-27,1,Atenciones de urgencia - Total,9452,100,559,954,6169,1670
-SAPU,2025-12-27,12,Atenciones de urgencia - Total Sistema Circulatorio,165,0,1,4,79,81
-SAPU,2025-12-27,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,0,4
-SAPU,2025-12-27,14,Atenciones de urgencia - Accidente vascular encefálico,6,0,0,0,1,5
-SAPU,2025-12-27,15,Atenciones de urgencia - Crisis hipertensiva,51,0,0,0,27,24
+SAPU,2025-12-27,1,Atenciones de urgencia - Total,9753,102,572,977,6361,1741
+SAPU,2025-12-27,12,Atenciones de urgencia - Total Sistema Circulatorio,176,0,1,4,83,88
+SAPU,2025-12-27,13,Atenciones de urgencia - Infarto agudo miocardio,5,0,0,0,1,4
+SAPU,2025-12-27,14,Atenciones de urgencia - Accidente vascular encefálico,7,0,0,0,1,6
+SAPU,2025-12-27,15,Atenciones de urgencia - Crisis hipertensiva,52,0,0,0,28,24
 SAPU,2025-12-27,16,Atenciones de urgencia - Arritmia grave,9,0,0,0,5,4
-SAPU,2025-12-27,17,Atenciones de urgencia - Otras causas circulatorias,95,0,1,4,46,44
+SAPU,2025-12-27,17,Atenciones de urgencia - Otras causas circulatorias,103,0,1,4,48,50
 SAPU,2025-12-27,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-12-27,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAPU,2025-01-28,1,Atenciones de urgencia - Total,6788,82,311,689,4736,970
@@ -19475,13 +19475,13 @@ SAPU,2025-11-28,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,3,2
 SAPU,2025-11-28,17,Atenciones de urgencia - Otras causas circulatorias,48,1,0,2,22,23
 SAPU,2025-11-28,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-28,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-28,1,Atenciones de urgencia - Total,9201,104,490,971,6177,1459
-SAPU,2025-12-28,12,Atenciones de urgencia - Total Sistema Circulatorio,166,0,1,2,95,68
+SAPU,2025-12-28,1,Atenciones de urgencia - Total,9567,110,514,1002,6410,1531
+SAPU,2025-12-28,12,Atenciones de urgencia - Total Sistema Circulatorio,171,0,1,2,95,73
 SAPU,2025-12-28,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,2,1
-SAPU,2025-12-28,14,Atenciones de urgencia - Accidente vascular encefálico,11,0,0,0,4,7
+SAPU,2025-12-28,14,Atenciones de urgencia - Accidente vascular encefálico,12,0,0,0,4,8
 SAPU,2025-12-28,15,Atenciones de urgencia - Crisis hipertensiva,55,0,0,0,36,19
 SAPU,2025-12-28,16,Atenciones de urgencia - Arritmia grave,11,0,0,0,3,8
-SAPU,2025-12-28,17,Atenciones de urgencia - Otras causas circulatorias,86,0,1,2,50,33
+SAPU,2025-12-28,17,Atenciones de urgencia - Otras causas circulatorias,90,0,1,2,50,37
 SAPU,2025-12-28,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-12-28,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAPU,2025-01-29,1,Atenciones de urgencia - Total,6483,70,283,609,4568,953
@@ -19574,13 +19574,13 @@ SAPU,2025-11-29,16,Atenciones de urgencia - Arritmia grave,13,0,0,0,5,8
 SAPU,2025-11-29,17,Atenciones de urgencia - Otras causas circulatorias,62,0,0,1,28,33
 SAPU,2025-11-29,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-29,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-29,1,Atenciones de urgencia - Total,7012,70,410,718,4669,1145
-SAPU,2025-12-29,12,Atenciones de urgencia - Total Sistema Circulatorio,131,0,0,1,63,67
+SAPU,2025-12-29,1,Atenciones de urgencia - Total,7799,77,468,799,5173,1282
+SAPU,2025-12-29,12,Atenciones de urgencia - Total Sistema Circulatorio,140,0,0,1,68,71
 SAPU,2025-12-29,13,Atenciones de urgencia - Infarto agudo miocardio,5,0,0,0,2,3
 SAPU,2025-12-29,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,0,2
-SAPU,2025-12-29,15,Atenciones de urgencia - Crisis hipertensiva,34,0,0,0,21,13
+SAPU,2025-12-29,15,Atenciones de urgencia - Crisis hipertensiva,39,0,0,0,23,16
 SAPU,2025-12-29,16,Atenciones de urgencia - Arritmia grave,15,0,0,0,5,10
-SAPU,2025-12-29,17,Atenciones de urgencia - Otras causas circulatorias,75,0,0,1,35,39
+SAPU,2025-12-29,17,Atenciones de urgencia - Otras causas circulatorias,79,0,0,1,38,40
 SAPU,2025-12-29,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-12-29,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAPU,2025-01-30,1,Atenciones de urgencia - Total,6308,64,323,644,4315,962
@@ -19673,13 +19673,13 @@ SAPU,2025-11-30,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,4,3
 SAPU,2025-11-30,17,Atenciones de urgencia - Otras causas circulatorias,95,1,1,5,54,34
 SAPU,2025-11-30,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-11-30,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-30,1,Atenciones de urgencia - Total,6034,57,340,665,4031,941
-SAPU,2025-12-30,12,Atenciones de urgencia - Total Sistema Circulatorio,93,0,0,0,56,37
-SAPU,2025-12-30,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,1,1
+SAPU,2025-12-30,1,Atenciones de urgencia - Total,7220,71,420,812,4769,1148
+SAPU,2025-12-30,12,Atenciones de urgencia - Total Sistema Circulatorio,111,0,0,0,67,44
+SAPU,2025-12-30,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,1,2
 SAPU,2025-12-30,14,Atenciones de urgencia - Accidente vascular encefálico,5,0,0,0,1,4
-SAPU,2025-12-30,15,Atenciones de urgencia - Crisis hipertensiva,31,0,0,0,26,5
-SAPU,2025-12-30,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,4,3
-SAPU,2025-12-30,17,Atenciones de urgencia - Otras causas circulatorias,48,0,0,0,24,24
+SAPU,2025-12-30,15,Atenciones de urgencia - Crisis hipertensiva,34,0,0,0,28,6
+SAPU,2025-12-30,16,Atenciones de urgencia - Arritmia grave,10,0,0,0,6,4
+SAPU,2025-12-30,17,Atenciones de urgencia - Otras causas circulatorias,59,0,0,0,31,28
 SAPU,2025-12-30,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-12-30,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAPU,2025-01-31,1,Atenciones de urgencia - Total,6102,68,283,577,4155,1019
@@ -19736,31 +19736,31 @@ SAPU,2025-10-31,16,Atenciones de urgencia - Arritmia grave,12,0,0,0,7,5
 SAPU,2025-10-31,17,Atenciones de urgencia - Otras causas circulatorias,69,0,1,2,42,24
 SAPU,2025-10-31,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-10-31,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAPU,2025-12-31,1,Atenciones de urgencia - Total,2919,34,164,324,1862,535
-SAPU,2025-12-31,12,Atenciones de urgencia - Total Sistema Circulatorio,48,0,0,1,22,25
-SAPU,2025-12-31,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,1,1
-SAPU,2025-12-31,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,0,2
-SAPU,2025-12-31,15,Atenciones de urgencia - Crisis hipertensiva,5,0,0,0,2,3
-SAPU,2025-12-31,16,Atenciones de urgencia - Arritmia grave,10,0,0,1,4,5
-SAPU,2025-12-31,17,Atenciones de urgencia - Otras causas circulatorias,29,0,0,0,15,14
+SAPU,2025-12-31,1,Atenciones de urgencia - Total,4974,59,260,535,3201,919
+SAPU,2025-12-31,12,Atenciones de urgencia - Total Sistema Circulatorio,88,0,0,1,44,43
+SAPU,2025-12-31,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,1,2
+SAPU,2025-12-31,14,Atenciones de urgencia - Accidente vascular encefálico,5,0,0,0,2,3
+SAPU,2025-12-31,15,Atenciones de urgencia - Crisis hipertensiva,15,0,0,0,10,5
+SAPU,2025-12-31,16,Atenciones de urgencia - Arritmia grave,16,0,0,1,7,8
+SAPU,2025-12-31,17,Atenciones de urgencia - Otras causas circulatorias,49,0,0,0,24,25
 SAPU,2025-12-31,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAPU,2025-12-31,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-01,1,Atenciones de urgencia - Total,2725,34,123,301,1781,486
-SAR,2025-01-01,12,Atenciones de urgencia - Total Sistema Circulatorio,65,0,0,2,32,31
+SAR,2025-01-01,1,Atenciones de urgencia - Total,2722,33,123,301,1780,485
+SAR,2025-01-01,12,Atenciones de urgencia - Total Sistema Circulatorio,64,0,0,2,32,30
 SAR,2025-01-01,13,Atenciones de urgencia - Infarto agudo miocardio,5,0,0,0,3,2
 SAR,2025-01-01,14,Atenciones de urgencia - Accidente vascular encefálico,5,0,0,0,3,2
-SAR,2025-01-01,15,Atenciones de urgencia - Crisis hipertensiva,25,0,0,0,14,11
+SAR,2025-01-01,15,Atenciones de urgencia - Crisis hipertensiva,24,0,0,0,14,10
 SAR,2025-01-01,16,Atenciones de urgencia - Arritmia grave,8,0,0,2,3,3
 SAR,2025-01-01,17,Atenciones de urgencia - Otras causas circulatorias,22,0,0,0,9,13
 SAR,2025-01-01,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-01,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-01,1,Atenciones de urgencia - Total,2750,32,111,263,1851,493
-SAR,2025-02-01,12,Atenciones de urgencia - Total Sistema Circulatorio,60,0,0,0,33,27
+SAR,2025-02-01,1,Atenciones de urgencia - Total,2742,32,111,263,1846,490
+SAR,2025-02-01,12,Atenciones de urgencia - Total Sistema Circulatorio,59,0,0,0,32,27
 SAR,2025-02-01,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,1,3
 SAR,2025-02-01,14,Atenciones de urgencia - Accidente vascular encefálico,10,0,0,0,4,6
 SAR,2025-02-01,15,Atenciones de urgencia - Crisis hipertensiva,18,0,0,0,14,4
 SAR,2025-02-01,16,Atenciones de urgencia - Arritmia grave,1,0,0,0,0,1
-SAR,2025-02-01,17,Atenciones de urgencia - Otras causas circulatorias,27,0,0,0,14,13
+SAR,2025-02-01,17,Atenciones de urgencia - Otras causas circulatorias,26,0,0,0,13,13
 SAR,2025-02-01,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-02-01,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAR,2025-03-01,1,Atenciones de urgencia - Total,2615,27,117,227,1722,522
@@ -19772,7 +19772,7 @@ SAR,2025-03-01,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,1,4
 SAR,2025-03-01,17,Atenciones de urgencia - Otras causas circulatorias,22,0,0,1,8,13
 SAR,2025-03-01,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-03-01,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-04-01,1,Atenciones de urgencia - Total,3521,38,243,629,2094,517
+SAR,2025-04-01,1,Atenciones de urgencia - Total,3520,38,243,629,2094,516
 SAR,2025-04-01,12,Atenciones de urgencia - Total Sistema Circulatorio,44,0,0,2,16,26
 SAR,2025-04-01,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,0,3
 SAR,2025-04-01,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,1,1
@@ -19826,7 +19826,7 @@ SAR,2025-09-01,16,Atenciones de urgencia - Arritmia grave,10,0,0,1,3,6
 SAR,2025-09-01,17,Atenciones de urgencia - Otras causas circulatorias,40,0,1,3,24,12
 SAR,2025-09-01,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-09-01,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-10-01,1,Atenciones de urgencia - Total,3502,35,257,563,2065,582
+SAR,2025-10-01,1,Atenciones de urgencia - Total,3500,35,256,563,2064,582
 SAR,2025-10-01,12,Atenciones de urgencia - Total Sistema Circulatorio,72,0,0,0,35,37
 SAR,2025-10-01,13,Atenciones de urgencia - Infarto agudo miocardio,5,0,0,0,2,3
 SAR,2025-10-01,14,Atenciones de urgencia - Accidente vascular encefálico,8,0,0,0,3,5
@@ -19835,7 +19835,7 @@ SAR,2025-10-01,16,Atenciones de urgencia - Arritmia grave,9,0,0,0,3,6
 SAR,2025-10-01,17,Atenciones de urgencia - Otras causas circulatorias,32,0,0,0,17,15
 SAR,2025-10-01,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-10-01,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-11-01,1,Atenciones de urgencia - Total,3415,44,244,506,2010,611
+SAR,2025-11-01,1,Atenciones de urgencia - Total,3413,44,244,506,2010,609
 SAR,2025-11-01,12,Atenciones de urgencia - Total Sistema Circulatorio,62,0,0,0,36,26
 SAR,2025-11-01,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,4,0
 SAR,2025-11-01,14,Atenciones de urgencia - Accidente vascular encefálico,8,0,0,0,3,5
@@ -19853,22 +19853,22 @@ SAR,2025-12-01,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,2,2
 SAR,2025-12-01,17,Atenciones de urgencia - Otras causas circulatorias,25,0,0,0,15,10
 SAR,2025-12-01,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-01,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-02,1,Atenciones de urgencia - Total,3207,34,150,304,2119,600
-SAR,2025-01-02,12,Atenciones de urgencia - Total Sistema Circulatorio,81,0,0,0,41,40
+SAR,2025-01-02,1,Atenciones de urgencia - Total,3204,34,150,303,2115,602
+SAR,2025-01-02,12,Atenciones de urgencia - Total Sistema Circulatorio,82,0,0,0,42,40
 SAR,2025-01-02,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,1,1
 SAR,2025-01-02,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,2,1
 SAR,2025-01-02,15,Atenciones de urgencia - Crisis hipertensiva,24,0,0,0,11,13
 SAR,2025-01-02,16,Atenciones de urgencia - Arritmia grave,3,0,0,0,3,0
-SAR,2025-01-02,17,Atenciones de urgencia - Otras causas circulatorias,49,0,0,0,24,25
+SAR,2025-01-02,17,Atenciones de urgencia - Otras causas circulatorias,50,0,0,0,25,25
 SAR,2025-01-02,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-02,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-02,1,Atenciones de urgencia - Total,2827,26,144,286,1885,486
-SAR,2025-02-02,12,Atenciones de urgencia - Total Sistema Circulatorio,64,0,0,0,31,33
+SAR,2025-02-02,1,Atenciones de urgencia - Total,2821,25,144,284,1881,487
+SAR,2025-02-02,12,Atenciones de urgencia - Total Sistema Circulatorio,64,0,0,0,32,32
 SAR,2025-02-02,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,4,0
 SAR,2025-02-02,14,Atenciones de urgencia - Accidente vascular encefálico,1,0,0,0,0,1
-SAR,2025-02-02,15,Atenciones de urgencia - Crisis hipertensiva,18,0,0,0,12,6
+SAR,2025-02-02,15,Atenciones de urgencia - Crisis hipertensiva,17,0,0,0,12,5
 SAR,2025-02-02,16,Atenciones de urgencia - Arritmia grave,2,0,0,0,1,1
-SAR,2025-02-02,17,Atenciones de urgencia - Otras causas circulatorias,39,0,0,0,14,25
+SAR,2025-02-02,17,Atenciones de urgencia - Otras causas circulatorias,40,0,0,0,15,25
 SAR,2025-02-02,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-02-02,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAR,2025-03-02,1,Atenciones de urgencia - Total,2921,30,121,252,1955,563
@@ -19961,7 +19961,7 @@ SAR,2025-12-02,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,2,2
 SAR,2025-12-02,17,Atenciones de urgencia - Otras causas circulatorias,36,0,1,0,21,14
 SAR,2025-12-02,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-02,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-03,1,Atenciones de urgencia - Total,2911,23,139,286,1902,561
+SAR,2025-01-03,1,Atenciones de urgencia - Total,2932,28,137,289,1916,562
 SAR,2025-01-03,12,Atenciones de urgencia - Total Sistema Circulatorio,61,0,0,0,37,24
 SAR,2025-01-03,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SAR,2025-01-03,14,Atenciones de urgencia - Accidente vascular encefálico,7,0,0,0,3,4
@@ -20051,13 +20051,13 @@ SAR,2025-10-03,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,3,2
 SAR,2025-10-03,17,Atenciones de urgencia - Otras causas circulatorias,22,0,0,0,8,14
 SAR,2025-10-03,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-10-03,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-11-03,1,Atenciones de urgencia - Total,4183,63,303,762,2436,619
-SAR,2025-11-03,12,Atenciones de urgencia - Total Sistema Circulatorio,46,0,1,2,20,23
+SAR,2025-11-03,1,Atenciones de urgencia - Total,4159,64,295,765,2433,602
+SAR,2025-11-03,12,Atenciones de urgencia - Total Sistema Circulatorio,48,0,1,2,22,23
 SAR,2025-11-03,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,2,2
 SAR,2025-11-03,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,1,1
-SAR,2025-11-03,15,Atenciones de urgencia - Crisis hipertensiva,12,0,0,0,9,3
+SAR,2025-11-03,15,Atenciones de urgencia - Crisis hipertensiva,13,0,0,0,10,3
 SAR,2025-11-03,16,Atenciones de urgencia - Arritmia grave,8,0,0,1,0,7
-SAR,2025-11-03,17,Atenciones de urgencia - Otras causas circulatorias,20,0,1,1,8,10
+SAR,2025-11-03,17,Atenciones de urgencia - Otras causas circulatorias,21,0,1,1,9,10
 SAR,2025-11-03,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-03,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAR,2025-12-03,1,Atenciones de urgencia - Total,3220,21,241,492,1975,491
@@ -20069,20 +20069,20 @@ SAR,2025-12-03,16,Atenciones de urgencia - Arritmia grave,3,0,0,0,2,1
 SAR,2025-12-03,17,Atenciones de urgencia - Otras causas circulatorias,56,0,2,4,31,19
 SAR,2025-12-03,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-03,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-04,1,Atenciones de urgencia - Total,3067,28,180,285,1950,624
-SAR,2025-01-04,12,Atenciones de urgencia - Total Sistema Circulatorio,75,0,0,2,33,40
+SAR,2025-01-04,1,Atenciones de urgencia - Total,3061,28,181,283,1947,622
+SAR,2025-01-04,12,Atenciones de urgencia - Total Sistema Circulatorio,76,0,0,2,34,40
 SAR,2025-01-04,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,4,0
 SAR,2025-01-04,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,1,3
 SAR,2025-01-04,15,Atenciones de urgencia - Crisis hipertensiva,31,0,0,0,13,18
 SAR,2025-01-04,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,3,3
-SAR,2025-01-04,17,Atenciones de urgencia - Otras causas circulatorias,30,0,0,2,12,16
+SAR,2025-01-04,17,Atenciones de urgencia - Otras causas circulatorias,31,0,0,2,13,16
 SAR,2025-01-04,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-04,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-04,1,Atenciones de urgencia - Total,2811,33,133,231,1896,518
-SAR,2025-02-04,12,Atenciones de urgencia - Total Sistema Circulatorio,66,0,0,1,34,31
+SAR,2025-02-04,1,Atenciones de urgencia - Total,2815,33,133,231,1896,522
+SAR,2025-02-04,12,Atenciones de urgencia - Total Sistema Circulatorio,68,0,0,1,36,31
 SAR,2025-02-04,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,2,2
 SAR,2025-02-04,14,Atenciones de urgencia - Accidente vascular encefálico,1,0,0,0,0,1
-SAR,2025-02-04,15,Atenciones de urgencia - Crisis hipertensiva,19,0,0,0,11,8
+SAR,2025-02-04,15,Atenciones de urgencia - Crisis hipertensiva,21,0,0,0,13,8
 SAR,2025-02-04,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,4,1
 SAR,2025-02-04,17,Atenciones de urgencia - Otras causas circulatorias,37,0,0,1,17,19
 SAR,2025-02-04,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
@@ -20105,7 +20105,7 @@ SAR,2025-04-04,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,2,2
 SAR,2025-04-04,17,Atenciones de urgencia - Otras causas circulatorias,15,0,0,1,9,5
 SAR,2025-04-04,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-04-04,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-05-04,1,Atenciones de urgencia - Total,3715,31,251,594,2248,591
+SAR,2025-05-04,1,Atenciones de urgencia - Total,3717,31,251,594,2250,591
 SAR,2025-05-04,12,Atenciones de urgencia - Total Sistema Circulatorio,50,0,0,1,27,22
 SAR,2025-05-04,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,1,0
 SAR,2025-05-04,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,1,2
@@ -20177,16 +20177,16 @@ SAR,2025-12-04,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,2,3
 SAR,2025-12-04,17,Atenciones de urgencia - Otras causas circulatorias,29,0,0,0,22,7
 SAR,2025-12-04,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-04,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-05,1,Atenciones de urgencia - Total,3158,27,160,356,2028,587
-SAR,2025-01-05,12,Atenciones de urgencia - Total Sistema Circulatorio,64,0,0,0,35,29
+SAR,2025-01-05,1,Atenciones de urgencia - Total,3169,27,160,357,2041,584
+SAR,2025-01-05,12,Atenciones de urgencia - Total Sistema Circulatorio,64,0,0,0,37,27
 SAR,2025-01-05,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,3,0
 SAR,2025-01-05,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,2,2
 SAR,2025-01-05,15,Atenciones de urgencia - Crisis hipertensiva,20,0,0,0,10,10
 SAR,2025-01-05,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,4,1
-SAR,2025-01-05,17,Atenciones de urgencia - Otras causas circulatorias,32,0,0,0,16,16
+SAR,2025-01-05,17,Atenciones de urgencia - Otras causas circulatorias,32,0,0,0,18,14
 SAR,2025-01-05,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-05,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-05,1,Atenciones de urgencia - Total,2715,31,117,250,1837,480
+SAR,2025-02-05,1,Atenciones de urgencia - Total,2699,31,117,249,1826,476
 SAR,2025-02-05,12,Atenciones de urgencia - Total Sistema Circulatorio,54,0,1,0,29,24
 SAR,2025-02-05,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,0,1
 SAR,2025-02-05,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,1,3
@@ -20195,7 +20195,7 @@ SAR,2025-02-05,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,3,3
 SAR,2025-02-05,17,Atenciones de urgencia - Otras causas circulatorias,31,0,0,0,19,12
 SAR,2025-02-05,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-02-05,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-03-05,1,Atenciones de urgencia - Total,2964,37,130,266,1977,554
+SAR,2025-03-05,1,Atenciones de urgencia - Total,2978,37,130,266,1976,569
 SAR,2025-03-05,12,Atenciones de urgencia - Total Sistema Circulatorio,55,0,0,0,31,24
 SAR,2025-03-05,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,2,2
 SAR,2025-03-05,14,Atenciones de urgencia - Accidente vascular encefálico,5,0,0,0,2,3
@@ -20213,9 +20213,9 @@ SAR,2025-04-05,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,2,5
 SAR,2025-04-05,17,Atenciones de urgencia - Otras causas circulatorias,24,0,0,1,14,9
 SAR,2025-04-05,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-04-05,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-05-05,1,Atenciones de urgencia - Total,4119,45,313,747,2428,586
-SAR,2025-05-05,12,Atenciones de urgencia - Total Sistema Circulatorio,90,0,0,0,53,37
-SAR,2025-05-05,13,Atenciones de urgencia - Infarto agudo miocardio,7,0,0,0,4,3
+SAR,2025-05-05,1,Atenciones de urgencia - Total,4116,45,313,747,2425,586
+SAR,2025-05-05,12,Atenciones de urgencia - Total Sistema Circulatorio,87,0,0,0,50,37
+SAR,2025-05-05,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,1,3
 SAR,2025-05-05,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,1,2
 SAR,2025-05-05,15,Atenciones de urgencia - Crisis hipertensiva,33,0,0,0,23,10
 SAR,2025-05-05,16,Atenciones de urgencia - Arritmia grave,2,0,0,0,0,2
@@ -20231,7 +20231,7 @@ SAR,2025-06-05,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,1,3
 SAR,2025-06-05,17,Atenciones de urgencia - Otras causas circulatorias,25,0,0,0,18,7
 SAR,2025-06-05,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-06-05,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-07-05,1,Atenciones de urgencia - Total,2769,27,135,225,1804,578
+SAR,2025-07-05,1,Atenciones de urgencia - Total,2789,47,135,225,1804,578
 SAR,2025-07-05,12,Atenciones de urgencia - Total Sistema Circulatorio,53,0,0,1,28,24
 SAR,2025-07-05,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,1,0
 SAR,2025-07-05,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,2,1
@@ -20276,7 +20276,7 @@ SAR,2025-11-05,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,3,4
 SAR,2025-11-05,17,Atenciones de urgencia - Otras causas circulatorias,34,0,0,1,17,16
 SAR,2025-11-05,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-05,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-05,1,Atenciones de urgencia - Total,3047,31,217,439,1851,509
+SAR,2025-12-05,1,Atenciones de urgencia - Total,3057,31,218,445,1854,509
 SAR,2025-12-05,12,Atenciones de urgencia - Total Sistema Circulatorio,52,0,0,0,23,29
 SAR,2025-12-05,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,0,1
 SAR,2025-12-05,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,0,4
@@ -20285,16 +20285,16 @@ SAR,2025-12-05,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,1,5
 SAR,2025-12-05,17,Atenciones de urgencia - Otras causas circulatorias,29,0,0,0,15,14
 SAR,2025-12-05,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-05,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-06,1,Atenciones de urgencia - Total,3273,27,176,301,2151,618
-SAR,2025-01-06,12,Atenciones de urgencia - Total Sistema Circulatorio,85,0,0,0,49,36
+SAR,2025-01-06,1,Atenciones de urgencia - Total,3273,27,178,301,2150,617
+SAR,2025-01-06,12,Atenciones de urgencia - Total Sistema Circulatorio,84,0,0,0,48,36
 SAR,2025-01-06,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,2,0
 SAR,2025-01-06,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,2,1
-SAR,2025-01-06,15,Atenciones de urgencia - Crisis hipertensiva,27,0,0,0,15,12
+SAR,2025-01-06,15,Atenciones de urgencia - Crisis hipertensiva,26,0,0,0,14,12
 SAR,2025-01-06,16,Atenciones de urgencia - Arritmia grave,3,0,0,0,3,0
 SAR,2025-01-06,17,Atenciones de urgencia - Otras causas circulatorias,50,0,0,0,27,23
 SAR,2025-01-06,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-06,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-06,1,Atenciones de urgencia - Total,2584,25,105,234,1735,485
+SAR,2025-02-06,1,Atenciones de urgencia - Total,2596,25,105,235,1741,490
 SAR,2025-02-06,12,Atenciones de urgencia - Total Sistema Circulatorio,61,0,0,0,36,25
 SAR,2025-02-06,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,1,0
 SAR,2025-02-06,14,Atenciones de urgencia - Accidente vascular encefálico,5,0,0,0,3,2
@@ -20312,7 +20312,7 @@ SAR,2025-03-06,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,5,0
 SAR,2025-03-06,17,Atenciones de urgencia - Otras causas circulatorias,40,0,0,1,21,18
 SAR,2025-03-06,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-03-06,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-04-06,1,Atenciones de urgencia - Total,3287,32,244,514,1999,498
+SAR,2025-04-06,1,Atenciones de urgencia - Total,3287,32,244,514,2000,497
 SAR,2025-04-06,12,Atenciones de urgencia - Total Sistema Circulatorio,72,0,0,1,36,35
 SAR,2025-04-06,13,Atenciones de urgencia - Infarto agudo miocardio,5,0,0,0,4,1
 SAR,2025-04-06,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,1,1
@@ -20393,16 +20393,16 @@ SAR,2025-12-06,16,Atenciones de urgencia - Arritmia grave,7,0,0,1,2,4
 SAR,2025-12-06,17,Atenciones de urgencia - Otras causas circulatorias,34,0,0,3,12,19
 SAR,2025-12-06,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-06,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-07,1,Atenciones de urgencia - Total,2858,30,161,248,1827,592
-SAR,2025-01-07,12,Atenciones de urgencia - Total Sistema Circulatorio,63,0,1,1,28,33
+SAR,2025-01-07,1,Atenciones de urgencia - Total,2867,30,161,249,1833,594
+SAR,2025-01-07,12,Atenciones de urgencia - Total Sistema Circulatorio,64,0,1,1,29,33
 SAR,2025-01-07,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,1,2
 SAR,2025-01-07,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,0,3
-SAR,2025-01-07,15,Atenciones de urgencia - Crisis hipertensiva,19,0,0,0,11,8
+SAR,2025-01-07,15,Atenciones de urgencia - Crisis hipertensiva,20,0,0,0,12,8
 SAR,2025-01-07,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,0,4
 SAR,2025-01-07,17,Atenciones de urgencia - Otras causas circulatorias,34,0,1,1,16,16
 SAR,2025-01-07,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-07,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-07,1,Atenciones de urgencia - Total,2551,38,105,231,1704,473
+SAR,2025-02-07,1,Atenciones de urgencia - Total,2550,38,105,232,1702,473
 SAR,2025-02-07,12,Atenciones de urgencia - Total Sistema Circulatorio,56,0,0,0,32,24
 SAR,2025-02-07,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,2,0
 SAR,2025-02-07,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,2,0
@@ -20411,13 +20411,13 @@ SAR,2025-02-07,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,4,2
 SAR,2025-02-07,17,Atenciones de urgencia - Otras causas circulatorias,25,0,0,0,14,11
 SAR,2025-02-07,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-02-07,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-03-07,1,Atenciones de urgencia - Total,2774,26,138,296,1789,525
-SAR,2025-03-07,12,Atenciones de urgencia - Total Sistema Circulatorio,56,0,1,0,28,27
+SAR,2025-03-07,1,Atenciones de urgencia - Total,2814,27,138,304,1811,534
+SAR,2025-03-07,12,Atenciones de urgencia - Total Sistema Circulatorio,55,0,1,0,27,27
 SAR,2025-03-07,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,2,1
 SAR,2025-03-07,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,2,1
-SAR,2025-03-07,15,Atenciones de urgencia - Crisis hipertensiva,22,0,0,0,8,14
+SAR,2025-03-07,15,Atenciones de urgencia - Crisis hipertensiva,23,0,0,0,8,15
 SAR,2025-03-07,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,2,2
-SAR,2025-03-07,17,Atenciones de urgencia - Otras causas circulatorias,24,0,1,0,14,9
+SAR,2025-03-07,17,Atenciones de urgencia - Otras causas circulatorias,22,0,1,0,13,8
 SAR,2025-03-07,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-03-07,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAR,2025-04-07,1,Atenciones de urgencia - Total,3956,44,247,686,2393,586
@@ -20438,7 +20438,7 @@ SAR,2025-05-07,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,2,3
 SAR,2025-05-07,17,Atenciones de urgencia - Otras causas circulatorias,29,0,0,0,17,12
 SAR,2025-05-07,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-05-07,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-06-07,1,Atenciones de urgencia - Total,3356,55,241,404,2062,594
+SAR,2025-06-07,1,Atenciones de urgencia - Total,3357,56,241,404,2062,594
 SAR,2025-06-07,12,Atenciones de urgencia - Total Sistema Circulatorio,66,0,0,0,32,34
 SAR,2025-06-07,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,2,1
 SAR,2025-06-07,14,Atenciones de urgencia - Accidente vascular encefálico,7,0,0,0,4,3
@@ -20492,7 +20492,7 @@ SAR,2025-11-07,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,0,4
 SAR,2025-11-07,17,Atenciones de urgencia - Otras causas circulatorias,35,0,0,0,17,18
 SAR,2025-11-07,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-07,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-07,1,Atenciones de urgencia - Total,3138,34,239,368,1922,575
+SAR,2025-12-07,1,Atenciones de urgencia - Total,3167,34,241,370,1945,577
 SAR,2025-12-07,12,Atenciones de urgencia - Total Sistema Circulatorio,63,0,0,0,25,38
 SAR,2025-12-07,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,2,2
 SAR,2025-12-07,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,1,2
@@ -20501,16 +20501,16 @@ SAR,2025-12-07,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,0,6
 SAR,2025-12-07,17,Atenciones de urgencia - Otras causas circulatorias,37,0,0,0,14,23
 SAR,2025-12-07,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-07,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-08,1,Atenciones de urgencia - Total,2856,28,142,277,1866,543
+SAR,2025-01-08,1,Atenciones de urgencia - Total,2856,28,142,277,1863,546
 SAR,2025-01-08,12,Atenciones de urgencia - Total Sistema Circulatorio,71,0,0,1,36,34
 SAR,2025-01-08,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,1,3
 SAR,2025-01-08,14,Atenciones de urgencia - Accidente vascular encefálico,6,0,0,0,1,5
-SAR,2025-01-08,15,Atenciones de urgencia - Crisis hipertensiva,23,0,0,0,14,9
+SAR,2025-01-08,15,Atenciones de urgencia - Crisis hipertensiva,22,0,0,0,13,9
 SAR,2025-01-08,16,Atenciones de urgencia - Arritmia grave,5,0,0,1,2,2
-SAR,2025-01-08,17,Atenciones de urgencia - Otras causas circulatorias,33,0,0,0,18,15
+SAR,2025-01-08,17,Atenciones de urgencia - Otras causas circulatorias,34,0,0,0,19,15
 SAR,2025-01-08,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-08,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-08,1,Atenciones de urgencia - Total,2549,24,119,220,1690,496
+SAR,2025-02-08,1,Atenciones de urgencia - Total,2552,24,119,219,1694,496
 SAR,2025-02-08,12,Atenciones de urgencia - Total Sistema Circulatorio,64,0,0,0,34,30
 SAR,2025-02-08,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,1,1
 SAR,2025-02-08,14,Atenciones de urgencia - Accidente vascular encefálico,6,0,0,0,2,4
@@ -20537,7 +20537,7 @@ SAR,2025-04-08,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,1,5
 SAR,2025-04-08,17,Atenciones de urgencia - Otras causas circulatorias,55,0,1,8,33,13
 SAR,2025-04-08,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-04-08,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-05-08,1,Atenciones de urgencia - Total,2600,27,133,323,1726,391
+SAR,2025-05-08,1,Atenciones de urgencia - Total,2630,57,133,323,1726,391
 SAR,2025-05-08,12,Atenciones de urgencia - Total Sistema Circulatorio,55,0,0,0,35,20
 SAR,2025-05-08,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,2,0
 SAR,2025-05-08,14,Atenciones de urgencia - Accidente vascular encefálico,5,0,0,0,2,3
@@ -20609,22 +20609,22 @@ SAR,2025-12-08,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,3,2
 SAR,2025-12-08,17,Atenciones de urgencia - Otras causas circulatorias,60,0,5,4,37,14
 SAR,2025-12-08,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-08,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-09,1,Atenciones de urgencia - Total,2884,41,134,276,1868,565
-SAR,2025-01-09,12,Atenciones de urgencia - Total Sistema Circulatorio,58,0,0,0,25,33
+SAR,2025-01-09,1,Atenciones de urgencia - Total,2895,41,133,277,1878,566
+SAR,2025-01-09,12,Atenciones de urgencia - Total Sistema Circulatorio,59,0,0,0,26,33
 SAR,2025-01-09,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,1,0
 SAR,2025-01-09,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,2,0
-SAR,2025-01-09,15,Atenciones de urgencia - Crisis hipertensiva,19,0,0,0,7,12
+SAR,2025-01-09,15,Atenciones de urgencia - Crisis hipertensiva,20,0,0,0,8,12
 SAR,2025-01-09,16,Atenciones de urgencia - Arritmia grave,8,0,0,0,4,4
 SAR,2025-01-09,17,Atenciones de urgencia - Otras causas circulatorias,28,0,0,0,11,17
 SAR,2025-01-09,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-09,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-09,1,Atenciones de urgencia - Total,2628,28,111,269,1756,464
-SAR,2025-02-09,12,Atenciones de urgencia - Total Sistema Circulatorio,68,0,1,1,38,28
+SAR,2025-02-09,1,Atenciones de urgencia - Total,2630,28,111,268,1761,462
+SAR,2025-02-09,12,Atenciones de urgencia - Total Sistema Circulatorio,67,0,1,1,38,27
 SAR,2025-02-09,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SAR,2025-02-09,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,4,0
 SAR,2025-02-09,15,Atenciones de urgencia - Crisis hipertensiva,14,0,0,0,7,7
 SAR,2025-02-09,16,Atenciones de urgencia - Arritmia grave,2,0,0,0,1,1
-SAR,2025-02-09,17,Atenciones de urgencia - Otras causas circulatorias,48,0,1,1,26,20
+SAR,2025-02-09,17,Atenciones de urgencia - Otras causas circulatorias,47,0,1,1,26,19
 SAR,2025-02-09,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-02-09,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAR,2025-03-09,1,Atenciones de urgencia - Total,3228,31,182,361,2033,621
@@ -20717,7 +20717,7 @@ SAR,2025-12-09,16,Atenciones de urgencia - Arritmia grave,0,0,0,0,0,0
 SAR,2025-12-09,17,Atenciones de urgencia - Otras causas circulatorias,35,0,0,3,17,15
 SAR,2025-12-09,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-09,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-10,1,Atenciones de urgencia - Total,2845,18,159,293,1870,505
+SAR,2025-01-10,1,Atenciones de urgencia - Total,2831,18,159,291,1860,503
 SAR,2025-01-10,12,Atenciones de urgencia - Total Sistema Circulatorio,68,0,2,0,39,27
 SAR,2025-01-10,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,1,1
 SAR,2025-01-10,14,Atenciones de urgencia - Accidente vascular encefálico,5,0,0,0,3,2
@@ -20726,13 +20726,13 @@ SAR,2025-01-10,16,Atenciones de urgencia - Arritmia grave,10,0,0,0,5,5
 SAR,2025-01-10,17,Atenciones de urgencia - Otras causas circulatorias,37,0,2,0,19,16
 SAR,2025-01-10,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-10,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-10,1,Atenciones de urgencia - Total,2971,33,123,256,2016,543
-SAR,2025-02-10,12,Atenciones de urgencia - Total Sistema Circulatorio,85,0,0,2,45,38
+SAR,2025-02-10,1,Atenciones de urgencia - Total,2969,33,123,257,2011,545
+SAR,2025-02-10,12,Atenciones de urgencia - Total Sistema Circulatorio,86,0,0,2,45,39
 SAR,2025-02-10,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,1,3
 SAR,2025-02-10,14,Atenciones de urgencia - Accidente vascular encefálico,5,0,0,1,1,3
 SAR,2025-02-10,15,Atenciones de urgencia - Crisis hipertensiva,27,0,0,0,18,9
 SAR,2025-02-10,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,3,1
-SAR,2025-02-10,17,Atenciones de urgencia - Otras causas circulatorias,45,0,0,1,22,22
+SAR,2025-02-10,17,Atenciones de urgencia - Otras causas circulatorias,46,0,0,1,22,23
 SAR,2025-02-10,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-02-10,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAR,2025-03-10,1,Atenciones de urgencia - Total,3572,27,197,493,2263,592
@@ -20825,16 +20825,16 @@ SAR,2025-12-10,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,2,2
 SAR,2025-12-10,17,Atenciones de urgencia - Otras causas circulatorias,36,0,0,0,18,18
 SAR,2025-12-10,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-10,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-11,1,Atenciones de urgencia - Total,2777,36,135,284,1804,518
-SAR,2025-01-11,12,Atenciones de urgencia - Total Sistema Circulatorio,70,0,0,0,37,33
-SAR,2025-01-11,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,3,1
+SAR,2025-01-11,1,Atenciones de urgencia - Total,2783,36,141,282,1802,522
+SAR,2025-01-11,12,Atenciones de urgencia - Total Sistema Circulatorio,72,0,0,0,40,32
+SAR,2025-01-11,13,Atenciones de urgencia - Infarto agudo miocardio,5,0,0,0,4,1
 SAR,2025-01-11,14,Atenciones de urgencia - Accidente vascular encefálico,1,0,0,0,0,1
-SAR,2025-01-11,15,Atenciones de urgencia - Crisis hipertensiva,16,0,0,0,8,8
+SAR,2025-01-11,15,Atenciones de urgencia - Crisis hipertensiva,16,0,0,0,9,7
 SAR,2025-01-11,16,Atenciones de urgencia - Arritmia grave,9,0,0,0,3,6
-SAR,2025-01-11,17,Atenciones de urgencia - Otras causas circulatorias,40,0,0,0,23,17
+SAR,2025-01-11,17,Atenciones de urgencia - Otras causas circulatorias,41,0,0,0,24,17
 SAR,2025-01-11,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-11,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-11,1,Atenciones de urgencia - Total,2828,28,100,234,1963,503
+SAR,2025-02-11,1,Atenciones de urgencia - Total,2835,28,99,235,1969,504
 SAR,2025-02-11,12,Atenciones de urgencia - Total Sistema Circulatorio,69,0,0,0,37,32
 SAR,2025-02-11,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,1,0
 SAR,2025-02-11,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,2,1
@@ -20924,7 +20924,7 @@ SAR,2025-11-11,16,Atenciones de urgencia - Arritmia grave,2,0,0,0,1,1
 SAR,2025-11-11,17,Atenciones de urgencia - Otras causas circulatorias,31,0,0,1,14,16
 SAR,2025-11-11,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-11,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-11,1,Atenciones de urgencia - Total,3168,25,180,398,1976,589
+SAR,2025-12-11,1,Atenciones de urgencia - Total,3182,26,184,400,1982,590
 SAR,2025-12-11,12,Atenciones de urgencia - Total Sistema Circulatorio,73,0,1,1,32,39
 SAR,2025-12-11,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,0,2
 SAR,2025-12-11,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,1,3
@@ -20933,16 +20933,16 @@ SAR,2025-12-11,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,3,2
 SAR,2025-12-11,17,Atenciones de urgencia - Otras causas circulatorias,40,0,1,1,19,19
 SAR,2025-12-11,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-11,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-12,1,Atenciones de urgencia - Total,2794,34,137,278,1862,483
-SAR,2025-01-12,12,Atenciones de urgencia - Total Sistema Circulatorio,59,0,0,1,30,28
-SAR,2025-01-12,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,1,0
+SAR,2025-01-12,1,Atenciones de urgencia - Total,2793,34,132,279,1866,482
+SAR,2025-01-12,12,Atenciones de urgencia - Total Sistema Circulatorio,57,0,0,1,27,29
+SAR,2025-01-12,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SAR,2025-01-12,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,2,0
-SAR,2025-01-12,15,Atenciones de urgencia - Crisis hipertensiva,15,0,0,0,8,7
+SAR,2025-01-12,15,Atenciones de urgencia - Crisis hipertensiva,15,0,0,0,7,8
 SAR,2025-01-12,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,2,5
-SAR,2025-01-12,17,Atenciones de urgencia - Otras causas circulatorias,34,0,0,1,17,16
+SAR,2025-01-12,17,Atenciones de urgencia - Otras causas circulatorias,33,0,0,1,16,16
 SAR,2025-01-12,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-12,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-12,1,Atenciones de urgencia - Total,2782,23,104,253,1869,533
+SAR,2025-02-12,1,Atenciones de urgencia - Total,2785,23,104,254,1871,533
 SAR,2025-02-12,12,Atenciones de urgencia - Total Sistema Circulatorio,54,0,0,1,26,27
 SAR,2025-02-12,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,1,1
 SAR,2025-02-12,14,Atenciones de urgencia - Accidente vascular encefálico,0,0,0,0,0,0
@@ -21032,16 +21032,16 @@ SAR,2025-11-12,16,Atenciones de urgencia - Arritmia grave,11,0,0,0,5,6
 SAR,2025-11-12,17,Atenciones de urgencia - Otras causas circulatorias,39,0,0,1,21,17
 SAR,2025-11-12,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-12,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-12,1,Atenciones de urgencia - Total,2902,34,161,308,1834,565
-SAR,2025-12-12,12,Atenciones de urgencia - Total Sistema Circulatorio,47,0,0,1,22,24
+SAR,2025-12-12,1,Atenciones de urgencia - Total,3062,37,173,322,1934,596
+SAR,2025-12-12,12,Atenciones de urgencia - Total Sistema Circulatorio,48,0,0,1,23,24
 SAR,2025-12-12,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SAR,2025-12-12,14,Atenciones de urgencia - Accidente vascular encefálico,1,0,0,0,0,1
 SAR,2025-12-12,15,Atenciones de urgencia - Crisis hipertensiva,19,0,0,0,10,9
-SAR,2025-12-12,16,Atenciones de urgencia - Arritmia grave,3,0,0,0,2,1
+SAR,2025-12-12,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,3,1
 SAR,2025-12-12,17,Atenciones de urgencia - Otras causas circulatorias,24,0,0,1,10,13
 SAR,2025-12-12,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-12,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-13,1,Atenciones de urgencia - Total,3286,28,153,304,2226,575
+SAR,2025-01-13,1,Atenciones de urgencia - Total,3292,29,152,306,2232,573
 SAR,2025-01-13,12,Atenciones de urgencia - Total Sistema Circulatorio,76,0,0,0,38,38
 SAR,2025-01-13,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,0,1
 SAR,2025-01-13,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,0,2
@@ -21050,13 +21050,13 @@ SAR,2025-01-13,16,Atenciones de urgencia - Arritmia grave,10,0,0,0,7,3
 SAR,2025-01-13,17,Atenciones de urgencia - Otras causas circulatorias,42,0,0,0,19,23
 SAR,2025-01-13,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-13,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-13,1,Atenciones de urgencia - Total,2752,64,110,231,1819,528
-SAR,2025-02-13,12,Atenciones de urgencia - Total Sistema Circulatorio,65,0,0,0,28,37
-SAR,2025-02-13,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,0,2
+SAR,2025-02-13,1,Atenciones de urgencia - Total,2756,63,108,222,1830,533
+SAR,2025-02-13,12,Atenciones de urgencia - Total Sistema Circulatorio,66,0,0,0,29,37
+SAR,2025-02-13,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,1,2
 SAR,2025-02-13,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,1,3
-SAR,2025-02-13,15,Atenciones de urgencia - Crisis hipertensiva,17,0,0,0,11,6
+SAR,2025-02-13,15,Atenciones de urgencia - Crisis hipertensiva,16,0,0,0,11,5
 SAR,2025-02-13,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,2,5
-SAR,2025-02-13,17,Atenciones de urgencia - Otras causas circulatorias,35,0,0,0,14,21
+SAR,2025-02-13,17,Atenciones de urgencia - Otras causas circulatorias,36,0,0,0,14,22
 SAR,2025-02-13,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-02-13,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAR,2025-03-13,1,Atenciones de urgencia - Total,3541,36,251,613,2087,554
@@ -21077,7 +21077,7 @@ SAR,2025-04-13,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,1,4
 SAR,2025-04-13,17,Atenciones de urgencia - Otras causas circulatorias,26,0,0,0,14,12
 SAR,2025-04-13,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-04-13,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-05-13,1,Atenciones de urgencia - Total,3715,40,227,685,2262,501
+SAR,2025-05-13,1,Atenciones de urgencia - Total,3721,40,227,685,2262,507
 SAR,2025-05-13,12,Atenciones de urgencia - Total Sistema Circulatorio,75,0,0,0,46,29
 SAR,2025-05-13,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,1,0
 SAR,2025-05-13,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,2,1
@@ -21140,16 +21140,16 @@ SAR,2025-11-13,16,Atenciones de urgencia - Arritmia grave,2,0,0,0,1,1
 SAR,2025-11-13,17,Atenciones de urgencia - Otras causas circulatorias,68,0,2,13,32,21
 SAR,2025-11-13,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-13,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-13,1,Atenciones de urgencia - Total,2938,37,170,336,1828,567
-SAR,2025-12-13,12,Atenciones de urgencia - Total Sistema Circulatorio,63,0,0,1,32,30
+SAR,2025-12-13,1,Atenciones de urgencia - Total,3224,38,186,365,2018,617
+SAR,2025-12-13,12,Atenciones de urgencia - Total Sistema Circulatorio,67,0,0,1,35,31
 SAR,2025-12-13,13,Atenciones de urgencia - Infarto agudo miocardio,6,0,0,0,4,2
 SAR,2025-12-13,14,Atenciones de urgencia - Accidente vascular encefálico,5,0,0,0,1,4
-SAR,2025-12-13,15,Atenciones de urgencia - Crisis hipertensiva,16,0,0,0,10,6
+SAR,2025-12-13,15,Atenciones de urgencia - Crisis hipertensiva,17,0,0,0,11,6
 SAR,2025-12-13,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,0,6
-SAR,2025-12-13,17,Atenciones de urgencia - Otras causas circulatorias,30,0,0,1,17,12
+SAR,2025-12-13,17,Atenciones de urgencia - Otras causas circulatorias,33,0,0,1,19,13
 SAR,2025-12-13,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-13,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-14,1,Atenciones de urgencia - Total,2920,25,145,256,1960,534
+SAR,2025-01-14,1,Atenciones de urgencia - Total,2934,25,144,256,1966,543
 SAR,2025-01-14,12,Atenciones de urgencia - Total Sistema Circulatorio,56,0,0,3,29,24
 SAR,2025-01-14,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,1,1
 SAR,2025-01-14,14,Atenciones de urgencia - Accidente vascular encefálico,6,0,0,0,2,4
@@ -21158,7 +21158,7 @@ SAR,2025-01-14,16,Atenciones de urgencia - Arritmia grave,9,0,0,2,3,4
 SAR,2025-01-14,17,Atenciones de urgencia - Otras causas circulatorias,25,0,0,1,13,11
 SAR,2025-01-14,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-14,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-14,1,Atenciones de urgencia - Total,2421,21,113,187,1598,502
+SAR,2025-02-14,1,Atenciones de urgencia - Total,2417,21,114,187,1593,502
 SAR,2025-02-14,12,Atenciones de urgencia - Total Sistema Circulatorio,72,0,0,0,34,38
 SAR,2025-02-14,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,1,0
 SAR,2025-02-14,14,Atenciones de urgencia - Accidente vascular encefálico,6,0,0,0,2,4
@@ -21167,7 +21167,7 @@ SAR,2025-02-14,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,2,2
 SAR,2025-02-14,17,Atenciones de urgencia - Otras causas circulatorias,43,0,0,0,19,24
 SAR,2025-02-14,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-02-14,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-03-14,1,Atenciones de urgencia - Total,3259,46,230,485,1945,553
+SAR,2025-03-14,1,Atenciones de urgencia - Total,3296,46,230,522,1945,553
 SAR,2025-03-14,12,Atenciones de urgencia - Total Sistema Circulatorio,74,0,0,0,31,43
 SAR,2025-03-14,13,Atenciones de urgencia - Infarto agudo miocardio,6,0,0,0,1,5
 SAR,2025-03-14,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,3,1
@@ -21248,25 +21248,25 @@ SAR,2025-11-14,16,Atenciones de urgencia - Arritmia grave,1,0,0,0,0,1
 SAR,2025-11-14,17,Atenciones de urgencia - Otras causas circulatorias,20,0,0,1,10,9
 SAR,2025-11-14,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-14,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-14,1,Atenciones de urgencia - Total,3197,40,197,363,2060,537
-SAR,2025-12-14,12,Atenciones de urgencia - Total Sistema Circulatorio,61,0,0,2,30,29
+SAR,2025-12-14,1,Atenciones de urgencia - Total,3345,42,203,381,2160,559
+SAR,2025-12-14,12,Atenciones de urgencia - Total Sistema Circulatorio,63,0,0,2,32,29
 SAR,2025-12-14,13,Atenciones de urgencia - Infarto agudo miocardio,5,0,0,0,2,3
 SAR,2025-12-14,14,Atenciones de urgencia - Accidente vascular encefálico,6,0,0,0,0,6
 SAR,2025-12-14,15,Atenciones de urgencia - Crisis hipertensiva,22,0,0,0,12,10
 SAR,2025-12-14,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,1,3
-SAR,2025-12-14,17,Atenciones de urgencia - Otras causas circulatorias,24,0,0,2,15,7
+SAR,2025-12-14,17,Atenciones de urgencia - Otras causas circulatorias,26,0,0,2,17,7
 SAR,2025-12-14,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-14,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-15,1,Atenciones de urgencia - Total,2754,27,152,256,1817,502
-SAR,2025-01-15,12,Atenciones de urgencia - Total Sistema Circulatorio,89,0,5,3,56,25
+SAR,2025-01-15,1,Atenciones de urgencia - Total,2761,27,151,264,1807,512
+SAR,2025-01-15,12,Atenciones de urgencia - Total Sistema Circulatorio,87,0,5,3,55,24
 SAR,2025-01-15,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,2,0
 SAR,2025-01-15,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,2,2
-SAR,2025-01-15,15,Atenciones de urgencia - Crisis hipertensiva,24,0,0,0,14,10
+SAR,2025-01-15,15,Atenciones de urgencia - Crisis hipertensiva,23,0,0,0,14,9
 SAR,2025-01-15,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,3,1
-SAR,2025-01-15,17,Atenciones de urgencia - Otras causas circulatorias,55,0,5,3,35,12
+SAR,2025-01-15,17,Atenciones de urgencia - Otras causas circulatorias,54,0,5,3,34,12
 SAR,2025-01-15,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-15,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-15,1,Atenciones de urgencia - Total,2580,22,113,195,1702,548
+SAR,2025-02-15,1,Atenciones de urgencia - Total,2582,22,113,195,1703,549
 SAR,2025-02-15,12,Atenciones de urgencia - Total Sistema Circulatorio,67,0,0,0,31,36
 SAR,2025-02-15,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,0,3
 SAR,2025-02-15,14,Atenciones de urgencia - Accidente vascular encefálico,1,0,0,0,1,0
@@ -21356,16 +21356,16 @@ SAR,2025-11-15,16,Atenciones de urgencia - Arritmia grave,3,1,0,0,2,0
 SAR,2025-11-15,17,Atenciones de urgencia - Otras causas circulatorias,31,0,0,1,18,12
 SAR,2025-11-15,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-15,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-15,1,Atenciones de urgencia - Total,3265,32,218,337,2088,590
-SAR,2025-12-15,12,Atenciones de urgencia - Total Sistema Circulatorio,60,0,0,0,29,31
+SAR,2025-12-15,1,Atenciones de urgencia - Total,3453,36,230,362,2201,624
+SAR,2025-12-15,12,Atenciones de urgencia - Total Sistema Circulatorio,63,0,0,0,29,34
 SAR,2025-12-15,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,1,1
-SAR,2025-12-15,14,Atenciones de urgencia - Accidente vascular encefálico,5,0,0,0,2,3
-SAR,2025-12-15,15,Atenciones de urgencia - Crisis hipertensiva,19,0,0,0,12,7
-SAR,2025-12-15,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,2,5
+SAR,2025-12-15,14,Atenciones de urgencia - Accidente vascular encefálico,6,0,0,0,2,4
+SAR,2025-12-15,15,Atenciones de urgencia - Crisis hipertensiva,20,0,0,0,12,8
+SAR,2025-12-15,16,Atenciones de urgencia - Arritmia grave,8,0,0,0,2,6
 SAR,2025-12-15,17,Atenciones de urgencia - Otras causas circulatorias,27,0,0,0,12,15
 SAR,2025-12-15,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-15,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-16,1,Atenciones de urgencia - Total,2784,35,166,290,1783,510
+SAR,2025-01-16,1,Atenciones de urgencia - Total,2840,42,168,292,1819,519
 SAR,2025-01-16,12,Atenciones de urgencia - Total Sistema Circulatorio,77,0,0,0,33,44
 SAR,2025-01-16,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,2,2
 SAR,2025-01-16,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,1,1
@@ -21374,7 +21374,7 @@ SAR,2025-01-16,16,Atenciones de urgencia - Arritmia grave,11,0,0,0,2,9
 SAR,2025-01-16,17,Atenciones de urgencia - Otras causas circulatorias,37,0,0,0,14,23
 SAR,2025-01-16,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-16,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-16,1,Atenciones de urgencia - Total,2756,26,126,242,1860,502
+SAR,2025-02-16,1,Atenciones de urgencia - Total,2760,26,125,243,1864,502
 SAR,2025-02-16,12,Atenciones de urgencia - Total Sistema Circulatorio,66,0,0,0,30,36
 SAR,2025-02-16,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,0,2
 SAR,2025-02-16,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,0,3
@@ -21464,16 +21464,16 @@ SAR,2025-11-16,16,Atenciones de urgencia - Arritmia grave,6,0,0,1,3,2
 SAR,2025-11-16,17,Atenciones de urgencia - Otras causas circulatorias,28,0,0,0,10,18
 SAR,2025-11-16,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-16,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-16,1,Atenciones de urgencia - Total,3074,45,174,322,1981,552
-SAR,2025-12-16,12,Atenciones de urgencia - Total Sistema Circulatorio,78,1,0,1,39,37
+SAR,2025-12-16,1,Atenciones de urgencia - Total,3221,44,179,335,2087,576
+SAR,2025-12-16,12,Atenciones de urgencia - Total Sistema Circulatorio,80,0,0,1,41,38
 SAR,2025-12-16,13,Atenciones de urgencia - Infarto agudo miocardio,6,0,0,0,2,4
-SAR,2025-12-16,14,Atenciones de urgencia - Accidente vascular encefálico,5,1,0,0,1,3
-SAR,2025-12-16,15,Atenciones de urgencia - Crisis hipertensiva,23,0,0,0,17,6
+SAR,2025-12-16,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,1,3
+SAR,2025-12-16,15,Atenciones de urgencia - Crisis hipertensiva,25,0,0,0,18,7
 SAR,2025-12-16,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,3,3
-SAR,2025-12-16,17,Atenciones de urgencia - Otras causas circulatorias,38,0,0,1,16,21
+SAR,2025-12-16,17,Atenciones de urgencia - Otras causas circulatorias,39,0,0,1,17,21
 SAR,2025-12-16,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-16,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-17,1,Atenciones de urgencia - Total,2667,19,143,279,1727,499
+SAR,2025-01-17,1,Atenciones de urgencia - Total,2668,20,143,280,1726,499
 SAR,2025-01-17,12,Atenciones de urgencia - Total Sistema Circulatorio,54,0,0,1,21,32
 SAR,2025-01-17,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,0,1
 SAR,2025-01-17,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,0,2
@@ -21482,11 +21482,11 @@ SAR,2025-01-17,16,Atenciones de urgencia - Arritmia grave,6,0,0,1,2,3
 SAR,2025-01-17,17,Atenciones de urgencia - Otras causas circulatorias,28,0,0,0,11,17
 SAR,2025-01-17,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-17,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-17,1,Atenciones de urgencia - Total,3040,23,120,245,2038,614
-SAR,2025-02-17,12,Atenciones de urgencia - Total Sistema Circulatorio,65,0,0,0,38,27
+SAR,2025-02-17,1,Atenciones de urgencia - Total,3040,23,119,246,2039,613
+SAR,2025-02-17,12,Atenciones de urgencia - Total Sistema Circulatorio,64,0,0,0,37,27
 SAR,2025-02-17,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,2,2
 SAR,2025-02-17,14,Atenciones de urgencia - Accidente vascular encefálico,7,0,0,0,1,6
-SAR,2025-02-17,15,Atenciones de urgencia - Crisis hipertensiva,16,0,0,0,10,6
+SAR,2025-02-17,15,Atenciones de urgencia - Crisis hipertensiva,15,0,0,0,9,6
 SAR,2025-02-17,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,4,0
 SAR,2025-02-17,17,Atenciones de urgencia - Otras causas circulatorias,34,0,0,0,21,13
 SAR,2025-02-17,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
@@ -21509,7 +21509,7 @@ SAR,2025-04-17,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,2,4
 SAR,2025-04-17,17,Atenciones de urgencia - Otras causas circulatorias,31,0,0,2,15,14
 SAR,2025-04-17,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-04-17,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-05-17,1,Atenciones de urgencia - Total,3184,31,211,429,1985,528
+SAR,2025-05-17,1,Atenciones de urgencia - Total,3187,31,211,429,1985,531
 SAR,2025-05-17,12,Atenciones de urgencia - Total Sistema Circulatorio,42,0,0,0,27,15
 SAR,2025-05-17,13,Atenciones de urgencia - Infarto agudo miocardio,5,0,0,0,2,3
 SAR,2025-05-17,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,0,3
@@ -21572,16 +21572,16 @@ SAR,2025-11-17,16,Atenciones de urgencia - Arritmia grave,9,0,0,0,3,6
 SAR,2025-11-17,17,Atenciones de urgencia - Otras causas circulatorias,32,0,0,0,19,13
 SAR,2025-11-17,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-17,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-17,1,Atenciones de urgencia - Total,3001,34,189,317,1937,524
-SAR,2025-12-17,12,Atenciones de urgencia - Total Sistema Circulatorio,47,0,0,0,20,27
+SAR,2025-12-17,1,Atenciones de urgencia - Total,3135,34,197,332,2025,547
+SAR,2025-12-17,12,Atenciones de urgencia - Total Sistema Circulatorio,55,0,0,0,25,30
 SAR,2025-12-17,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
-SAR,2025-12-17,14,Atenciones de urgencia - Accidente vascular encefálico,1,0,0,0,0,1
+SAR,2025-12-17,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,2,2
 SAR,2025-12-17,15,Atenciones de urgencia - Crisis hipertensiva,12,0,0,0,8,4
-SAR,2025-12-17,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,4,3
-SAR,2025-12-17,17,Atenciones de urgencia - Otras causas circulatorias,27,0,0,0,8,19
+SAR,2025-12-17,16,Atenciones de urgencia - Arritmia grave,8,0,0,0,5,3
+SAR,2025-12-17,17,Atenciones de urgencia - Otras causas circulatorias,31,0,0,0,10,21
 SAR,2025-12-17,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-17,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-18,1,Atenciones de urgencia - Total,2527,27,138,259,1638,465
+SAR,2025-01-18,1,Atenciones de urgencia - Total,2523,27,141,255,1639,461
 SAR,2025-01-18,12,Atenciones de urgencia - Total Sistema Circulatorio,44,0,0,0,26,18
 SAR,2025-01-18,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,0,2
 SAR,2025-01-18,14,Atenciones de urgencia - Accidente vascular encefálico,6,0,0,0,3,3
@@ -21590,7 +21590,7 @@ SAR,2025-01-18,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,2,4
 SAR,2025-01-18,17,Atenciones de urgencia - Otras causas circulatorias,18,0,0,0,13,5
 SAR,2025-01-18,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-18,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-18,1,Atenciones de urgencia - Total,2887,33,102,236,2012,504
+SAR,2025-02-18,1,Atenciones de urgencia - Total,2889,33,104,237,2011,504
 SAR,2025-02-18,12,Atenciones de urgencia - Total Sistema Circulatorio,76,0,0,0,35,41
 SAR,2025-02-18,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,2,0
 SAR,2025-02-18,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,0,2
@@ -21680,16 +21680,16 @@ SAR,2025-11-18,16,Atenciones de urgencia - Arritmia grave,6,0,0,1,1,4
 SAR,2025-11-18,17,Atenciones de urgencia - Otras causas circulatorias,32,0,0,0,16,16
 SAR,2025-11-18,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-18,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-18,1,Atenciones de urgencia - Total,2882,36,196,307,1825,518
-SAR,2025-12-18,12,Atenciones de urgencia - Total Sistema Circulatorio,42,0,0,0,24,18
+SAR,2025-12-18,1,Atenciones de urgencia - Total,3120,38,209,336,1984,553
+SAR,2025-12-18,12,Atenciones de urgencia - Total Sistema Circulatorio,44,0,0,0,25,19
 SAR,2025-12-18,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,0,1
 SAR,2025-12-18,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,1,2
-SAR,2025-12-18,15,Atenciones de urgencia - Crisis hipertensiva,10,0,0,0,8,2
+SAR,2025-12-18,15,Atenciones de urgencia - Crisis hipertensiva,11,0,0,0,9,2
 SAR,2025-12-18,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,3,2
-SAR,2025-12-18,17,Atenciones de urgencia - Otras causas circulatorias,23,0,0,0,12,11
+SAR,2025-12-18,17,Atenciones de urgencia - Otras causas circulatorias,24,0,0,0,12,12
 SAR,2025-12-18,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-18,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-19,1,Atenciones de urgencia - Total,2862,33,145,291,1869,524
+SAR,2025-01-19,1,Atenciones de urgencia - Total,2862,33,145,291,1870,523
 SAR,2025-01-19,12,Atenciones de urgencia - Total Sistema Circulatorio,53,0,0,0,25,28
 SAR,2025-01-19,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,0,1
 SAR,2025-01-19,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,0,3
@@ -21698,11 +21698,11 @@ SAR,2025-01-19,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,3,4
 SAR,2025-01-19,17,Atenciones de urgencia - Otras causas circulatorias,28,0,0,0,17,11
 SAR,2025-01-19,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-19,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-19,1,Atenciones de urgencia - Total,2753,36,101,238,1849,529
-SAR,2025-02-19,12,Atenciones de urgencia - Total Sistema Circulatorio,59,0,0,0,26,33
+SAR,2025-02-19,1,Atenciones de urgencia - Total,2752,36,101,238,1846,531
+SAR,2025-02-19,12,Atenciones de urgencia - Total Sistema Circulatorio,60,0,0,0,27,33
 SAR,2025-02-19,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,2,1
 SAR,2025-02-19,14,Atenciones de urgencia - Accidente vascular encefálico,1,0,0,0,1,0
-SAR,2025-02-19,15,Atenciones de urgencia - Crisis hipertensiva,23,0,0,0,10,13
+SAR,2025-02-19,15,Atenciones de urgencia - Crisis hipertensiva,24,0,0,0,11,13
 SAR,2025-02-19,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,1,4
 SAR,2025-02-19,17,Atenciones de urgencia - Otras causas circulatorias,27,0,0,0,12,15
 SAR,2025-02-19,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
@@ -21711,9 +21711,9 @@ SAR,2025-03-19,1,Atenciones de urgencia - Total,3898,71,270,741,2321,495
 SAR,2025-03-19,12,Atenciones de urgencia - Total Sistema Circulatorio,69,0,0,2,41,26
 SAR,2025-03-19,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SAR,2025-03-19,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,0,3
-SAR,2025-03-19,15,Atenciones de urgencia - Crisis hipertensiva,29,0,0,0,17,12
+SAR,2025-03-19,15,Atenciones de urgencia - Crisis hipertensiva,30,0,0,0,18,12
 SAR,2025-03-19,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,5,2
-SAR,2025-03-19,17,Atenciones de urgencia - Otras causas circulatorias,30,0,0,2,19,9
+SAR,2025-03-19,17,Atenciones de urgencia - Otras causas circulatorias,29,0,0,2,18,9
 SAR,2025-03-19,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-03-19,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAR,2025-04-19,1,Atenciones de urgencia - Total,3498,41,237,513,2124,583
@@ -21788,16 +21788,16 @@ SAR,2025-11-19,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,2,3
 SAR,2025-11-19,17,Atenciones de urgencia - Otras causas circulatorias,32,0,0,0,13,19
 SAR,2025-11-19,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-19,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-19,1,Atenciones de urgencia - Total,2865,35,168,339,1765,558
-SAR,2025-12-19,12,Atenciones de urgencia - Total Sistema Circulatorio,49,0,0,0,24,25
+SAR,2025-12-19,1,Atenciones de urgencia - Total,3000,36,172,350,1865,577
+SAR,2025-12-19,12,Atenciones de urgencia - Total Sistema Circulatorio,52,0,0,0,25,27
 SAR,2025-12-19,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,1,2
 SAR,2025-12-19,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,0,2
-SAR,2025-12-19,15,Atenciones de urgencia - Crisis hipertensiva,14,0,0,0,6,8
-SAR,2025-12-19,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,4,0
-SAR,2025-12-19,17,Atenciones de urgencia - Otras causas circulatorias,26,0,0,0,13,13
+SAR,2025-12-19,15,Atenciones de urgencia - Crisis hipertensiva,15,0,0,0,7,8
+SAR,2025-12-19,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,4,1
+SAR,2025-12-19,17,Atenciones de urgencia - Otras causas circulatorias,27,0,0,0,13,14
 SAR,2025-12-19,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-19,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-20,1,Atenciones de urgencia - Total,3035,34,127,285,1997,592
+SAR,2025-01-20,1,Atenciones de urgencia - Total,3042,34,128,286,2000,594
 SAR,2025-01-20,12,Atenciones de urgencia - Total Sistema Circulatorio,55,0,0,0,27,28
 SAR,2025-01-20,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,1,1
 SAR,2025-01-20,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,1,1
@@ -21806,7 +21806,7 @@ SAR,2025-01-20,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,1,5
 SAR,2025-01-20,17,Atenciones de urgencia - Otras causas circulatorias,36,0,0,0,18,18
 SAR,2025-01-20,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-20,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-20,1,Atenciones de urgencia - Total,2636,29,102,227,1761,517
+SAR,2025-02-20,1,Atenciones de urgencia - Total,2647,29,102,228,1769,519
 SAR,2025-02-20,12,Atenciones de urgencia - Total Sistema Circulatorio,50,0,0,0,24,26
 SAR,2025-02-20,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,1,1
 SAR,2025-02-20,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,2,2
@@ -21896,16 +21896,16 @@ SAR,2025-11-20,16,Atenciones de urgencia - Arritmia grave,3,0,0,0,1,2
 SAR,2025-11-20,17,Atenciones de urgencia - Otras causas circulatorias,31,0,0,2,12,17
 SAR,2025-11-20,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-20,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-20,1,Atenciones de urgencia - Total,2989,33,192,315,1850,599
-SAR,2025-12-20,12,Atenciones de urgencia - Total Sistema Circulatorio,46,0,0,1,25,20
+SAR,2025-12-20,1,Atenciones de urgencia - Total,3098,34,203,322,1917,622
+SAR,2025-12-20,12,Atenciones de urgencia - Total Sistema Circulatorio,47,0,0,1,26,20
 SAR,2025-12-20,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,1,1
-SAR,2025-12-20,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,0,3
+SAR,2025-12-20,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,1,3
 SAR,2025-12-20,15,Atenciones de urgencia - Crisis hipertensiva,14,0,0,0,7,7
 SAR,2025-12-20,16,Atenciones de urgencia - Arritmia grave,3,0,0,0,1,2
 SAR,2025-12-20,17,Atenciones de urgencia - Otras causas circulatorias,24,0,0,1,16,7
 SAR,2025-12-20,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-20,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-21,1,Atenciones de urgencia - Total,2751,27,151,259,1824,490
+SAR,2025-01-21,1,Atenciones de urgencia - Total,2744,27,151,258,1817,491
 SAR,2025-01-21,12,Atenciones de urgencia - Total Sistema Circulatorio,50,0,0,0,20,30
 SAR,2025-01-21,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,0,1
 SAR,2025-01-21,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,2,2
@@ -21914,16 +21914,16 @@ SAR,2025-01-21,16,Atenciones de urgencia - Arritmia grave,1,0,0,0,1,0
 SAR,2025-01-21,17,Atenciones de urgencia - Otras causas circulatorias,29,0,0,0,10,19
 SAR,2025-01-21,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-21,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-21,1,Atenciones de urgencia - Total,2566,29,100,225,1713,499
-SAR,2025-02-21,12,Atenciones de urgencia - Total Sistema Circulatorio,48,0,0,1,26,21
+SAR,2025-02-21,1,Atenciones de urgencia - Total,2563,29,100,225,1712,497
+SAR,2025-02-21,12,Atenciones de urgencia - Total Sistema Circulatorio,49,0,0,1,27,21
 SAR,2025-02-21,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,1,0
 SAR,2025-02-21,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,2,1
 SAR,2025-02-21,15,Atenciones de urgencia - Crisis hipertensiva,13,0,0,0,6,7
 SAR,2025-02-21,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,4,1
-SAR,2025-02-21,17,Atenciones de urgencia - Otras causas circulatorias,26,0,0,1,13,12
+SAR,2025-02-21,17,Atenciones de urgencia - Otras causas circulatorias,27,0,0,1,14,12
 SAR,2025-02-21,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-02-21,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-03-21,1,Atenciones de urgencia - Total,3359,50,240,542,1955,572
+SAR,2025-03-21,1,Atenciones de urgencia - Total,3359,50,240,541,1956,572
 SAR,2025-03-21,12,Atenciones de urgencia - Total Sistema Circulatorio,80,0,0,0,39,41
 SAR,2025-03-21,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,0,1
 SAR,2025-03-21,14,Atenciones de urgencia - Accidente vascular encefálico,6,0,0,0,3,3
@@ -21932,7 +21932,7 @@ SAR,2025-03-21,16,Atenciones de urgencia - Arritmia grave,8,0,0,0,4,4
 SAR,2025-03-21,17,Atenciones de urgencia - Otras causas circulatorias,35,0,0,0,17,18
 SAR,2025-03-21,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-03-21,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-04-21,1,Atenciones de urgencia - Total,4199,45,300,780,2531,543
+SAR,2025-04-21,1,Atenciones de urgencia - Total,4199,45,300,780,2530,544
 SAR,2025-04-21,12,Atenciones de urgencia - Total Sistema Circulatorio,71,0,0,0,35,36
 SAR,2025-04-21,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,2,1
 SAR,2025-04-21,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,0,2
@@ -21950,7 +21950,7 @@ SAR,2025-05-21,16,Atenciones de urgencia - Arritmia grave,4,0,0,1,1,2
 SAR,2025-05-21,17,Atenciones de urgencia - Otras causas circulatorias,25,0,0,0,14,11
 SAR,2025-05-21,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-05-21,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-06-21,1,Atenciones de urgencia - Total,2961,40,229,294,1837,561
+SAR,2025-06-21,1,Atenciones de urgencia - Total,2962,40,229,294,1838,561
 SAR,2025-06-21,12,Atenciones de urgencia - Total Sistema Circulatorio,62,0,0,1,23,38
 SAR,2025-06-21,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,1,2
 SAR,2025-06-21,14,Atenciones de urgencia - Accidente vascular encefálico,7,0,0,0,2,5
@@ -22004,7 +22004,7 @@ SAR,2025-11-21,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,2,2
 SAR,2025-11-21,17,Atenciones de urgencia - Otras causas circulatorias,25,0,0,0,14,11
 SAR,2025-11-21,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-21,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-21,1,Atenciones de urgencia - Total,3115,27,190,324,1982,592
+SAR,2025-12-21,1,Atenciones de urgencia - Total,3255,28,204,334,2075,614
 SAR,2025-12-21,12,Atenciones de urgencia - Total Sistema Circulatorio,72,0,1,1,33,37
 SAR,2025-12-21,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,0,3
 SAR,2025-12-21,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,1,2
@@ -22013,7 +22013,7 @@ SAR,2025-12-21,16,Atenciones de urgencia - Arritmia grave,11,0,0,0,5,6
 SAR,2025-12-21,17,Atenciones de urgencia - Otras causas circulatorias,34,0,1,1,15,17
 SAR,2025-12-21,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-21,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-22,1,Atenciones de urgencia - Total,2686,22,125,233,1822,484
+SAR,2025-01-22,1,Atenciones de urgencia - Total,2694,22,125,233,1831,483
 SAR,2025-01-22,12,Atenciones de urgencia - Total Sistema Circulatorio,50,0,0,0,22,28
 SAR,2025-01-22,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,1,0
 SAR,2025-01-22,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,0,2
@@ -22022,7 +22022,7 @@ SAR,2025-01-22,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,1,3
 SAR,2025-01-22,17,Atenciones de urgencia - Otras causas circulatorias,28,0,0,0,12,16
 SAR,2025-01-22,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-22,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-22,1,Atenciones de urgencia - Total,2863,33,100,252,1937,541
+SAR,2025-02-22,1,Atenciones de urgencia - Total,2860,33,100,252,1932,543
 SAR,2025-02-22,12,Atenciones de urgencia - Total Sistema Circulatorio,63,1,0,1,36,25
 SAR,2025-02-22,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,1,0
 SAR,2025-02-22,14,Atenciones de urgencia - Accidente vascular encefálico,1,0,0,0,0,1
@@ -22112,16 +22112,16 @@ SAR,2025-11-22,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,4,2
 SAR,2025-11-22,17,Atenciones de urgencia - Otras causas circulatorias,29,0,0,0,9,20
 SAR,2025-11-22,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-22,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-22,1,Atenciones de urgencia - Total,3256,37,197,331,2117,574
-SAR,2025-12-22,12,Atenciones de urgencia - Total Sistema Circulatorio,57,0,0,0,27,30
+SAR,2025-12-22,1,Atenciones de urgencia - Total,3408,39,204,346,2218,601
+SAR,2025-12-22,12,Atenciones de urgencia - Total Sistema Circulatorio,58,0,0,0,27,31
 SAR,2025-12-22,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,3,0
 SAR,2025-12-22,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,0,4
 SAR,2025-12-22,15,Atenciones de urgencia - Crisis hipertensiva,14,0,0,0,10,4
-SAR,2025-12-22,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,1,5
+SAR,2025-12-22,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,1,6
 SAR,2025-12-22,17,Atenciones de urgencia - Otras causas circulatorias,30,0,0,0,13,17
 SAR,2025-12-22,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-22,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-23,1,Atenciones de urgencia - Total,2675,30,123,223,1820,479
+SAR,2025-01-23,1,Atenciones de urgencia - Total,2676,30,123,225,1819,479
 SAR,2025-01-23,12,Atenciones de urgencia - Total Sistema Circulatorio,65,0,0,1,30,34
 SAR,2025-01-23,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,0,2
 SAR,2025-01-23,14,Atenciones de urgencia - Accidente vascular encefálico,6,0,0,0,2,4
@@ -22130,7 +22130,7 @@ SAR,2025-01-23,16,Atenciones de urgencia - Arritmia grave,4,0,0,1,2,1
 SAR,2025-01-23,17,Atenciones de urgencia - Otras causas circulatorias,33,0,0,0,16,17
 SAR,2025-01-23,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-23,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-23,1,Atenciones de urgencia - Total,2900,37,127,275,1911,550
+SAR,2025-02-23,1,Atenciones de urgencia - Total,2899,37,126,274,1913,549
 SAR,2025-02-23,12,Atenciones de urgencia - Total Sistema Circulatorio,62,0,0,1,30,31
 SAR,2025-02-23,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,2,2
 SAR,2025-02-23,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,2,1
@@ -22139,7 +22139,7 @@ SAR,2025-02-23,16,Atenciones de urgencia - Arritmia grave,10,0,0,0,4,6
 SAR,2025-02-23,17,Atenciones de urgencia - Otras causas circulatorias,27,0,0,1,12,14
 SAR,2025-02-23,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-02-23,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-03-23,1,Atenciones de urgencia - Total,3531,57,253,531,2142,548
+SAR,2025-03-23,1,Atenciones de urgencia - Total,3532,57,253,531,2143,548
 SAR,2025-03-23,12,Atenciones de urgencia - Total Sistema Circulatorio,74,0,0,4,42,28
 SAR,2025-03-23,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,1,1
 SAR,2025-03-23,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,0,3
@@ -22220,16 +22220,16 @@ SAR,2025-11-23,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,4,1
 SAR,2025-11-23,17,Atenciones de urgencia - Otras causas circulatorias,42,0,0,0,19,23
 SAR,2025-11-23,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-23,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-23,1,Atenciones de urgencia - Total,2845,32,156,277,1824,556
-SAR,2025-12-23,12,Atenciones de urgencia - Total Sistema Circulatorio,56,0,0,1,27,28
+SAR,2025-12-23,1,Atenciones de urgencia - Total,2988,35,166,296,1907,584
+SAR,2025-12-23,12,Atenciones de urgencia - Total Sistema Circulatorio,57,0,0,1,27,29
 SAR,2025-12-23,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,1,0
-SAR,2025-12-23,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,1,1
+SAR,2025-12-23,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,1,2
 SAR,2025-12-23,15,Atenciones de urgencia - Crisis hipertensiva,9,0,0,0,4,5
 SAR,2025-12-23,16,Atenciones de urgencia - Arritmia grave,9,0,0,0,3,6
 SAR,2025-12-23,17,Atenciones de urgencia - Otras causas circulatorias,35,0,0,1,18,16
 SAR,2025-12-23,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-23,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-24,1,Atenciones de urgencia - Total,2620,31,112,239,1727,511
+SAR,2025-01-24,1,Atenciones de urgencia - Total,2619,31,111,237,1727,513
 SAR,2025-01-24,12,Atenciones de urgencia - Total Sistema Circulatorio,69,0,0,1,40,28
 SAR,2025-01-24,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,0,1
 SAR,2025-01-24,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,2,2
@@ -22238,7 +22238,7 @@ SAR,2025-01-24,16,Atenciones de urgencia - Arritmia grave,4,0,0,1,2,1
 SAR,2025-01-24,17,Atenciones de urgencia - Otras causas circulatorias,33,0,0,0,21,12
 SAR,2025-01-24,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-24,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-24,1,Atenciones de urgencia - Total,2971,28,106,252,2032,553
+SAR,2025-02-24,1,Atenciones de urgencia - Total,2984,28,107,253,2042,554
 SAR,2025-02-24,12,Atenciones de urgencia - Total Sistema Circulatorio,68,0,0,1,37,30
 SAR,2025-02-24,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,1,0
 SAR,2025-02-24,14,Atenciones de urgencia - Accidente vascular encefálico,7,0,0,1,4,2
@@ -22247,11 +22247,11 @@ SAR,2025-02-24,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,3,2
 SAR,2025-02-24,17,Atenciones de urgencia - Otras causas circulatorias,41,0,0,0,21,20
 SAR,2025-02-24,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-02-24,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-03-24,1,Atenciones de urgencia - Total,3489,45,261,636,2047,500
-SAR,2025-03-24,12,Atenciones de urgencia - Total Sistema Circulatorio,54,0,0,0,30,24
+SAR,2025-03-24,1,Atenciones de urgencia - Total,3490,45,261,636,2048,500
+SAR,2025-03-24,12,Atenciones de urgencia - Total Sistema Circulatorio,55,0,0,0,31,24
 SAR,2025-03-24,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SAR,2025-03-24,14,Atenciones de urgencia - Accidente vascular encefálico,6,0,0,0,0,6
-SAR,2025-03-24,15,Atenciones de urgencia - Crisis hipertensiva,21,0,0,0,14,7
+SAR,2025-03-24,15,Atenciones de urgencia - Crisis hipertensiva,22,0,0,0,15,7
 SAR,2025-03-24,16,Atenciones de urgencia - Arritmia grave,2,0,0,0,1,1
 SAR,2025-03-24,17,Atenciones de urgencia - Otras causas circulatorias,25,0,0,0,15,10
 SAR,2025-03-24,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
@@ -22328,16 +22328,16 @@ SAR,2025-11-24,16,Atenciones de urgencia - Arritmia grave,8,0,0,0,5,3
 SAR,2025-11-24,17,Atenciones de urgencia - Otras causas circulatorias,33,0,0,1,15,17
 SAR,2025-11-24,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-24,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-24,1,Atenciones de urgencia - Total,2435,18,142,215,1545,515
-SAR,2025-12-24,12,Atenciones de urgencia - Total Sistema Circulatorio,53,0,0,0,22,31
+SAR,2025-12-24,1,Atenciones de urgencia - Total,2546,20,146,228,1615,537
+SAR,2025-12-24,12,Atenciones de urgencia - Total Sistema Circulatorio,55,0,0,0,23,32
 SAR,2025-12-24,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,1,3
-SAR,2025-12-24,14,Atenciones de urgencia - Accidente vascular encefálico,7,0,0,0,2,5
-SAR,2025-12-24,15,Atenciones de urgencia - Crisis hipertensiva,6,0,0,0,2,4
+SAR,2025-12-24,14,Atenciones de urgencia - Accidente vascular encefálico,8,0,0,0,3,5
+SAR,2025-12-24,15,Atenciones de urgencia - Crisis hipertensiva,7,0,0,0,2,5
 SAR,2025-12-24,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,4,3
 SAR,2025-12-24,17,Atenciones de urgencia - Otras causas circulatorias,29,0,0,0,13,16
 SAR,2025-12-24,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-24,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-25,1,Atenciones de urgencia - Total,2698,30,128,249,1797,494
+SAR,2025-01-25,1,Atenciones de urgencia - Total,2703,31,128,251,1800,493
 SAR,2025-01-25,12,Atenciones de urgencia - Total Sistema Circulatorio,70,0,0,2,38,30
 SAR,2025-01-25,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,0,1
 SAR,2025-01-25,14,Atenciones de urgencia - Accidente vascular encefálico,1,0,0,0,0,1
@@ -22436,16 +22436,16 @@ SAR,2025-11-25,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,2,3
 SAR,2025-11-25,17,Atenciones de urgencia - Otras causas circulatorias,42,0,0,0,23,19
 SAR,2025-11-25,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-25,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-25,1,Atenciones de urgencia - Total,2890,38,170,296,1876,510
-SAR,2025-12-25,12,Atenciones de urgencia - Total Sistema Circulatorio,57,0,0,1,26,30
+SAR,2025-12-25,1,Atenciones de urgencia - Total,3010,40,175,310,1950,535
+SAR,2025-12-25,12,Atenciones de urgencia - Total Sistema Circulatorio,58,0,0,1,26,31
 SAR,2025-12-25,13,Atenciones de urgencia - Infarto agudo miocardio,6,0,0,0,3,3
 SAR,2025-12-25,14,Atenciones de urgencia - Accidente vascular encefálico,5,0,0,0,2,3
 SAR,2025-12-25,15,Atenciones de urgencia - Crisis hipertensiva,8,0,0,0,4,4
-SAR,2025-12-25,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,2,4
+SAR,2025-12-25,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,2,5
 SAR,2025-12-25,17,Atenciones de urgencia - Otras causas circulatorias,32,0,0,1,15,16
 SAR,2025-12-25,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-25,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-26,1,Atenciones de urgencia - Total,2792,28,148,277,1854,485
+SAR,2025-01-26,1,Atenciones de urgencia - Total,2791,28,149,276,1852,486
 SAR,2025-01-26,12,Atenciones de urgencia - Total Sistema Circulatorio,75,0,0,0,45,30
 SAR,2025-01-26,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,2,0
 SAR,2025-01-26,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,1,2
@@ -22454,7 +22454,7 @@ SAR,2025-01-26,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,1,3
 SAR,2025-01-26,17,Atenciones de urgencia - Otras causas circulatorias,42,0,0,0,21,21
 SAR,2025-01-26,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-26,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-26,1,Atenciones de urgencia - Total,2960,34,115,265,1996,550
+SAR,2025-02-26,1,Atenciones de urgencia - Total,3008,34,115,265,1996,598
 SAR,2025-02-26,12,Atenciones de urgencia - Total Sistema Circulatorio,63,0,0,3,30,30
 SAR,2025-02-26,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,0,4
 SAR,2025-02-26,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,2,2
@@ -22544,16 +22544,16 @@ SAR,2025-11-26,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,3,3
 SAR,2025-11-26,17,Atenciones de urgencia - Otras causas circulatorias,35,2,0,0,15,18
 SAR,2025-11-26,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-26,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-26,1,Atenciones de urgencia - Total,3171,46,144,269,2104,608
-SAR,2025-12-26,12,Atenciones de urgencia - Total Sistema Circulatorio,79,0,0,0,42,37
+SAR,2025-12-26,1,Atenciones de urgencia - Total,3319,49,153,285,2196,636
+SAR,2025-12-26,12,Atenciones de urgencia - Total Sistema Circulatorio,84,0,0,0,46,38
 SAR,2025-12-26,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,1,2
 SAR,2025-12-26,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,2,2
-SAR,2025-12-26,15,Atenciones de urgencia - Crisis hipertensiva,13,0,0,0,6,7
+SAR,2025-12-26,15,Atenciones de urgencia - Crisis hipertensiva,15,0,0,0,8,7
 SAR,2025-12-26,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,3,3
-SAR,2025-12-26,17,Atenciones de urgencia - Otras causas circulatorias,53,0,0,0,30,23
+SAR,2025-12-26,17,Atenciones de urgencia - Otras causas circulatorias,56,0,0,0,32,24
 SAR,2025-12-26,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-26,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-27,1,Atenciones de urgencia - Total,3055,35,137,264,2081,538
+SAR,2025-01-27,1,Atenciones de urgencia - Total,3057,34,135,264,2086,538
 SAR,2025-01-27,12,Atenciones de urgencia - Total Sistema Circulatorio,61,0,0,0,32,29
 SAR,2025-01-27,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,0,1
 SAR,2025-01-27,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,3,1
@@ -22652,16 +22652,16 @@ SAR,2025-11-27,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,0,4
 SAR,2025-11-27,17,Atenciones de urgencia - Otras causas circulatorias,30,0,0,1,10,19
 SAR,2025-11-27,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-27,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-27,1,Atenciones de urgencia - Total,3086,33,166,262,2039,586
-SAR,2025-12-27,12,Atenciones de urgencia - Total Sistema Circulatorio,55,0,0,0,31,24
+SAR,2025-12-27,1,Atenciones de urgencia - Total,3207,35,172,275,2113,612
+SAR,2025-12-27,12,Atenciones de urgencia - Total Sistema Circulatorio,58,0,0,0,31,27
 SAR,2025-12-27,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,1,2
 SAR,2025-12-27,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,3,1
 SAR,2025-12-27,15,Atenciones de urgencia - Crisis hipertensiva,8,0,0,0,4,4
 SAR,2025-12-27,16,Atenciones de urgencia - Arritmia grave,4,0,0,0,3,1
-SAR,2025-12-27,17,Atenciones de urgencia - Otras causas circulatorias,36,0,0,0,20,16
+SAR,2025-12-27,17,Atenciones de urgencia - Otras causas circulatorias,39,0,0,0,20,19
 SAR,2025-12-27,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-27,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-28,1,Atenciones de urgencia - Total,2861,26,129,250,1989,467
+SAR,2025-01-28,1,Atenciones de urgencia - Total,2860,27,131,251,1985,466
 SAR,2025-01-28,12,Atenciones de urgencia - Total Sistema Circulatorio,57,0,0,0,31,26
 SAR,2025-01-28,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,0,3
 SAR,2025-01-28,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,1,2
@@ -22670,7 +22670,7 @@ SAR,2025-01-28,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,3,2
 SAR,2025-01-28,17,Atenciones de urgencia - Otras causas circulatorias,35,0,0,0,20,15
 SAR,2025-01-28,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-28,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-02-28,1,Atenciones de urgencia - Total,2606,18,104,231,1734,519
+SAR,2025-02-28,1,Atenciones de urgencia - Total,2665,18,111,239,1770,527
 SAR,2025-02-28,12,Atenciones de urgencia - Total Sistema Circulatorio,61,0,0,0,31,30
 SAR,2025-02-28,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,1,0
 SAR,2025-02-28,14,Atenciones de urgencia - Accidente vascular encefálico,10,0,0,0,6,4
@@ -22706,7 +22706,7 @@ SAR,2025-05-28,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,1,5
 SAR,2025-05-28,17,Atenciones de urgencia - Otras causas circulatorias,26,0,0,1,11,14
 SAR,2025-05-28,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-05-28,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-06-28,1,Atenciones de urgencia - Total,2762,20,176,262,1714,590
+SAR,2025-06-28,1,Atenciones de urgencia - Total,2781,39,176,262,1714,590
 SAR,2025-06-28,12,Atenciones de urgencia - Total Sistema Circulatorio,74,1,0,0,40,33
 SAR,2025-06-28,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,2,2
 SAR,2025-06-28,14,Atenciones de urgencia - Accidente vascular encefálico,5,0,0,0,0,5
@@ -22760,22 +22760,22 @@ SAR,2025-11-28,16,Atenciones de urgencia - Arritmia grave,8,0,0,0,3,5
 SAR,2025-11-28,17,Atenciones de urgencia - Otras causas circulatorias,19,0,0,0,10,9
 SAR,2025-11-28,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-28,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-28,1,Atenciones de urgencia - Total,3309,46,166,368,2096,633
-SAR,2025-12-28,12,Atenciones de urgencia - Total Sistema Circulatorio,56,0,0,0,25,31
+SAR,2025-12-28,1,Atenciones de urgencia - Total,3424,48,174,383,2174,645
+SAR,2025-12-28,12,Atenciones de urgencia - Total Sistema Circulatorio,58,0,0,0,25,33
 SAR,2025-12-28,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,2,1
 SAR,2025-12-28,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,1,3
-SAR,2025-12-28,15,Atenciones de urgencia - Crisis hipertensiva,9,0,0,0,6,3
+SAR,2025-12-28,15,Atenciones de urgencia - Crisis hipertensiva,10,0,0,0,6,4
 SAR,2025-12-28,16,Atenciones de urgencia - Arritmia grave,1,0,0,0,0,1
-SAR,2025-12-28,17,Atenciones de urgencia - Otras causas circulatorias,39,0,0,0,16,23
+SAR,2025-12-28,17,Atenciones de urgencia - Otras causas circulatorias,40,0,0,0,16,24
 SAR,2025-12-28,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-28,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-29,1,Atenciones de urgencia - Total,2873,28,124,279,1886,556
-SAR,2025-01-29,12,Atenciones de urgencia - Total Sistema Circulatorio,78,0,0,0,37,41
+SAR,2025-01-29,1,Atenciones de urgencia - Total,2877,28,124,276,1892,557
+SAR,2025-01-29,12,Atenciones de urgencia - Total Sistema Circulatorio,79,0,0,0,38,41
 SAR,2025-01-29,13,Atenciones de urgencia - Infarto agudo miocardio,3,0,0,0,0,3
 SAR,2025-01-29,14,Atenciones de urgencia - Accidente vascular encefálico,4,0,0,0,1,3
 SAR,2025-01-29,15,Atenciones de urgencia - Crisis hipertensiva,35,0,0,0,19,16
 SAR,2025-01-29,16,Atenciones de urgencia - Arritmia grave,5,0,0,0,1,4
-SAR,2025-01-29,17,Atenciones de urgencia - Otras causas circulatorias,31,0,0,0,16,15
+SAR,2025-01-29,17,Atenciones de urgencia - Otras causas circulatorias,32,0,0,0,17,15
 SAR,2025-01-29,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-01-29,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SAR,2025-03-29,1,Atenciones de urgencia - Total,3117,48,192,326,1906,645
@@ -22859,20 +22859,20 @@ SAR,2025-11-29,16,Atenciones de urgencia - Arritmia grave,3,0,0,0,2,1
 SAR,2025-11-29,17,Atenciones de urgencia - Otras causas circulatorias,35,0,0,3,16,16
 SAR,2025-11-29,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-29,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-29,1,Atenciones de urgencia - Total,3339,43,167,319,2129,681
-SAR,2025-12-29,12,Atenciones de urgencia - Total Sistema Circulatorio,66,0,0,2,35,29
+SAR,2025-12-29,1,Atenciones de urgencia - Total,3474,46,172,341,2205,710
+SAR,2025-12-29,12,Atenciones de urgencia - Total Sistema Circulatorio,70,0,0,2,39,29
 SAR,2025-12-29,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,1,0
-SAR,2025-12-29,14,Atenciones de urgencia - Accidente vascular encefálico,6,0,0,0,3,3
-SAR,2025-12-29,15,Atenciones de urgencia - Crisis hipertensiva,11,0,0,0,5,6
+SAR,2025-12-29,14,Atenciones de urgencia - Accidente vascular encefálico,8,0,0,0,5,3
+SAR,2025-12-29,15,Atenciones de urgencia - Crisis hipertensiva,12,0,0,0,6,6
 SAR,2025-12-29,16,Atenciones de urgencia - Arritmia grave,9,0,0,0,4,5
-SAR,2025-12-29,17,Atenciones de urgencia - Otras causas circulatorias,39,0,0,2,22,15
+SAR,2025-12-29,17,Atenciones de urgencia - Otras causas circulatorias,40,0,0,2,23,15
 SAR,2025-12-29,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-29,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-30,1,Atenciones de urgencia - Total,2745,33,130,240,1795,547
-SAR,2025-01-30,12,Atenciones de urgencia - Total Sistema Circulatorio,57,0,0,0,25,32
+SAR,2025-01-30,1,Atenciones de urgencia - Total,2747,31,134,238,1799,545
+SAR,2025-01-30,12,Atenciones de urgencia - Total Sistema Circulatorio,57,0,0,0,24,33
 SAR,2025-01-30,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,0,1
-SAR,2025-01-30,14,Atenciones de urgencia - Accidente vascular encefálico,3,0,0,0,2,1
-SAR,2025-01-30,15,Atenciones de urgencia - Crisis hipertensiva,19,0,0,0,8,11
+SAR,2025-01-30,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,1,1
+SAR,2025-01-30,15,Atenciones de urgencia - Crisis hipertensiva,20,0,0,0,8,12
 SAR,2025-01-30,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,2,5
 SAR,2025-01-30,17,Atenciones de urgencia - Otras causas circulatorias,27,0,0,0,13,14
 SAR,2025-01-30,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
@@ -22904,7 +22904,7 @@ SAR,2025-05-30,16,Atenciones de urgencia - Arritmia grave,9,0,0,0,5,4
 SAR,2025-05-30,17,Atenciones de urgencia - Otras causas circulatorias,61,2,4,15,23,17
 SAR,2025-05-30,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-05-30,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-06-30,1,Atenciones de urgencia - Total,2903,39,138,206,1918,602
+SAR,2025-06-30,1,Atenciones de urgencia - Total,2903,53,136,205,1912,597
 SAR,2025-06-30,12,Atenciones de urgencia - Total Sistema Circulatorio,68,0,0,1,38,29
 SAR,2025-06-30,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,0,2
 SAR,2025-06-30,14,Atenciones de urgencia - Accidente vascular encefálico,5,0,0,0,2,3
@@ -22958,16 +22958,16 @@ SAR,2025-11-30,16,Atenciones de urgencia - Arritmia grave,7,0,0,0,3,4
 SAR,2025-11-30,17,Atenciones de urgencia - Otras causas circulatorias,26,0,0,1,10,15
 SAR,2025-11-30,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-11-30,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-30,1,Atenciones de urgencia - Total,2998,29,153,305,1948,563
-SAR,2025-12-30,12,Atenciones de urgencia - Total Sistema Circulatorio,66,0,1,0,34,31
+SAR,2025-12-30,1,Atenciones de urgencia - Total,3282,31,166,334,2127,624
+SAR,2025-12-30,12,Atenciones de urgencia - Total Sistema Circulatorio,73,0,1,0,38,34
 SAR,2025-12-30,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,1,1
-SAR,2025-12-30,14,Atenciones de urgencia - Accidente vascular encefálico,8,0,0,0,4,4
+SAR,2025-12-30,14,Atenciones de urgencia - Accidente vascular encefálico,10,0,0,0,6,4
 SAR,2025-12-30,15,Atenciones de urgencia - Crisis hipertensiva,15,0,0,0,9,6
-SAR,2025-12-30,16,Atenciones de urgencia - Arritmia grave,8,0,0,0,2,6
-SAR,2025-12-30,17,Atenciones de urgencia - Otras causas circulatorias,33,0,1,0,18,14
+SAR,2025-12-30,16,Atenciones de urgencia - Arritmia grave,9,0,0,0,3,6
+SAR,2025-12-30,17,Atenciones de urgencia - Otras causas circulatorias,37,0,1,0,19,17
 SAR,2025-12-30,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-30,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-01-31,1,Atenciones de urgencia - Total,2552,23,101,251,1691,486
+SAR,2025-01-31,1,Atenciones de urgencia - Total,2553,23,102,252,1690,486
 SAR,2025-01-31,12,Atenciones de urgencia - Total Sistema Circulatorio,70,0,0,3,31,36
 SAR,2025-01-31,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,0,1
 SAR,2025-01-31,14,Atenciones de urgencia - Accidente vascular encefálico,5,0,0,0,2,3
@@ -23021,13 +23021,13 @@ SAR,2025-10-31,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,1,5
 SAR,2025-10-31,17,Atenciones de urgencia - Otras causas circulatorias,21,0,0,0,7,14
 SAR,2025-10-31,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-10-31,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SAR,2025-12-31,1,Atenciones de urgencia - Total,1459,17,93,145,895,309
-SAR,2025-12-31,12,Atenciones de urgencia - Total Sistema Circulatorio,30,0,0,0,15,15
-SAR,2025-12-31,13,Atenciones de urgencia - Infarto agudo miocardio,2,0,0,0,2,0
-SAR,2025-12-31,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,1,1
-SAR,2025-12-31,15,Atenciones de urgencia - Crisis hipertensiva,1,0,0,0,0,1
-SAR,2025-12-31,16,Atenciones de urgencia - Arritmia grave,1,0,0,0,0,1
-SAR,2025-12-31,17,Atenciones de urgencia - Otras causas circulatorias,24,0,0,0,12,12
+SAR,2025-12-31,1,Atenciones de urgencia - Total,2640,38,155,255,1643,549
+SAR,2025-12-31,12,Atenciones de urgencia - Total Sistema Circulatorio,53,0,0,0,26,27
+SAR,2025-12-31,13,Atenciones de urgencia - Infarto agudo miocardio,4,0,0,0,3,1
+SAR,2025-12-31,14,Atenciones de urgencia - Accidente vascular encefálico,7,0,0,0,4,3
+SAR,2025-12-31,15,Atenciones de urgencia - Crisis hipertensiva,5,0,0,0,2,3
+SAR,2025-12-31,16,Atenciones de urgencia - Arritmia grave,6,0,0,0,3,3
+SAR,2025-12-31,17,Atenciones de urgencia - Otras causas circulatorias,31,0,0,0,14,17
 SAR,2025-12-31,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SAR,2025-12-31,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SUR,2025-01-01,1,Atenciones de urgencia - Total,287,3,21,35,192,36
@@ -23327,7 +23327,7 @@ SUR,2025-09-03,16,Atenciones de urgencia - Arritmia grave,0,0,0,0,0,0
 SUR,2025-09-03,17,Atenciones de urgencia - Otras causas circulatorias,4,0,0,0,4,0
 SUR,2025-09-03,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-09-03,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SUR,2025-10-03,1,Atenciones de urgencia - Total,231,3,11,34,156,27
+SUR,2025-10-03,1,Atenciones de urgencia - Total,230,3,11,34,155,27
 SUR,2025-10-03,12,Atenciones de urgencia - Total Sistema Circulatorio,3,0,0,0,2,1
 SUR,2025-10-03,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SUR,2025-10-03,14,Atenciones de urgencia - Accidente vascular encefálico,0,0,0,0,0,0
@@ -24749,11 +24749,11 @@ SUR,2025-11-16,16,Atenciones de urgencia - Arritmia grave,0,0,0,0,0,0
 SUR,2025-11-16,17,Atenciones de urgencia - Otras causas circulatorias,2,0,0,1,1,0
 SUR,2025-11-16,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-11-16,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SUR,2025-12-16,1,Atenciones de urgencia - Total,243,4,26,44,145,24
-SUR,2025-12-16,12,Atenciones de urgencia - Total Sistema Circulatorio,4,0,0,0,3,1
+SUR,2025-12-16,1,Atenciones de urgencia - Total,276,5,28,50,158,35
+SUR,2025-12-16,12,Atenciones de urgencia - Total Sistema Circulatorio,8,0,0,0,7,1
 SUR,2025-12-16,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
-SUR,2025-12-16,14,Atenciones de urgencia - Accidente vascular encefálico,0,0,0,0,0,0
-SUR,2025-12-16,15,Atenciones de urgencia - Crisis hipertensiva,1,0,0,0,1,0
+SUR,2025-12-16,14,Atenciones de urgencia - Accidente vascular encefálico,1,0,0,0,1,0
+SUR,2025-12-16,15,Atenciones de urgencia - Crisis hipertensiva,4,0,0,0,4,0
 SUR,2025-12-16,16,Atenciones de urgencia - Arritmia grave,0,0,0,0,0,0
 SUR,2025-12-16,17,Atenciones de urgencia - Otras causas circulatorias,3,0,0,0,2,1
 SUR,2025-12-16,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
@@ -24857,7 +24857,7 @@ SUR,2025-11-17,16,Atenciones de urgencia - Arritmia grave,0,0,0,0,0,0
 SUR,2025-11-17,17,Atenciones de urgencia - Otras causas circulatorias,3,0,0,0,2,1
 SUR,2025-11-17,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-11-17,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SUR,2025-12-17,1,Atenciones de urgencia - Total,207,4,12,25,142,24
+SUR,2025-12-17,1,Atenciones de urgencia - Total,254,5,16,30,174,29
 SUR,2025-12-17,12,Atenciones de urgencia - Total Sistema Circulatorio,0,0,0,0,0,0
 SUR,2025-12-17,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SUR,2025-12-17,14,Atenciones de urgencia - Accidente vascular encefálico,0,0,0,0,0,0
@@ -24965,7 +24965,7 @@ SUR,2025-11-18,16,Atenciones de urgencia - Arritmia grave,0,0,0,0,0,0
 SUR,2025-11-18,17,Atenciones de urgencia - Otras causas circulatorias,2,0,0,0,1,1
 SUR,2025-11-18,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-11-18,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SUR,2025-12-18,1,Atenciones de urgencia - Total,185,3,11,23,127,21
+SUR,2025-12-18,1,Atenciones de urgencia - Total,237,6,15,28,163,25
 SUR,2025-12-18,12,Atenciones de urgencia - Total Sistema Circulatorio,3,0,0,0,2,1
 SUR,2025-12-18,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SUR,2025-12-18,14,Atenciones de urgencia - Accidente vascular encefálico,0,0,0,0,0,0
@@ -25073,7 +25073,7 @@ SUR,2025-11-19,16,Atenciones de urgencia - Arritmia grave,0,0,0,0,0,0
 SUR,2025-11-19,17,Atenciones de urgencia - Otras causas circulatorias,2,0,0,0,2,0
 SUR,2025-11-19,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-11-19,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SUR,2025-12-19,1,Atenciones de urgencia - Total,202,3,23,21,127,28
+SUR,2025-12-19,1,Atenciones de urgencia - Total,258,4,25,30,170,29
 SUR,2025-12-19,12,Atenciones de urgencia - Total Sistema Circulatorio,17,0,0,1,11,5
 SUR,2025-12-19,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SUR,2025-12-19,14,Atenciones de urgencia - Accidente vascular encefálico,0,0,0,0,0,0
@@ -25181,7 +25181,7 @@ SUR,2025-11-20,16,Atenciones de urgencia - Arritmia grave,1,0,0,0,1,0
 SUR,2025-11-20,17,Atenciones de urgencia - Otras causas circulatorias,3,0,0,0,0,3
 SUR,2025-11-20,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-11-20,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SUR,2025-12-20,1,Atenciones de urgencia - Total,268,12,22,25,175,34
+SUR,2025-12-20,1,Atenciones de urgencia - Total,319,13,23,35,207,41
 SUR,2025-12-20,12,Atenciones de urgencia - Total Sistema Circulatorio,5,0,0,0,2,3
 SUR,2025-12-20,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SUR,2025-12-20,14,Atenciones de urgencia - Accidente vascular encefálico,0,0,0,0,0,0
@@ -25289,11 +25289,11 @@ SUR,2025-11-21,16,Atenciones de urgencia - Arritmia grave,1,0,0,0,1,0
 SUR,2025-11-21,17,Atenciones de urgencia - Otras causas circulatorias,2,0,0,0,2,0
 SUR,2025-11-21,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-11-21,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SUR,2025-12-21,1,Atenciones de urgencia - Total,269,5,19,34,176,35
-SUR,2025-12-21,12,Atenciones de urgencia - Total Sistema Circulatorio,3,0,0,0,3,0
+SUR,2025-12-21,1,Atenciones de urgencia - Total,325,7,20,43,213,42
+SUR,2025-12-21,12,Atenciones de urgencia - Total Sistema Circulatorio,5,0,0,0,4,1
 SUR,2025-12-21,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
-SUR,2025-12-21,14,Atenciones de urgencia - Accidente vascular encefálico,1,0,0,0,1,0
-SUR,2025-12-21,15,Atenciones de urgencia - Crisis hipertensiva,1,0,0,0,1,0
+SUR,2025-12-21,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,1,1
+SUR,2025-12-21,15,Atenciones de urgencia - Crisis hipertensiva,2,0,0,0,2,0
 SUR,2025-12-21,16,Atenciones de urgencia - Arritmia grave,0,0,0,0,0,0
 SUR,2025-12-21,17,Atenciones de urgencia - Otras causas circulatorias,1,0,0,0,1,0
 SUR,2025-12-21,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
@@ -25397,13 +25397,13 @@ SUR,2025-11-22,16,Atenciones de urgencia - Arritmia grave,1,0,0,0,0,1
 SUR,2025-11-22,17,Atenciones de urgencia - Otras causas circulatorias,0,0,0,0,0,0
 SUR,2025-11-22,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-11-22,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SUR,2025-12-22,1,Atenciones de urgencia - Total,171,7,8,18,110,28
-SUR,2025-12-22,12,Atenciones de urgencia - Total Sistema Circulatorio,2,0,0,0,2,0
+SUR,2025-12-22,1,Atenciones de urgencia - Total,248,10,12,32,153,41
+SUR,2025-12-22,12,Atenciones de urgencia - Total Sistema Circulatorio,4,0,0,0,3,1
 SUR,2025-12-22,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SUR,2025-12-22,14,Atenciones de urgencia - Accidente vascular encefálico,0,0,0,0,0,0
-SUR,2025-12-22,15,Atenciones de urgencia - Crisis hipertensiva,1,0,0,0,1,0
+SUR,2025-12-22,15,Atenciones de urgencia - Crisis hipertensiva,2,0,0,0,2,0
 SUR,2025-12-22,16,Atenciones de urgencia - Arritmia grave,0,0,0,0,0,0
-SUR,2025-12-22,17,Atenciones de urgencia - Otras causas circulatorias,1,0,0,0,1,0
+SUR,2025-12-22,17,Atenciones de urgencia - Otras causas circulatorias,2,0,0,0,1,1
 SUR,2025-12-22,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-12-22,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SUR,2025-01-23,1,Atenciones de urgencia - Total,252,3,9,22,174,44
@@ -25505,13 +25505,13 @@ SUR,2025-11-23,16,Atenciones de urgencia - Arritmia grave,0,0,0,0,0,0
 SUR,2025-11-23,17,Atenciones de urgencia - Otras causas circulatorias,1,0,0,0,0,1
 SUR,2025-11-23,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-11-23,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SUR,2025-12-23,1,Atenciones de urgencia - Total,188,2,14,30,118,24
-SUR,2025-12-23,12,Atenciones de urgencia - Total Sistema Circulatorio,10,0,0,1,5,4
+SUR,2025-12-23,1,Atenciones de urgencia - Total,238,3,17,36,152,30
+SUR,2025-12-23,12,Atenciones de urgencia - Total Sistema Circulatorio,11,0,0,1,6,4
 SUR,2025-12-23,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SUR,2025-12-23,14,Atenciones de urgencia - Accidente vascular encefálico,0,0,0,0,0,0
 SUR,2025-12-23,15,Atenciones de urgencia - Crisis hipertensiva,5,0,0,0,3,2
 SUR,2025-12-23,16,Atenciones de urgencia - Arritmia grave,1,0,0,0,0,1
-SUR,2025-12-23,17,Atenciones de urgencia - Otras causas circulatorias,4,0,0,1,2,1
+SUR,2025-12-23,17,Atenciones de urgencia - Otras causas circulatorias,5,0,0,1,3,1
 SUR,2025-12-23,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-12-23,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SUR,2025-01-24,1,Atenciones de urgencia - Total,264,3,15,32,181,33
@@ -25613,7 +25613,7 @@ SUR,2025-11-24,16,Atenciones de urgencia - Arritmia grave,1,0,0,0,1,0
 SUR,2025-11-24,17,Atenciones de urgencia - Otras causas circulatorias,1,0,0,0,0,1
 SUR,2025-11-24,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-11-24,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SUR,2025-12-24,1,Atenciones de urgencia - Total,146,5,13,15,94,19
+SUR,2025-12-24,1,Atenciones de urgencia - Total,178,6,14,19,117,22
 SUR,2025-12-24,12,Atenciones de urgencia - Total Sistema Circulatorio,2,0,0,0,2,0
 SUR,2025-12-24,13,Atenciones de urgencia - Infarto agudo miocardio,1,0,0,0,1,0
 SUR,2025-12-24,14,Atenciones de urgencia - Accidente vascular encefálico,0,0,0,0,0,0
@@ -25721,13 +25721,13 @@ SUR,2025-11-25,16,Atenciones de urgencia - Arritmia grave,1,0,0,0,0,1
 SUR,2025-11-25,17,Atenciones de urgencia - Otras causas circulatorias,0,0,0,0,0,0
 SUR,2025-11-25,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-11-25,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SUR,2025-12-25,1,Atenciones de urgencia - Total,273,5,19,31,177,41
-SUR,2025-12-25,12,Atenciones de urgencia - Total Sistema Circulatorio,4,0,0,0,1,3
+SUR,2025-12-25,1,Atenciones de urgencia - Total,334,7,19,42,220,46
+SUR,2025-12-25,12,Atenciones de urgencia - Total Sistema Circulatorio,7,0,0,1,2,4
 SUR,2025-12-25,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SUR,2025-12-25,14,Atenciones de urgencia - Accidente vascular encefálico,1,0,0,0,0,1
-SUR,2025-12-25,15,Atenciones de urgencia - Crisis hipertensiva,1,0,0,0,1,0
+SUR,2025-12-25,15,Atenciones de urgencia - Crisis hipertensiva,2,0,0,1,1,0
 SUR,2025-12-25,16,Atenciones de urgencia - Arritmia grave,1,0,0,0,0,1
-SUR,2025-12-25,17,Atenciones de urgencia - Otras causas circulatorias,1,0,0,0,0,1
+SUR,2025-12-25,17,Atenciones de urgencia - Otras causas circulatorias,3,0,0,0,1,2
 SUR,2025-12-25,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-12-25,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SUR,2025-01-26,1,Atenciones de urgencia - Total,278,4,14,32,196,32
@@ -25829,13 +25829,13 @@ SUR,2025-11-26,16,Atenciones de urgencia - Arritmia grave,0,0,0,0,0,0
 SUR,2025-11-26,17,Atenciones de urgencia - Otras causas circulatorias,2,0,0,0,1,1
 SUR,2025-11-26,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-11-26,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SUR,2025-12-26,1,Atenciones de urgencia - Total,201,2,16,26,133,24
-SUR,2025-12-26,12,Atenciones de urgencia - Total Sistema Circulatorio,5,0,0,0,3,2
+SUR,2025-12-26,1,Atenciones de urgencia - Total,291,4,26,35,191,35
+SUR,2025-12-26,12,Atenciones de urgencia - Total Sistema Circulatorio,8,0,0,0,5,3
 SUR,2025-12-26,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SUR,2025-12-26,14,Atenciones de urgencia - Accidente vascular encefálico,0,0,0,0,0,0
-SUR,2025-12-26,15,Atenciones de urgencia - Crisis hipertensiva,3,0,0,0,2,1
+SUR,2025-12-26,15,Atenciones de urgencia - Crisis hipertensiva,4,0,0,0,3,1
 SUR,2025-12-26,16,Atenciones de urgencia - Arritmia grave,0,0,0,0,0,0
-SUR,2025-12-26,17,Atenciones de urgencia - Otras causas circulatorias,2,0,0,0,1,1
+SUR,2025-12-26,17,Atenciones de urgencia - Otras causas circulatorias,4,0,0,0,2,2
 SUR,2025-12-26,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-12-26,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SUR,2025-01-27,1,Atenciones de urgencia - Total,232,2,13,17,171,29
@@ -25937,13 +25937,13 @@ SUR,2025-11-27,16,Atenciones de urgencia - Arritmia grave,2,0,0,0,0,2
 SUR,2025-11-27,17,Atenciones de urgencia - Otras causas circulatorias,3,0,0,0,1,2
 SUR,2025-11-27,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-11-27,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SUR,2025-12-27,1,Atenciones de urgencia - Total,284,6,11,38,193,36
-SUR,2025-12-27,12,Atenciones de urgencia - Total Sistema Circulatorio,4,0,0,0,3,1
+SUR,2025-12-27,1,Atenciones de urgencia - Total,374,7,13,45,254,55
+SUR,2025-12-27,12,Atenciones de urgencia - Total Sistema Circulatorio,8,0,0,0,4,4
 SUR,2025-12-27,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SUR,2025-12-27,14,Atenciones de urgencia - Accidente vascular encefálico,0,0,0,0,0,0
 SUR,2025-12-27,15,Atenciones de urgencia - Crisis hipertensiva,2,0,0,0,1,1
 SUR,2025-12-27,16,Atenciones de urgencia - Arritmia grave,1,0,0,0,1,0
-SUR,2025-12-27,17,Atenciones de urgencia - Otras causas circulatorias,1,0,0,0,1,0
+SUR,2025-12-27,17,Atenciones de urgencia - Otras causas circulatorias,5,0,0,0,2,3
 SUR,2025-12-27,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-12-27,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SUR,2025-01-28,1,Atenciones de urgencia - Total,169,4,15,11,114,25
@@ -26045,13 +26045,13 @@ SUR,2025-11-28,16,Atenciones de urgencia - Arritmia grave,0,0,0,0,0,0
 SUR,2025-11-28,17,Atenciones de urgencia - Otras causas circulatorias,0,0,0,0,0,0
 SUR,2025-11-28,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-11-28,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SUR,2025-12-28,1,Atenciones de urgencia - Total,304,9,24,47,194,30
-SUR,2025-12-28,12,Atenciones de urgencia - Total Sistema Circulatorio,5,0,0,0,3,2
+SUR,2025-12-28,1,Atenciones de urgencia - Total,363,9,29,55,229,41
+SUR,2025-12-28,12,Atenciones de urgencia - Total Sistema Circulatorio,6,0,0,0,3,3
 SUR,2025-12-28,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SUR,2025-12-28,14,Atenciones de urgencia - Accidente vascular encefálico,0,0,0,0,0,0
 SUR,2025-12-28,15,Atenciones de urgencia - Crisis hipertensiva,2,0,0,0,1,1
 SUR,2025-12-28,16,Atenciones de urgencia - Arritmia grave,1,0,0,0,1,0
-SUR,2025-12-28,17,Atenciones de urgencia - Otras causas circulatorias,2,0,0,0,1,1
+SUR,2025-12-28,17,Atenciones de urgencia - Otras causas circulatorias,3,0,0,0,1,2
 SUR,2025-12-28,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-12-28,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SUR,2025-01-29,1,Atenciones de urgencia - Total,178,2,12,12,126,26
@@ -26144,13 +26144,13 @@ SUR,2025-11-29,16,Atenciones de urgencia - Arritmia grave,0,0,0,0,0,0
 SUR,2025-11-29,17,Atenciones de urgencia - Otras causas circulatorias,1,0,0,0,1,0
 SUR,2025-11-29,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-11-29,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SUR,2025-12-29,1,Atenciones de urgencia - Total,127,1,9,23,80,14
-SUR,2025-12-29,12,Atenciones de urgencia - Total Sistema Circulatorio,2,0,0,0,2,0
+SUR,2025-12-29,1,Atenciones de urgencia - Total,327,3,33,45,204,42
+SUR,2025-12-29,12,Atenciones de urgencia - Total Sistema Circulatorio,5,0,0,0,2,3
 SUR,2025-12-29,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
-SUR,2025-12-29,14,Atenciones de urgencia - Accidente vascular encefálico,0,0,0,0,0,0
+SUR,2025-12-29,14,Atenciones de urgencia - Accidente vascular encefálico,1,0,0,0,0,1
 SUR,2025-12-29,15,Atenciones de urgencia - Crisis hipertensiva,1,0,0,0,1,0
 SUR,2025-12-29,16,Atenciones de urgencia - Arritmia grave,0,0,0,0,0,0
-SUR,2025-12-29,17,Atenciones de urgencia - Otras causas circulatorias,1,0,0,0,1,0
+SUR,2025-12-29,17,Atenciones de urgencia - Otras causas circulatorias,3,0,0,0,1,2
 SUR,2025-12-29,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-12-29,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SUR,2025-01-30,1,Atenciones de urgencia - Total,204,1,11,22,142,28
@@ -26243,13 +26243,13 @@ SUR,2025-11-30,16,Atenciones de urgencia - Arritmia grave,0,0,0,0,0,0
 SUR,2025-11-30,17,Atenciones de urgencia - Otras causas circulatorias,0,0,0,0,0,0
 SUR,2025-11-30,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-11-30,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SUR,2025-12-30,1,Atenciones de urgencia - Total,84,2,5,14,53,10
-SUR,2025-12-30,12,Atenciones de urgencia - Total Sistema Circulatorio,2,0,0,0,2,0
+SUR,2025-12-30,1,Atenciones de urgencia - Total,268,4,18,38,168,40
+SUR,2025-12-30,12,Atenciones de urgencia - Total Sistema Circulatorio,6,0,0,0,5,1
 SUR,2025-12-30,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
 SUR,2025-12-30,14,Atenciones de urgencia - Accidente vascular encefálico,0,0,0,0,0,0
-SUR,2025-12-30,15,Atenciones de urgencia - Crisis hipertensiva,2,0,0,0,2,0
-SUR,2025-12-30,16,Atenciones de urgencia - Arritmia grave,0,0,0,0,0,0
-SUR,2025-12-30,17,Atenciones de urgencia - Otras causas circulatorias,0,0,0,0,0,0
+SUR,2025-12-30,15,Atenciones de urgencia - Crisis hipertensiva,3,0,0,0,3,0
+SUR,2025-12-30,16,Atenciones de urgencia - Arritmia grave,1,0,0,0,0,1
+SUR,2025-12-30,17,Atenciones de urgencia - Otras causas circulatorias,2,0,0,0,2,0
 SUR,2025-12-30,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-12-30,25,Hospitalizaciones - Total,0,0,0,0,0,0
 SUR,2025-01-31,1,Atenciones de urgencia - Total,141,2,9,13,94,23
@@ -26306,12 +26306,12 @@ SUR,2025-10-31,16,Atenciones de urgencia - Arritmia grave,1,0,0,0,0,1
 SUR,2025-10-31,17,Atenciones de urgencia - Otras causas circulatorias,2,0,0,0,0,2
 SUR,2025-10-31,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-10-31,25,Hospitalizaciones - Total,0,0,0,0,0,0
-SUR,2025-12-31,1,Atenciones de urgencia - Total,1,0,1,0,0,0
-SUR,2025-12-31,12,Atenciones de urgencia - Total Sistema Circulatorio,0,0,0,0,0,0
+SUR,2025-12-31,1,Atenciones de urgencia - Total,192,5,13,19,124,31
+SUR,2025-12-31,12,Atenciones de urgencia - Total Sistema Circulatorio,8,0,0,0,5,3
 SUR,2025-12-31,13,Atenciones de urgencia - Infarto agudo miocardio,0,0,0,0,0,0
-SUR,2025-12-31,14,Atenciones de urgencia - Accidente vascular encefálico,0,0,0,0,0,0
-SUR,2025-12-31,15,Atenciones de urgencia - Crisis hipertensiva,0,0,0,0,0,0
+SUR,2025-12-31,14,Atenciones de urgencia - Accidente vascular encefálico,2,0,0,0,0,2
+SUR,2025-12-31,15,Atenciones de urgencia - Crisis hipertensiva,3,0,0,0,2,1
 SUR,2025-12-31,16,Atenciones de urgencia - Arritmia grave,0,0,0,0,0,0
-SUR,2025-12-31,17,Atenciones de urgencia - Otras causas circulatorias,0,0,0,0,0,0
+SUR,2025-12-31,17,Atenciones de urgencia - Otras causas circulatorias,3,0,0,0,3,0
 SUR,2025-12-31,22,Hospitalizaciones - CAUSAS SISTEMA CIRCULATORIO,0,0,0,0,0,0
 SUR,2025-12-31,25,Hospitalizaciones - Total,0,0,0,0,0,0
